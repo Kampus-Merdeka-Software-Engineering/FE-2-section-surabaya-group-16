@@ -1,0 +1,216 @@
+/* CSS untuk .main-container */
+.main-container {
+  width: 100%;
+  margin: 10px;
+}
+
+/* CSS untuk #navbar-container */
+#navbar-container {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+/* CSS untuk .text-container */
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-120%, -50%);
+  text-align: justify;
+  z-index: 1;
+  color: #ffffff; /* Warna teks */
+  background: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  overflow: auto;
+}
+
+/* CSS untuk .slider1 */
+.slider1 {
+  position: relative;
+}
+
+/* CSS untuk gambar dalam .slider1 */
+.slider1 img {
+  width: 100%;
+}
+
+/* CSS untuk #heading */
+#heading {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* CSS untuk #subheading */
+#subheading {
+  font-size: 20px;
+}
+
+/* CSS untuk #booknow1 */
+#booknow1 {
+  float: left;
+  border: none;
+  border-radius: 5px;
+  background: #ffca0e;
+  color: #ffffff;
+  font-family: inter;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  padding: 10px 20px;
+  height: 40px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+#booknow1:hover {
+  background: #ffd524;
+  color: #ffffff;
+}
+
+/* CSS untuk #popular_rooms */
+#popular_rooms {
+  margin: 10px;
+}
+
+/* CSS untuk .headings */
+.headings {
+  display: flex;
+  justify-content: center;
+}
+
+/* CSS untuk warna kata terakhir dalam h1 */
+.headings h1::last-word {
+  color: #009c95;
+}
+
+/* CSS untuk .card */
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+/* CSS untuk .card_room1 */
+.card_room1 {
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  box-shadow: 0.3s;
+  width: 280px;
+  height: 410px;
+  margin: 30px;
+  border: #ffffff;
+  position: relative;
+}
+
+/* CSS untuk gambar dalam .card_room1 */
+.card_room1 img {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+}
+
+/* CSS hover untuk .card_room1 */
+.card_room1:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+/* CSS untuk .text_room */
+.text_room {
+  position: absolute;
+  top: 300px;
+  left: 10px;
+  color: #5b5b5b;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* CSS untuk .booknow_room */
+.booknow_room {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 5px;
+  background: #ffca0e;
+  color: #ffffff;
+  font-family: inter;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  height: 40px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+#booknow_room:hover {
+  background: #ffd524;
+  color: #ffffff;
+}
+
+/* Media query untuk tampilan seluler (maksimal 600px) */
+@media screen and (max-width: 600px) {
+  /* CSS untuk .nav pada tampilan seluler */
+  .nav {
+    display: none; /* Sembunyikan menu navigasi secara default */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #009c95;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 1;
+  }
+
+  /* CSS untuk tautan dalam .nav pada tampilan seluler */
+  .nav a {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+  }
+
+  /* CSS untuk .burger-container pada tampilan seluler */
+  .burger-container {
+    display: block;
+  }
+
+  /* CSS untuk .text-container pada tampilan seluler */
+  .text-container {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  /* CSS untuk gambar dalam .slider1 pada tampilan seluler */
+  .slider1 img {
+    width: 100%;
+  }
+
+  /* CSS untuk #heading pada tampilan seluler */
+  #heading {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  /* CSS untuk #subheading pada tampilan seluler */
+  #subheading {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  /* CSS untuk #booknow1 pada tampilan seluler */
+  #booknow1 {
+    font-size: 12px;
+    padding: 10px 20px;
+    height: 30px;
+  }
+}
