@@ -1,8 +1,9 @@
 /* CSS untuk .topnav */
 .topnav {
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.97);
-  position: relative;
+  overflow-x: hidden;
+  background-color: #009C95;
+  width: 100%;
+  
 }
 
 /* CSS untuk tautan dalam .topnav */

@@ -1,0 +1,269 @@
+/* Main Facilities Container - 100% width */
+#main-facilities {
+  width: 100%;
+}
+
+/* Text Container - Absolute position at 30% from the top */
+.text-container {
+  position: absolute;
+  top: 30%;
+  text-align: left;
+  z-index: 1;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+}
+
+/* Slide1 Facilities Container - Relative position with z-index -1 */
+.slide1-facilites {
+  position: relative;
+  z-index: -1;
+}
+
+/* Image in Slide - 100% width, 20% height, and 5% top margin */
+.slide1-facilites img {
+  margin-top: 5%;
+  width: 100%;
+  height: 20%;
+}
+
+/* Heading - Font size 30px, Bold */
+#heading {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Subheading - Font size 20px */
+#subheading {
+  font-size: 20px;
+}
+
+/* Our Facilities Section - Center-aligned text */
+.our-facilities {
+  text-align: center;
+}
+
+/* Underline for Our Facilities Title */
+.bottom-footer h5::before {
+  content: " ";
+  display: block;
+  color: #ffffff;
+  height: 2px;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 auto 10px;
+}
+
+/* Text, Image, and Icon Styles for Our Facilities */
+.our-facilities h3,
+.our-facilities p,
+.our-facilities img {
+  text-align: center;
+}
+
+/* Image in Our Facilities - 100% width, border-radius 10px */
+.our-facilities img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Icon Style - Relative position */
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background-color: #fff;
+  width: 200px;
+  height: 70px;
+  margin-bottom: 10px;
+  border: #ffffff;
+  position: relative;
+}
+
+/* Our Facilities Icons Container - Blue background */
+.our-facilities-icons {
+  background-color: #009c95;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  z-index: -1;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+/* Facilities Cards Container - Flex layout with padding */
+.cards-facilities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* Facilities Card - Shadow, fixed width and height */
+.card-facility {
+  margin-bottom: 50px;
+  margin-right: 10px;
+  background-color: #fff;
+  width: 280px;
+  height: 410px;
+  border: #ffffff;
+  position: relative;
+  z-index: -1;
+  margin: auto;
+}
+
+/* Image in Card - 100% width, 60% height, and border-radius 10px */
+.card-facility img {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Title in Card - Absolute position, font 20px, and Bold */
+.card-facility h3 {
+  position: absolute;
+  top: 250px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Text in Card - Absolute position, left-aligned text */
+.card-facility p {
+  position: absolute;
+  top: 290px;
+  text-align: left;
+}
+
+/* Other Facilities Section Title - Center-aligned with underline */
+.other-facilities h2 {
+  text-align: center;
+  border-bottom: 1px solid #e3800a;
+}
+
+/* Media query for small screens (max-width: 770px) */
+@media screen and (max-width: 770px) {
+  /* Text Container Style for Small Screens */
+  .text-container {
+    position: absolute;
+    top: 30%;
+    text-align: left;
+    z-index: 1;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+  }
+
+  /* Slide1 Facilities Style for Small Screens */
+  .slide1-facilites {
+    position: relative;
+    z-index: -1;
+  }
+
+  /* Image in Slide Style for Small Screens */
+  .slide1-facilites img {
+    margin-top: 5%;
+    width: 100%;
+    height: 20%;
+  }
+
+  /* Heading and Subheading Style for Small Screens */
+  #heading {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  #subheading {
+    font-size: 20px;
+  }
+
+  /* Our Facilities and Other Facilities Title Style for Small Screens */
+  .our-facilities h2,
+  .other-facilities h2 {
+    text-align: center;
+    border-bottom: 1px solid #e3800a;
+  }
+
+  /* Text, Image, and Icon Style for Small Screens */
+  .our-facilities h3,
+  .other-facilities h3,
+  .our-facilities p,
+  .other-facilities p,
+  .our-facilities img,
+  .other-facilities img {
+    text-align: center;
+  }
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon img {
+    width: 20px;
+    margin-bottom: 10px;
+  }
+  .icon p {
+    font-size: 14px; 
+    margin: 0; 
+  }
+
+  /* Facilities Cards Style for Small Screens */
+  .cards-facilities {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Facilities Card and Image Style for Small Screens */
+  .card-facility,
+  .other-facility {
+    background-color: #fff;
+    box-shadow: 0.3s;
+    width: 280px;
+    height: 410px;
+    border: #ffffff;
+    position: relative;
+    z-index: -1;
+    margin: auto;
+  }
+
+  .card-facility img,
+  .other-facility img {
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    border-radius: 10px;
+  }
+
+  /* Title and Text Style for Facilities Card on Small Screens */
+  .card-facility h3,
+  .other-facility h3 {
+    position: absolute;
+    top: 250px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .card-facility p,
+  .other-facility p {
+    position: absolute;
+    top: 290px;
+    text-align: left;
+  }
+  .our-facilities-icons {
+    background-color: #009c95;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+}
