@@ -1,5 +1,5 @@
 /* Main Facilities Container - 100% width */
-#main-facilities {
+.main-facilities {
   width: 100%;
 }
 
@@ -98,21 +98,31 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-right: 10px;
-  margin-bottom: 20px;
+  margin: 20px 10px 30px; 
 }
 
 /* Facilities Card - Shadow, fixed width and height */
 .card-facility {
-  margin-bottom: 50px;
-  margin-right: 10px;
+  margin: 50px 10px 0 auto;
   background-color: #fff;
   width: 280px;
   height: 410px;
   border: #ffffff;
   position: relative;
   z-index: -1;
-  margin: auto;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon img {
+  width: 20px;
+  margin-bottom: 10px;
+}
+.icon p {
+  font-size: 14px; 
+  margin: 0; 
 }
 
 /* Image in Card - 100% width, 60% height, and border-radius 10px */

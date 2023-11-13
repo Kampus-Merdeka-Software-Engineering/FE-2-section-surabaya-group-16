@@ -1,5 +1,7 @@
 /* Top Navigation Styles */
 .topnav {
+  z-index: 2;
+  top: 0;
   background-color: #009c95;
   width: 100%;
   display: flex;
@@ -9,11 +11,8 @@
 
 /* Logo Navigation Styles */
 .logo_nav img {
-  margin-top: 50px;
-  height: 45px;
+  height: 40px;
   margin: 15px;
-  align-content: center;
-  justify-content: center;
 }
 
 /* Menu Styles */
@@ -21,12 +20,14 @@
   float: right;
   margin-left: auto;
   text-align: center;
-  margin-top: 2px;
+  margin-top: 20px;
 }
 
 /* List Styles */
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul li {
@@ -34,22 +35,23 @@ ul li {
 }
 
 /* Anchor Styles */
-a {
+.navbar {
   font-family: Inter;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
   padding: 20px;
+  position: relative;
 }
 
-a:hover {
+.navbar:hover {
   color: #ffca0e;
   border-bottom: 1px solid #ffca0e;
 }
 
 /* Button Styles */
-ul li button {
+li button {
   border: none;
   border-radius: 5px;
   background: #ffca0e;
@@ -61,7 +63,9 @@ ul li button {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
-  margin-right: 20px;
+  margin-left: 5px;
+  margin-right: 14px;
+  margin-bottom: 20px;
 }
 
 ul li button:hover {
@@ -73,8 +77,8 @@ ul li button:hover {
 .bottom-footer {
   background-color: #009c95;
   width: 98%;
-  position: relative;
-  z-index: -1;
+  position:  relative;
+  bottom: 0;
   padding: 10px;
 }
 
@@ -87,11 +91,8 @@ ul li button:hover {
 }
 
 .logo-container img {
-  display: block;
   height: 40px;
   margin: 5px auto;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Contact and Follow Footer Styles */
@@ -124,11 +125,10 @@ ul li button:hover {
   padding: 10px;
   background-color: #a0a0a0;
   border-radius: 20px;
-  cursor: pointer;
 }
 
-.contact-footer img:hover,
-.follow-footer img:hover {
+.contact img:hover,
+.follow img:hover {
   background-color: #ffca0e;
   transition: background-color 0.3s ease-in-out;
 }
@@ -219,7 +219,6 @@ ul li button:hover {
 
   /* Menu Styles for Small Screens */
   #menu {
-    z-index: 0;
     min-width: 100%;
     min-height: 100%;
     position: fixed;
@@ -243,19 +242,25 @@ ul li button:hover {
   ul {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
 
-  ul li a {
+  ul li .navbar {
     color: #fff;
     display: block;
     font-size: 16px;
     text-decoration: none;
     text-align: center;
     margin: 0;
-    padding: 10px 20px;
+    padding: 30px 30px;
   }
 
-  li a:hover {
+  li button {
+    margin-top: 20px;
+  }
+
+  li .navbar:hover {
     color: #ffca0e;
     border-bottom: 2px solid #ffca0e;
   }
@@ -267,8 +272,8 @@ ul li button:hover {
   }
 
   /* Contact and Follow Footer Styles for Small Screens */
-  .contact-footer img:hover,
-  .follow-footer img:hover {
+  .contact img:hover,
+  .follow img:hover {
     background-color: #ffca0e;
     transition: background-color 0.3s ease-in-out;
   }
@@ -281,7 +286,7 @@ ul li button:hover {
   }
 
   .logo-container img {
-    height: 30px;
+    height: 40px;
   }
 
   .social-container {
