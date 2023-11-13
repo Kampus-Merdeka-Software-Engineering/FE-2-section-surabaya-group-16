@@ -77,9 +77,10 @@
 }
 
 /* CSS untuk .headings */
-.headings {
+.headings h1 {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  color: #5B5B5B;
 }
 
 /* CSS untuk warna kata terakhir dalam h1 */
@@ -93,6 +94,60 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-right: 10px;
+}
+
+/* CSS untuk about */
+.about_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.about_container .text {
+  width: 100%;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 20px;
+}
+.about_container .right {
+  padding: 30px 0;
+
+}
+.about_container .box {
+  text-align: center;
+  position: relative;
+  margin-top: -40px;
+  margin-bottom: 10px;
+  
+}
+.about_container .box h3 {
+  color: #009c95;
+  font-size: 20px;
+}
+.about_container .box h4 {
+  position: relative;
+  margin-top: -10px;
+  font-size: 15px;
+}
+.about_container img {
+ width: 60%;
+ padding: 10px;
+ margin-right: 10px;
+}
+
+.about_container h1 {
+  position: relative;
+  margin-top: 100px;
+  color: #5B5B5B;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.about_container h2 {
+  color: #009c95;
 }
 
 /* CSS untuk .card_room1 */
@@ -130,6 +185,35 @@
   color: #5b5b5b;
   font-size: 20px;
   font-weight: bold;
+}
+
+/* CSS info fasilitas room */
+.text_room .room_fasilities {
+  display: flex;
+  position: relative;
+  top: -20px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 10px;
+  font-size: 10px;
+}
+
+.text_room .room_fasilities p {
+  margin: 0;
+  padding: 5px;
+}
+ 
+/* CSS rating bintang */
+.rate {
+  position: relative;
+  top: -20px;
+  font-size: small;
+}
+
+.text_room h2 {
+  font-size: 24px;
+  position: relative;
+  margin-top:-40px ;
 }
 
 /* CSS untuk .booknow_room */
@@ -214,3 +298,25 @@
     height: 30px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* import eksternal font Inter */
+ @font-face {
+  font-family:'Inter', sans-serif;
+  src: url('font/Inter-Regular.ttf');
+}
+  body {
+    font-family:'Inter', sans-serif;
+  }
+

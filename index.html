@@ -7,6 +7,8 @@
     <!-- Menghubungkan file stylesheet eksternal untuk halaman utama -->
     <link rel="stylesheet" href="css/navbar-foot.css">
     <link rel="stylesheet" href="css/home.css" />
+        <!-- Menghubungkan ke fontawesome untuk penggunaan icon -->
+        <script src="https://kit.fontawesome.com/65b6cd36b7.js" crossorigin="anonymous"></script>
     <!-- Judul halaman web -->
     <title>Something Island Resort</title>
   </head>
@@ -33,19 +35,10 @@
           </ul>
         </div>
       </div>
-      <section id="facilities1">
-        <div class="slide1-facilites">
-            <img src="images/restaurant.png" alt="">
-            <div class="text-container">
-              <h1 id="heading">Sunshine i-land Resort</h1>
-              <p id="subheading">Enjoy your holiday with us!</p>
-            </div>
-          </div>
-        </div>
       <!-- Home section -->
       <section id="home1">
         <div class="slider1">
-          <img src="images\hotel-1330834_1280.jpg" />
+          <img src="images\mainpic_home.jpg" />
           <div class="text-container">
             <p id="heading">Something island resort</p>
             <p id="subheading">Enjoy your holiday with us!</p>
@@ -53,30 +46,50 @@
           </div>
         </div>
       </section>
-      <!-- About Us section -->
-      <section id="about1">
-        <div class="headings">
-          <h1>About Us</h1>
-        </div>
-        <div class="card">
-          <div class="card_about">
-            <!-- Gambar-gambar yang menjelaskan "About Us" -->
-            <img src="images\popular1.png" alt="" />
-            <img src="images\popular1.png" alt="" />
-            <img src="images\popular1.png" alt="" />
+     <!-- About Us section -->
+     <section id="about" class="about">
+      <div class="about_container">
+        <!-- Gambar-gambar yang menjelaskan "About Us" -->
+        <img src="images/mainpic_about.png" class="about_gambar1" alt="" />
+        <div class="text">
+          <h1>About</h1>
+          <h2>BECOME AN ESTIMATE OF YOUR AND YOUR FAMILY'S VACATION DREAMS</h2> <br>
+          <p>place where you and your family will enjoy pristine nature and
+          all have a great time in a distinguished and luxurious setting.</p>  
+        <div class="content flex_space">
+          <div class="right grid2">
+            <div class="box">
+              <div class="text">
+                <h3>25</h3>
+                <h4>Rooms</h4>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="text">
+                <h3>2</h3>
+                <h4>Bars</h4>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="text">
+                <h3>2</h3>
+                <h4>Restaurant</h4>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="text">
+                <h3>1</h3>
+                <h4>GYM</h4>
+              </div>
+            </div>
           </div>
-          <div>
-            <h4>
-              BECOME AN ESTIMATE OF YOUR AND YOUR FAMILY'S VACATION DREAMS
-            </h4>
-            <p>
-              A place where you and your family will enjoy pristine nature and
-              all have a great time in a distinguished and luxurious setting.
-            </p>
-          </div>
         </div>
-        <div></div>
-      </section>
+      </div>
+    </div>
+    </section>
       <!-- Popular Rooms section -->
       <section id="popular_rooms1">
         <div class="headings">
@@ -85,37 +98,80 @@
         <div class="card">
           <div class="card_room1">
             <!-- Gambar dan tombol "Book Now" untuk kamar Deluxe -->
-            <img src="images\popular1.png" alt="" />
+            <img src="images\popularroom_1.jpg" alt="" />
             <div class="text_room">
-              <p>Deluxe</p>
+              <h2>Junior</h2>
+              <div class="room_fasilities">
+                <i class="fas fa-bed"></i>
+                  <p>2 bed</p>
+                <i class="fas fa-cocktail"></i>
+                  <p>mini bar</p>
+                <i class="fa fa-wifi"></i>
+                  <p>internet</p>
+              </div>
+              <div class="rate">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
             </div>
             <button class="booknow_room">Book Now</button>
           </div>
           <div>
             <!-- Informasi kamar lainnya -->
             <div class="card_room1">
-              <img src="images\popular1.png" alt="" />
+              <img src="images\popularroom_2.jpg" alt="" />
               <div class="text_room">
-                <p>Deluxe</p>
+               <h2>Deluxe</h2>
+                <div class="room_fasilities">
+                  <i class="fas fa-bed"></i>
+                    <p>2 bed</p>
+                  <i class="fas fa-cocktail"></i>
+                    <p>mini bar</p>
+                  <i class="fa fa-wifi"></i>
+                    <p>internet</p>
+                </div>
+                <div class="rate">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  </div>
+                </div>
+                <button class="booknow_room">Book Now</button>
               </div>
-              <button class="booknow_room">Book Now</button>
             </div>
-          </div>
           <div>
             <div class="card_room1">
-              <img src="images\popular1.png" alt="" />
+              <img src="images\popularroom_3.jpg" alt="" />
               <div class="text_room">
-                <p>Deluxe</p>
+                <h2>Super Deluxe</h2>
+                <div class="room_fasilities">
+                  <i class="fas fa-bed"></i>
+                    <p>2 bed</p>
+                  <i class="fas fa-cocktail"></i>
+                    <p>mini bar</p>
+                  <i class="fa fa-wifi"></i>
+                    <p>internet</p>
+                </div>
+                <div class="rate">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <button class="booknow_room">Book Now</button>
+            </div>
+            <div>
               </div>
               <button class="booknow_room">Book Now</button>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Facilities section (belum ada konten) -->
-      <section id="facilities1">
-        <div class="headings">
-          <h1>Our Fasilities</h1>
         </div>
       </section>
       <!-- Customers Say section (belum ada konten) -->
