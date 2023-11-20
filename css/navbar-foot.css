@@ -2,13 +2,20 @@
 .topnav {
   z-index: 2;
   top: 0;
+  left: 0;
   background-color: #009c95;
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
+  transition: background-color 0.3s;
+  font-family:'Inter', sans-serif;
 }
 
+.topnav.scrolled {
+  background-color: #017b7b;
+}
 /* Logo Navigation Styles */
 .logo_nav img {
   height: 40px;
@@ -35,7 +42,7 @@ ul li {
 }
 
 /* Anchor Styles */
-.navbar {
+.navbar-item {
   font-family: Inter;
   font-size: 16px;
   font-weight: bold;
@@ -43,11 +50,15 @@ ul li {
   text-decoration: none;
   padding: 20px;
   position: relative;
+  transition: color 0.3s;
 }
 
-.navbar:hover {
+.navbar-item:hover {
   color: #ffca0e;
-  border-bottom: 1px solid #ffca0e;
+}
+.navbar-item.active {
+  color: #ffca0e;
+  border-bottom: 2px solid #ffca0e;
 }
 
 /* Button Styles */
@@ -76,10 +87,10 @@ ul li button:hover {
 /* Bottom Footer Styles */
 .bottom-footer {
   background-color: #009c95;
-  width: 98%;
-  position:  relative;
-  bottom: 0;
-  padding: 10px;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  right: 0;
 }
 
 /* Logo and Social Styles */
@@ -89,16 +100,18 @@ ul li button:hover {
   justify-content: space-around;
   align-items: center;
 }
-
+.logo-container {
+  display: block;
+}
 .logo-container img {
   height: 40px;
-  margin: 5px auto;
+  padding: 20px;
 }
-
-/* Contact and Follow Footer Styles */
-.contact-footer,
-.follow-footer {
-  margin: 20px 0;
+.logo-container p {
+  color: #fff;
+  font-weight: bold;
+  margin: 20px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -111,9 +124,16 @@ ul li button:hover {
   justify-content: center;
   margin: 0 auto;
 }
+/* Contact and Follow Footer Styles */
+.contact-footer,
+.follow-footer {
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
 .contact-footer h4,
 .follow-footer h4 {
+  text-align: center;
   margin: 0;
   color: #fff;
 }
@@ -123,8 +143,12 @@ ul li button:hover {
   width: 14px;
   margin: 10px;
   padding: 10px;
-  background-color: #a0a0a0;
-  border-radius: 20px;
+  background-color: #767474;
+  border-radius: 15px;
+}
+.contact-img,
+.follow-img {
+  display: flex;
 }
 
 .contact img:hover,
@@ -147,11 +171,15 @@ ul li button:hover {
   height: 2px;
   width: 100%;
   background-color: #ffffff;
-  margin: 0 auto 10px;
+  margin: 0 auto 20px;
 }
 
 /* Media Query for Small Screens */
 @media screen and (max-width: 770px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
   /* Burger Menu Styles */
   #burger-menu {
     cursor: pointer;
@@ -210,7 +238,7 @@ ul li button:hover {
   }
 
   #burger-menu.close span:after {
-    top: 0px;
+    top: 0;
     left: 0;
     transform: rotate(90deg);
     opacity: 0;
@@ -233,8 +261,8 @@ ul li button:hover {
 
   #menu.overlay {
     visibility: visible;
-    opacity: 2;
-    padding-top: 50px;
+    opacity: 3;
+    padding-top: 80px;
     background: rgba(0, 0, 0, 0.87);
   }
 
@@ -246,7 +274,7 @@ ul li button:hover {
     padding: 0;
   }
 
-  ul li .navbar {
+  ul li .navbar-item {
     color: #fff;
     display: block;
     font-size: 16px;
@@ -260,17 +288,23 @@ ul li button:hover {
     margin-top: 20px;
   }
 
-  li .navbar:hover {
+  li .navbar-item:hover {
+    color: #ffca0e;
+  }
+  .navbar-item.active {
     color: #ffca0e;
     border-bottom: 2px solid #ffca0e;
   }
-
-  /* Bottom Footer Styles for Small Screens */
-  .bottom-footer {
-    width: 98%;
-    padding: 10px;
+  .contact-footer,
+  .follow-footer
+  {
+    padding-top: 20px;
   }
+  .contact-img,
+  .follow-img {
 
+    display: block;
+  }
   /* Contact and Follow Footer Styles for Small Screens */
   .contact img:hover,
   .follow img:hover {
@@ -293,3 +327,5 @@ ul li button:hover {
     width: 100px;
   }
 }
+
+
