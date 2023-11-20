@@ -19,7 +19,7 @@
   text-align: justify;
   z-index: 1;
   color: #ffffff; /* Warna teks */
-  background: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
+  background: rgba(203, 202, 202, 0.6); /* Latar belakang transparan */
   padding: 20px;
   border-radius: 10px;
   margin: 20px;
@@ -79,8 +79,8 @@
 /* CSS untuk .headings */
 .headings h1 {
   display: flex;
-  justify-content: left;
-  color: #5B5B5B;
+  justify-content: center;
+  color: #555555;
 }
 
 /* CSS untuk warna kata terakhir dalam h1 */
@@ -90,6 +90,7 @@
 
 /* CSS untuk .card */
 .card {
+  padding: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -208,6 +209,7 @@
   position: relative;
   top: -20px;
   font-size: small;
+  color: #ffca0e;
 }
 
 .text_room h2 {
@@ -215,7 +217,29 @@
   position: relative;
   margin-top:-40px ;
 }
+.card_fasilities {
+  position: relative;
+  flex: 0 0 auto; 
+  width: 25%; 
+}
 
+.card_fasilities img {
+  width: 100%;
+  height: auto;
+}
+
+.card_fasilities p {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'cursive';
+  color: white;
+  font-weight: bold;
+  font-size: 27px;
+  text-align: center;
+}
+  
 /* CSS untuk .booknow_room */
 .booknow_room {
   position: absolute;
@@ -241,11 +265,56 @@
   color: #ffffff;
 }
 
+/* CSS Clients */
+#customers_say {
+  padding: 100px;
+  background-color: rgb(238, 238, 238);
+}
+.card_grid {
+  margin-top: 4 rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 2rem;
+  
+}
+.client_card {
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.client_card img {
+  display: block;
+  margin: auto;
+  padding: auto;
+  max-width: 80px;
+  margin: auto;
+  margin-bottom: 1rem;
+  border-radius: 100%;
+}
+.client_card h2, .client_card p {
+  text-align: center;
+  color: #5B5B5B;
+}
+#customers_say .headings p {
+  text-align: center;
+  color: #009c95;
+}
+
+.card_grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.client_card {
+  flex: 1 0 150px; 
+}
+
 /* Media query untuk tampilan seluler (maksimal 600px) */
 @media screen and (max-width: 600px) {
   /* CSS untuk .nav pada tampilan seluler */
   .nav {
-    display: none; /* Sembunyikan menu navigasi secara default */
+    display: none; 
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -297,6 +366,20 @@
     padding: 10px 20px;
     height: 30px;
   }
+
+  /* CSS untuk Fasilities di tampilan seluler */
+  .card_fasilities {
+    width: 50%;
+  }
+
+  /* CSS untuk our cutomer say tampilan seluler*/
+  .card_grid {
+    flex-direction: column;
+  }
+
+  .client_card {
+    flex: 1 0 auto;
+  }
 }
 
 
@@ -315,8 +398,18 @@
  @font-face {
   font-family:'Inter', sans-serif;
   src: url('font/Inter-Regular.ttf');
-}
+ }
+
+ @font-face {
+  font-family: 'KaushanScript-Regular', cursive;
+  src: url('font/KaushanScript-Regular.ttf') format('truetype');
+ }
+
+
   body {
     font-family:'Inter', sans-serif;
   }
 
+  .card_fasilities p {
+    font-family: 'Kaushan Script', cursive;
+  }

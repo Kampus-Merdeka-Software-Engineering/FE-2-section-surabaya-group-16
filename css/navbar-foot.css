@@ -10,6 +10,7 @@
   align-items: center;
   position: fixed;
   transition: background-color 0.3s;
+  font-family:'Inter', sans-serif;
 }
 
 .topnav.scrolled {
@@ -326,3 +327,5 @@ ul li button:hover {
     width: 100px;
   }
 }
+
+
