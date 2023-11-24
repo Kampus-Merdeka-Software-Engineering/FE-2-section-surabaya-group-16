@@ -1,55 +1,68 @@
-/* CSS untuk .main-container */
-.main-container {
-  width: 100%;
+/* External font import for Inter */
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("font/Inter-Regular.ttf");
 }
 
-/* CSS untuk #navbar-container */
-#navbar-container {
-  position: fixed;
-  width: 100%;
-  z-index: 2;
+/* External font import for Kaushan Script */
+@font-face {
+  font-family: "KaushanScript-Regular", cursive;
+  src: url("font/KaushanScript-Regular.ttf") format("truetype");
 }
 
-/* CSS untuk .text-container */
+/* Set the default font family for the body */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Styling for the text container */
 .text-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-120%, -50%);
-  text-align: justify;
+  transform: translate(-50%, -50%);
+  text-align: center;
   z-index: 1;
-  color: #ffffff; /* Warna teks */
-  background: rgba(203, 202, 202, 0.6); /* Latar belakang transparan */
+  color: #f1ebeb; /* Text color */
   padding: 20px;
-  border-radius: 10px;
-  margin: 20px;
   overflow: auto;
+  display: flex;
+  border-radius: 10px ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-/* CSS untuk .slider1 */
+/* Styling for slider container */
 .slider1 {
   position: relative;
 }
 
-/* CSS untuk gambar dalam .slider1 */
+/* Styling for images within the slider */
 .slider1 img {
+  margin-top: 20px;
   width: 100%;
+  height: 100%;
+  display: block;
 }
 
-/* CSS untuk #heading */
+/* Styling for heading (#heading) */
 #heading {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-/* CSS untuk #subheading */
+/* Styling for subheading (#subheading) */
 #subheading {
-  font-size: 20px;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* CSS untuk #booknow1 */
+/* Styling for the book now button (#booknow1) */
 #booknow1 {
-  float: left;
   border: none;
   border-radius: 5px;
   background: #ffca0e;
@@ -61,9 +74,9 @@
   padding: 10px 20px;
   height: 40px;
   cursor: pointer;
+  transition: background 0.3s, color 0.3s;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s, color 0.3s;
 }
 
 #booknow1:hover {
@@ -71,87 +84,87 @@
   color: #ffffff;
 }
 
-/* CSS untuk #popular_rooms */
+/* Styling for popular rooms section (#popular_rooms) */
 #popular_rooms {
   margin: 10px;
 }
 
-/* CSS untuk .headings */
+/* Styling for headings within .headings */
 .headings h1 {
+  margin-top: 50px;
+  margin-bottom: 20px;
   display: flex;
+  text-align: center;
   justify-content: center;
   color: #555555;
 }
 
-/* CSS untuk warna kata terakhir dalam h1 */
+/* Styling for the last word in h1 within .headings */
 .headings h1::last-word {
   color: #009c95;
 }
 
-/* CSS untuk .card */
+/* Styling for cards container (.card) */
 .card {
   padding: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 20px;
   margin-right: 10px;
 }
 
-/* CSS untuk about */
-.about_container{
+/* Styling for about section (.about-content) */
+.about-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-}
-.about_container .text {
-  width: 100%;
+  align-items: center;
 }
 
+/* Styling for grid layout in about section (.grid2) */
 .grid2 {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
-.about_container .right {
-  padding: 30px 0;
 
-}
-.about_container .box {
+/* Styling for individual boxes within .about-content (.box) */
+.about-content .box {
   text-align: center;
   position: relative;
-  margin-top: -40px;
-  margin-bottom: 10px;
-  
+  margin: 10px;
 }
-.about_container .box h3 {
+
+/* Styling for heading and subheading in .box */
+.about-content .box h3 {
   color: #009c95;
   font-size: 20px;
 }
-.about_container .box h4 {
+
+.about-content .box h4 {
   position: relative;
   margin-top: -10px;
   font-size: 15px;
 }
-.about_container img {
- width: 60%;
- padding: 10px;
- margin-right: 10px;
+
+/* Styling for images in .about-content */
+.about-content img {
+  width: 40%;
+  margin: 20px;
 }
 
-.about_container h1 {
-  position: relative;
-  margin-top: 100px;
-  color: #5B5B5B;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: normal;
+/* Styling for heading and paragraphs in .about-content */
+.about-content h2, p {
+  margin: 20px;
+  text-align: justify;
 }
 
-.about_container h2 {
+/* Styling for heading color in .about-content */
+.about-content h2 {
   color: #009c95;
 }
 
-/* CSS untuk .card_room1 */
+/* Styling for individual room cards (.card_room1) */
 .card_room1 {
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -164,21 +177,22 @@
   position: relative;
 }
 
-/* CSS untuk gambar dalam .card_room1 */
+/* Styling for images within .card_room1 */
 .card_room1 img {
   width: 100%;
   height: 60%;
   position: absolute;
+  border-radius: 10px;
 }
 
-/* CSS hover untuk .card_room1 */
+/* Hover effect for .card_room1 */
 .card_room1:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
   cursor: pointer;
 }
 
-/* CSS untuk .text_room */
+/* Styling for room details text (.text_room) */
 .text_room {
   position: absolute;
   top: 300px;
@@ -188,7 +202,7 @@
   font-weight: bold;
 }
 
-/* CSS info fasilitas room */
+/* Styling for room facilities information (.room_fasilities) */
 .text_room .room_fasilities {
   display: flex;
   position: relative;
@@ -203,8 +217,8 @@
   margin: 0;
   padding: 5px;
 }
- 
-/* CSS rating bintang */
+
+/* Styling for star rating (.rate) */
 .rate {
   position: relative;
   top: -20px;
@@ -215,33 +229,18 @@
 .text_room h2 {
   font-size: 24px;
   position: relative;
-  margin-top:-40px ;
+  margin-top: -40px;
 }
-.card_fasilities {
-  position: relative;
-  flex: 0 0 auto; 
-  width: 25%; 
-}
-
-.card_fasilities img {
-  width: 100%;
-  height: auto;
-}
-
-.card_fasilities p {
+.harga{
   position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'cursive';
-  color: white;
+  bottom: 10px;
+  left: 0;
+  font-size: 16px;
+  color: #009c95;
   font-weight: bold;
-  font-size: 27px;
-  text-align: center;
 }
-  
-/* CSS untuk .booknow_room */
-.booknow_room {
+/* Styling for "View Room" button (.view-room) */
+.view-room {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -260,29 +259,34 @@
   transition: background 0.3s, color 0.3s;
 }
 
-#booknow_room:hover {
+.view-room:hover {
   background: #ffd524;
   color: #ffffff;
 }
 
-/* CSS Clients */
+/* Styling for client testimonials section (#customers_say) */
 #customers_say {
+  margin-top: 40px;
   padding: 100px;
   background-color: rgb(238, 238, 238);
 }
+
+/* Styling for grid layout in client testimonials (.card_grid) */
 .card_grid {
-  margin-top: 4 rem;
+  margin-top: 4rem;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
-  
 }
+
+/* Styling for individual client cards (.client_card) */
 .client_card {
   padding: 2rem;
   background-color: var(--white);
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
+
 .client_card img {
   display: block;
   margin: auto;
@@ -292,124 +296,141 @@
   margin-bottom: 1rem;
   border-radius: 100%;
 }
-.client_card h2, .client_card p {
+
+.client_card h2,
+.client_card p {
   text-align: center;
-  color: #5B5B5B;
+  color: #5b5b5b;
 }
+
+/* Styling for headings in customer testimonials (#customers_say .headings p) */
 #customers_say .headings p {
   text-align: center;
   color: #009c95;
 }
 
-.card_grid {
+/* Styling for card facilities section (.card-facilities) */
+.card-facilities {
+  margin-top: 30px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.client_card {
-  flex: 1 0 150px; 
+/* Styling for individual facility cards (.facility) */
+.facility {
+  width: 100%; /* Adjust the width as needed */
+  margin: 10px; /* Add margin between cards */
+  position: relative;
+  border-radius: 10px;
+  transition: transform 300ms ease-out;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Media query untuk tampilan seluler (maksimal 600px) */
-@media screen and (max-width: 600px) {
-  /* CSS untuk .nav pada tampilan seluler */
-  .nav {
-    display: none; 
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: #009c95;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    z-index: 1;
-  }
+/* Styling for images within facility cards (.facility img) */
+.facility img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
 
-  /* CSS untuk tautan dalam .nav pada tampilan seluler */
-  .nav a {
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-  }
+.card-facilities .facility.active {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjust the scale as needed */
 
-  /* CSS untuk .burger-container pada tampilan seluler */
-  .burger-container {
-    display: block;
-  }
+}
 
-  /* CSS untuk .text-container pada tampilan seluler */
-  .text-container {
-    font-size: 12px;
-    padding: 10px;
-  }
+.card-facilities .btn{
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  color: #00c2d8;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+/* Styling for navigation button (.btn) */
+.card-facilities .btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
 
-  /* CSS untuk gambar dalam .slider1 pada tampilan seluler */
+.btn-prev {
+  left: 20%;
+  top: 50%;
+}
+
+.btn-next {
+  right: 20%;
+  top: 50%;
+}
+
+.btn-prev img,
+.btn-next img {
+  height: 20px;
+  margin: 0 5px;
+}
+
+/* Media query for mobile view (maximum width 770px) */
+@media screen and (max-width: 770px) {
+
+  /* Styling for images in slider1 for mobile view (.slider1 img) */
   .slider1 img {
     width: 100%;
   }
 
-  /* CSS untuk #heading pada tampilan seluler */
+  /* Styling for heading in mobile view (#heading) */
   #heading {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
   }
 
-  /* CSS untuk #subheading pada tampilan seluler */
+  /* Styling for subheading in mobile view (#subheading) */
   #subheading {
-    font-size: 12px;
-    margin-top: 5px;
+    font-size: 20px;
   }
 
-  /* CSS untuk #booknow1 pada tampilan seluler */
+  /* Styling for book now button in mobile view (#booknow1) */
   #booknow1 {
     font-size: 12px;
     padding: 10px 20px;
     height: 30px;
   }
 
-  /* CSS untuk Fasilities di tampilan seluler */
-  .card_fasilities {
-    width: 50%;
-  }
+  /* Styling for card facilities section (.card-facilities) */
 
-  /* CSS untuk our cutomer say tampilan seluler*/
+  /* Display customer testimonials in a block in mobile view (.card_grid) */
   .card_grid {
-    flex-direction: column;
+    display: block;
   }
 
+  /* Adjust client card styles for mobile view (.client_card) */
   .client_card {
     flex: 1 0 auto;
   }
+
+  /* Adjust about content styles for mobile view (.about-content) */
+  .about-content {
+    display: block;
+  }
+
+  /* Adjust image size within about content for mobile view (.about-content img) */
+  .about-content img {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  /* Justify text within about content for mobile view (.about-content h2, p) */
+  .about-content h2, p {
+    text-align: justify;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
- /* import eksternal font Inter */
- @font-face {
-  font-family:'Inter', sans-serif;
-  src: url('font/Inter-Regular.ttf');
- }
-
- @font-face {
-  font-family: 'KaushanScript-Regular', cursive;
-  src: url('font/KaushanScript-Regular.ttf') format('truetype');
- }
-
-
-  body {
-    font-family:'Inter', sans-serif;
-  }
-
-  .card_fasilities p {
-    font-family: 'Kaushan Script', cursive;
-  }
