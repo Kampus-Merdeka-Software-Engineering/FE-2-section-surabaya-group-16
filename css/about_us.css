@@ -119,17 +119,17 @@ h2 {
   text-align: center; 
 }
 
-.follow-img  a {
-  scale: 10%;
-  margin-top: 100px;
+.social-media-member a {
+  scale: 13%;
+  margin-top: 340px;
   margin-left: 15px;
   
 }
-.follow-img b {
-  scale: 10%;
-  margin-top: 100px;
+.social-media-member b {
+  scale: 13%;
   margin-left: 30px;
-  filter: grayscale();
+  margin-top: 340px;
+}
 }
 /* Styling for heading text in visi-misi */
  .headings h1 {
