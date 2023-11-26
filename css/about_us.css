@@ -38,13 +38,16 @@
 /* Styling for images in .about-content */
 .about-content img {
   width: 40%;
-  margin: 20px;
+  margin-top: 72px;
 }
 
-/* Styling for heading and paragraphs in .about-content */
+/* Styling for heading and paragraphs in .about-content (visi, misi, and arround) */
 .about-content h2, p {
   margin: 20px;
-  text-align: justify;
+  text-align: center;
+}
+.text-about {
+  text-align: center;
 }
 
 /* Styling for heading color in .about-content */
@@ -123,18 +126,19 @@ h2 {
   scale: 13%;
   margin-top: 340px;
   margin-left: 15px;
+  filter: sepia();
   
 }
 .social-media-member b {
   scale: 13%;
   margin-left: 30px;
   margin-top: 340px;
+  filter: sepia();
 }
-}
-/* Styling for heading text in visi-misi */
- .headings h1 {
+
+/* Extra styling for heading text in .about-content */
+.text-about h2 {
   text-align: center;
-}
- .center-text {
-  text-align: center;
+  margin-top: 100px;
+  color: #000000;
 }
