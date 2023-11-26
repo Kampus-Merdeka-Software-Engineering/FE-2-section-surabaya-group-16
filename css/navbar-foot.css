@@ -1,4 +1,7 @@
 /* Top Navigation Styles */
+#nav{
+  margin-bottom: 80px;
+}
 .topnav {
   z-index: 2;
   top: 0;
@@ -17,7 +20,7 @@
   background-color: #017b7b;
 }
 /* Logo Navigation Styles */
-.logo_nav img {
+.logo-nav img {
   height: 40px;
   margin: 15px;
 }
@@ -28,6 +31,9 @@
   margin-left: auto;
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* List Styles */
@@ -42,13 +48,13 @@ ul li {
 }
 
 /* Anchor Styles */
-.navbar-item {
+li .navbar-item {
   font-family: Inter;
   font-size: 16px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
-  padding: 20px;
+  padding: 10px 20px;
   position: relative;
   transition: color 0.3s;
 }
@@ -74,7 +80,6 @@ li button {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
-  margin-left: 5px;
   margin-right: 14px;
   margin-bottom: 20px;
 }
@@ -88,7 +93,6 @@ ul li button:hover {
 .bottom-footer {
   background-color: #009c95;
   width: 100%;
-  height: auto;
   position: absolute;
   right: 0;
 }
@@ -160,7 +164,6 @@ ul li button:hover {
 /* Additional Footer Styles */
 .bottom-footer h5 {
   text-align: center;
-  margin: 10px 0;
   color: #ffffff;
 }
 
@@ -176,6 +179,9 @@ ul li button:hover {
 
 /* Media Query for Small Screens */
 @media screen and (max-width: 770px) {
+  #nav{
+    margin-bottom: 73px;
+  }
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -249,20 +255,18 @@ ul li button:hover {
   #menu {
     min-width: 100%;
     min-height: 100%;
+    right: 0;
     position: fixed;
-    top: 0;
-    height: 0;
     visibility: hidden;
     opacity: 0;
     text-align: center;
-    padding-top: 30px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3ms ease-in;
   }
 
   #menu.overlay {
     visibility: visible;
     opacity: 3;
-    padding-top: 80px;
+    top: 8%;
     background: rgba(0, 0, 0, 0.87);
   }
 
@@ -270,8 +274,6 @@ ul li button:hover {
   ul {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
   }
 
   ul li .navbar-item {
@@ -280,12 +282,11 @@ ul li button:hover {
     font-size: 16px;
     text-decoration: none;
     text-align: center;
-    margin: 0;
-    padding: 30px 30px;
+    padding: 30px;
   }
 
   li button {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   li .navbar-item:hover {
@@ -328,4 +329,17 @@ ul li button:hover {
   }
 }
 
-
+@media screen and (max-width: 330px){
+  #nav{
+    margin-bottom: 63px;
+  }
+  .logo-nav img{
+    height: 30px;
+  }
+  #menu.overlay {
+    visibility: visible;
+    opacity: 3;
+    top: 6%;
+    background: rgba(0, 0, 0, 0.87);
+  }
+}

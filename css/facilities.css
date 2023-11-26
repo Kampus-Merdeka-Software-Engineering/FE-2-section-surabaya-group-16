@@ -2,6 +2,11 @@
 .main-facilities {
   width: 100%;
 }
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
 #facilities1,
 #facilities2,
 #facilities3 {
@@ -12,14 +17,16 @@
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-120%, -50%);
+  width: 80%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   color: #ffffff; /* Warna teks */
-  background: rgba(0, 0, 0, 0.7); /* Latar belakang transparan */
+  background: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
   padding: 20px;
-  border-radius: 10px;
-  margin: 60px;
+  border-radius: 20px;
+  margin: 10px;
   overflow: auto;
+  justify-content: center;
 }
 /* Slide1 Facilities Container - Relative position with z-index -1 */
 .slide1-facilities {
@@ -104,7 +111,7 @@
 }
 
 /* Facilities Cards Container - Flex layout with padding */
-.cards-facilities {
+.card-facilities {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -167,27 +174,8 @@
 }
 
 /* Media query for small screens (max-width: 770px) */
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 800px) {
   /* Text Container Style for Small Screens */
-  /* CSS untuk .text-container */
-  .text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-120%, -50%);
-    text-align: justify;
-    z-index: 1;
-    color: #ffffff; /* Warna teks */
-    background: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-    overflow: auto;
-  }
-  .slide1-facilities img {
-    width: 100%;
-    height: 50%;
-  }
 
   /* Heading and Subheading Style for Small Screens */
   #heading {
@@ -278,5 +266,33 @@
     align-items: center;
     justify-content: space-around;
     padding: 20px 0;
+  }
+}
+
+@media screen and (max-width:300px){
+  .text-container {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #ffffff; /* Warna teks */
+    background: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: auto;
+    justify-content: center;
+  }
+  #heading {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: inter;
+  }
+
+  #subheading {
+    font-size: 8px;
+    font-family: inter;
   }
 }

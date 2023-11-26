@@ -9,36 +9,40 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="topnav">
-        <!-- Baris navigasi atas dimulai di sini -->
-        <div class="logo_nav">
-          <img src="images\sunshine_white.png" alt="" />
+      <section id="nav">
+        <div class="topnav">
+          <!-- Top navigation bar starts here -->
+          <div class="logo-nav">
+            <img src="images\sunshine_white.png" alt="" />
+          </div>
+          <div id="burger-menu">
+            <span></span>
+          </div>
+          <div id="menu">
+            <ul>
+              <!-- Navigation menu items -->
+              <li>
+                <a href="index.html" class="navbar-item" id="home">Home</a>
+              </li>
+              <li>
+                <a href="about_us.html" class="navbar-item" id="about"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="facilities.html" class="navbar-item" id="facilities"
+                  >Facilities</a
+                >
+              </li>
+              <li>
+                <a href="rooms.html" class="navbar-item" id="Rooms">Rooms</a>
+              </li>
+              <!-- "Book Now" button -->
+              <li><button id="bookNow">Book Now</button></li>
+            </ul>
+          </div>
         </div>
-        <div id="burger-menu">
-          <span></span>
-        </div>
-        <div id="menu">
-          <ul>
-            <!-- Navigasi menu item -->
-            <li><a href="index.html" class="navbar-item" id="home">Home</a></li>
-            <li>
-              <a href="about_us.html" class="navbar-item" id="about"
-                >About Us</a
-              >
-            </li>
-            <li>
-              <a href="facilities.html" class="navbar-item" id="facilities"
-                >Facilities</a
-              >
-            </li>
-            <li>
-              <a href="rooms.html" class="navbar-item" id="Rooms">Rooms</a>
-            </li>
-            <!-- Tombol "Book Now" -->
-            <li><button>Book Now</button></li>
-          </ul>
-        </div>
-      </div>
+      </section>
       <section id="filter-section">
         <img src="images/mainpic_rooms.jpg" alt="">
         <div id="filter-form">
@@ -65,235 +69,358 @@
           <h1>Junior Room</h1>
         </div>
         <div class="card">
-          <div class="card_room1">
-            <!-- Gambar dan tombol "Book Now" untuk kamar Deluxe -->
-            <img src="images\popularroom_1.jpg" alt="" />
-            <div class="text_room">
-              <h2>Junior</h2>
-              <div class="room_fasilities">
-                <i class="fas fa-bed"></i>
-                  <p>2 bed</p>
-                <i class="fas fa-cocktail"></i>
-                  <p>mini bar</p>
-                <i class="fa fa-wifi"></i>
-                  <p>internet</p>
+          <div class="card-room1">
+            <img src="images\popularroom_3.jpg" alt="" />
+            <div class="room-container">
+              <div class="discount">
+                <p>Discount 15%</p>
               </div>
-          </div>
-          <div>
-            <p class="harga"> Rp. 100.000</p>
-        </div>
+            </div>
+            <div class="text-room">
+              <h2>Super Deluxe</h2>
+            </div>
+            <div class="available">
+              <p>Available : 3</p>
+            </div>
+            <div class="room-facilities">
+              <div class="item">
+                <img src="images/bed.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/minibar.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/wifi.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/bath.png" alt="" />
+                <p>2</p>
+              </div>
+            </div>
+            <div>
+              <p class="price">Rp. 100.000</p>
+            </div>
             <button class="view-room">View Room</button>
           </div>
-          <div>
-            <!-- Informasi kamar lainnya -->
-            <div class="card_room1">
-              <img src="images\popularroom_2.jpg" alt="" />
-              <div class="text_room">
-               <h2>Deluxe</h2>
-                <div class="room_fasilities">
-                  <i class="fas fa-bed"></i>
-                    <p>2 bed</p>
-                  <i class="fas fa-cocktail"></i>
-                    <p>mini bar</p>
-                  <i class="fa fa-wifi"></i>
-                    <p>internet</p>
-                </div>
-                </div>
-                <div>
-                  <p class="harga"> Rp. 100.000</p>
+          <!-- Other room information -->
+          <div class="card-room1">
+            <img src="images\popularroom_2.jpg" alt="" />
+              <div class="discount">
+                <p>Discount 20%</p>
               </div>
-                <button class="view-room">View Room</button>
+            <div class="text-room">
+              <h2>Deluxe</h2>
+            </div>
+            <div class="available">
+              <p>Available : 3</p>
+            </div>
+            <div class="room-facilities">
+              <div class="item">
+                <img src="images/bed.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/bath.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/wifi.png" alt="" />
+                <p>2</p>
               </div>
             </div>
-          <div>
-            <div class="card_room1">
-              <img src="images\popularroom_3.jpg" alt="" />
-              <div class="text_room">
-                <h2>Super Deluxe</h2>
-                <div class="room_fasilities">
-                  <i class="fas fa-bed"></i>
-                    <p>2 bed</p>
-                  <i class="fas fa-cocktail"></i>
-                    <p>mini bar</p>
-                  <i class="fa fa-wifi"></i>
-                    <p>internet</p>
-                </div>
+            <div>
+              <p class="price">Rp. 100.000</p>
+            </div>
+            <button class="view-room">View Room</button>
+          </div>
+          <div class="card-room1">
+            <!-- Image and "Book Now" button for Junior room -->
+            <img src="images\popularroom_1.jpg" alt="" />
+            <div class="room-container">
+              <div class="discount">
+                <p>Discount 30%</p>
               </div>
-              <div>
-                <p class="harga"> Rp. 100.000</p>
             </div>
-              <button class="view-room">View Room</button>
+            <div class="text-room">
+              <h2>Junior</h2>
             </div>
+            <div class="available">
+              <p>Available : 3</p>
+            </div>
+            <div class="room-facilities">
+              <div class="item">
+                <img src="images/bed.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/wifi.png" alt="" />
+                <p>2</p>
+              </div>
+            </div>
+            <div>
+              <p class="price">Rp. 100.000</p>
+            </div>
+            <button class="view-room">View Room</button>
+          </div>
+        </div>          
       </section>
       <section id="list-room-2">
         <div class="headings">
           <h1>Deluxe Room</h1>
         </div>
         <div class="card">
-          <div class="card_room1">
-            <!-- Gambar dan tombol "Book Now" untuk kamar Deluxe -->
-            <img src="images\popularroom_1.jpg" alt="" />
-            <div class="text_room">
-              <h2>Junior</h2>
-              <div class="room_fasilities">
-                <i class="fas fa-bed"></i>
-                  <p>2 bed</p>
-                <i class="fas fa-cocktail"></i>
-                  <p>mini bar</p>
-                <i class="fa fa-wifi"></i>
-                  <p>internet</p>
+          <div class="card-room1">
+            <img src="images\popularroom_3.jpg" alt="" />
+            <div class="room-container">
+              <div class="discount">
+                <p>Discount 15%</p>
               </div>
-          </div>
-          <div>
-            <p class="harga"> Rp. 100.000</p>
-        </div>
+            </div>
+            <div class="text-room">
+              <h2>Super Deluxe</h2>
+            </div>
+            <div class="available">
+              <p>Available : 3</p>
+            </div>
+            <div class="room-facilities">
+              <div class="item">
+                <img src="images/bed.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/minibar.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/wifi.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/bath.png" alt="" />
+                <p>2</p>
+              </div>
+            </div>
+            <div>
+              <p class="price">Rp. 100.000</p>
+            </div>
             <button class="view-room">View Room</button>
           </div>
-          <div>
-            <!-- Informasi kamar lainnya -->
-            <div class="card_room1">
-              <img src="images\popularroom_2.jpg" alt="" />
-              <div class="text_room">
-               <h2>Deluxe</h2>
-                <div class="room_fasilities">
-                  <i class="fas fa-bed"></i>
-                    <p>2 bed</p>
-                  <i class="fas fa-cocktail"></i>
-                    <p>mini bar</p>
-                  <i class="fa fa-wifi"></i>
-                    <p>internet</p>
-                </div>
-                </div>
-                <div>
-                  <p class="harga"> Rp. 100.000</p>
+          <!-- Other room information -->
+          <div class="card-room1">
+            <img src="images\popularroom_2.jpg" alt="" />
+              <div class="discount">
+                <p>Discount 20%</p>
               </div>
-                <button class="view-room">View Room</button>
+            <div class="text-room">
+              <h2>Deluxe</h2>
+            </div>
+            <div class="available">
+              <p>Available : 3</p>
+            </div>
+            <div class="room-facilities">
+              <div class="item">
+                <img src="images/bed.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/bath.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/wifi.png" alt="" />
+                <p>2</p>
               </div>
             </div>
-          <div>
-            <div class="card_room1">
-              <img src="images\popularroom_3.jpg" alt="" />
-              <div class="text_room">
-                <h2>Super Deluxe</h2>
-                <div class="room_fasilities">
-                  <i class="fas fa-bed"></i>
-                    <p>2 bed</p>
-                  <i class="fas fa-cocktail"></i>
-                    <p>mini bar</p>
-                  <i class="fa fa-wifi"></i>
-                    <p>internet</p>
-                </div>
+            <div>
+              <p class="price">Rp. 100.000</p>
+            </div>
+            <button class="view-room">View Room</button>
+          </div>
+          <div class="card-room1">
+            <!-- Image and "Book Now" button for Junior room -->
+            <img src="images\popularroom_1.jpg" alt="" />
+            <div class="room-container">
+              <div class="discount">
+                <p>Discount 30%</p>
               </div>
-              <div>
-                <p class="harga"> Rp. 100.000</p>
             </div>
-              <button class="view-room">View Room</button>
+            <div class="text-room">
+              <h2>Junior</h2>
             </div>
+            <div class="available">
+              <p>Available : 3</p>
+            </div>
+            <div class="room-facilities">
+              <div class="item">
+                <img src="images/bed.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/wifi.png" alt="" />
+                <p>2</p>
+              </div>
+            </div>
+            <div>
+              <p class="price">Rp. 100.000</p>
+            </div>
+            <button class="view-room">View Room</button>
+          </div>
+        </div> 
       </section>
       <section id="list-room-3">
         <div class="headings">
           <h1>Junior Room</h1>
         </div>
         <div class="card">
-          <div class="card_room1">
-            <!-- Gambar dan tombol "Book Now" untuk kamar Deluxe -->
-            <img src="images\popularroom_1.jpg" alt="" />
-            <div class="text_room">
-              <h2>Junior</h2>
-              <div class="room_fasilities">
-                <i class="fas fa-bed"></i>
-                  <p>2 bed</p>
-                <i class="fas fa-cocktail"></i>
-                  <p>mini bar</p>
-                <i class="fa fa-wifi"></i>
-                  <p>internet</p>
+          <div class="card-room1">
+            <img src="images\popularroom_3.jpg" alt="" />
+            <div class="room-container">
+              <div class="discount">
+                <p>Discount 15%</p>
               </div>
-          </div>
-          <div>
-            <p class="harga"> Rp. 100.000</p>
-        </div>
+            </div>
+            <div class="text-room">
+              <h2>Super Deluxe</h2>
+            </div>
+            <div class="available">
+              <p>Available : 3</p>
+            </div>
+            <div class="room-facilities">
+              <div class="item">
+                <img src="images/bed.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/minibar.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/wifi.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/bath.png" alt="" />
+                <p>2</p>
+              </div>
+            </div>
+            <div>
+              <p class="price">Rp. 100.000</p>
+            </div>
             <button class="view-room">View Room</button>
           </div>
-          <div>
-            <!-- Informasi kamar lainnya -->
-            <div class="card_room1">
-              <img src="images\popularroom_2.jpg" alt="" />
-              <div class="text_room">
-               <h2>Deluxe</h2>
-                <div class="room_fasilities">
-                  <i class="fas fa-bed"></i>
-                    <p>2 bed</p>
-                  <i class="fas fa-cocktail"></i>
-                    <p>mini bar</p>
-                  <i class="fa fa-wifi"></i>
-                    <p>internet</p>
-                </div>
-                </div>
-                <div>
-                  <p class="harga"> Rp. 100.000</p>
+          <!-- Other room information -->
+          <div class="card-room1">
+            <img src="images\popularroom_2.jpg" alt="" />
+              <div class="discount">
+                <p>Discount 20%</p>
               </div>
-                <button class="view-room">View Room</button>
+            <div class="text-room">
+              <h2>Deluxe</h2>
+            </div>
+            <div class="available">
+              <p>Available : 3</p>
+            </div>
+            <div class="room-facilities">
+              <div class="item">
+                <img src="images/bed.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/bath.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/wifi.png" alt="" />
+                <p>2</p>
               </div>
             </div>
-          <div>
-            <div class="card_room1">
-              <img src="images\popularroom_3.jpg" alt="" />
-              <div class="text_room">
-                <h2>Super Deluxe</h2>
-                <div class="room_fasilities">
-                  <i class="fas fa-bed"></i>
-                    <p>2 bed</p>
-                  <i class="fas fa-cocktail"></i>
-                    <p>mini bar</p>
-                  <i class="fa fa-wifi"></i>
-                    <p>internet</p>
-                </div>
+            <div>
+              <p class="price">Rp. 100.000</p>
+            </div>
+            <button class="view-room">View Room</button>
+          </div>
+          <div class="card-room1">
+            <!-- Image and "Book Now" button for Junior room -->
+            <img src="images\popularroom_1.jpg" alt="" />
+            <div class="room-container">
+              <div class="discount">
+                <p>Discount 30%</p>
               </div>
-              <div>
-                <p class="harga"> Rp. 100.000</p>
             </div>
-              <button class="view-room">View Room</button>
+            <div class="text-room">
+              <h2>Junior</h2>
             </div>
+            <div class="available">
+              <p>Available : 3</p>
+            </div>
+            <div class="room-facilities">
+              <div class="item">
+                <img src="images/bed.png" alt="" />
+                <p>2</p>
+              </div>
+              <div class="item">
+                <img src="images/wifi.png" alt="" />
+                <p>2</p>
+              </div>
+            </div>
+            <div>
+              <p class="price">Rp. 100.000</p>
+            </div>
+            <button class="view-room">View Room</button>
+          </div>
+        </div> 
       </section>
-      <div class="bottom-footer">
-        <div class="logo-social">
-          <div class="logo-container">
-            <img src="images/sunshine_white.png" alt="sunshine i-land logo" />
-            <p>Enjoy holiday with us</p>
-          </div>
-          <div class="social-container">
-            <div class="contact-footer">
-              <h4>Contact Us</h4>
-              <div class="contact-img">
-                <a class="contact" href="#"
-                  ><img
-                    class="contact-loc"
-                    src="images\map-pin.svg"
-                    alt="Location"
-                /></a>
-                <a class="contact" href="#"
-                  ><img class="contact-phon" src="images\phone.svg" alt="Phone"
-                /></a>
-                <a class="contact" href="#"
-                  ><img class="contact-mail" src="images\mail.svg" alt="Mail"
-                /></a>
+      <section id="footer">
+        <div class="bottom-footer">
+          <div class="logo-social">
+            <div class="logo-container">
+              <img src="images/sunshine_white.png" alt="sunshine i-land logo" />
+              <p>Enjoy holiday with us</p>
+            </div>
+            <div class="social-container">
+              <div class="contact-footer">
+                <h4>Contact Us</h4>
+                <div class="contact-img">
+                  <a class="contact" href="#"
+                    ><img
+                      class="contact-loc"
+                      src="images\map-pin.svg"
+                      alt="Location"
+                  /></a>
+                  <a class="contact" href="#"
+                    ><img
+                      class="contact-phon"
+                      src="images\phone.svg"
+                      alt="Phone"
+                  /></a>
+                  <a class="contact" href="mailto:sunshineilandresort@gmail.com"
+                    ><img class="contact-mail" src="images\mail.svg" alt="Mail"
+                  /></a>
+                </div>
+              </div>
+              <div class="follow-footer">
+                <h4>Follow Us</h4>
+                <div class="follow-img">
+                  <a
+                    class="follow"
+                    href="https://www.facebook.com/profile.php?id=61554082070886&mibextid=ZbWKwL"
+                    ><img src="images\facebook.svg" alt="Facebook"
+                  /></a>
+                  <a
+                    class="follow"
+                    href="https://instagram.com/sunshine_iland_resort?igshid=OGQ5ZDc2ODk2ZA=="
+                    ><img src="images\instagram.svg" alt="Instagram"
+                  /></a>
+                </div>
               </div>
             </div>
-            <div class="follow-footer">
-              <h4>Follow Us</h4>
-              <div class="follow-img">
-                <a class="follow" href="#"
-                  ><img src="images\facebook.svg" alt="Facebook"
-                /></a>
-                <a class="follow" href="#"
-                  ><img src="images\instagram.svg" alt="Instagram"
-                /></a>
-              </div>
-            </div>
           </div>
+          <h5>Copyright @2023 SESurabayaGrup16</h5>
         </div>
-        <h5>Copyright @2023 SESurabayaGrup16</h5>
-      </div>
+      </section>
     </div>
     <script src="javascript/script.js"></script>
   </body>
