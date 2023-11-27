@@ -164,11 +164,7 @@ body {
   margin-inline: 20px;
 }
 
-/* Styling for heading and paragraphs in .about-content */
-.about-content h2, p {
-  margin: 20px;
-  text-align: justify;
-}
+
 
 /* Styling for heading color in .about-content */
 .about-content h2 {
@@ -245,7 +241,7 @@ body {
 .discount p{
   position: absolute;
   margin-top: 0px;
-  right: -20px;
+  right: 0px;
   background-color: rgba(220, 20, 20, 0.8);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   color: #fff;
@@ -270,7 +266,7 @@ body {
 .available {
   position: absolute;
   top: 45%;
-  right: -10px;
+  right: 10px;
 }
 
 .available p{
@@ -293,9 +289,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 4px;
 }
 .item p{
-  margin-left: 25px;
+  margin-left: 20px;
   text-align: center;
 }
 
@@ -307,7 +304,7 @@ body {
 .price{
   position: absolute;
   bottom: 10px;
-  left: 0;
+  left: 10px;
   font-size: 16px;
   color: #009c95;
   font-weight: bold;
@@ -382,75 +379,107 @@ body {
 /* Styling for card facilities section (.card-facilities) */
 #our-facilities{
   margin-bottom: 60px;
-}
-/* CSS */
-.card-facilities {
-  position: relative;
-  width: 40%;
-  margin: 50px auto;
+  
 }
 
-.slider {
-  display: block;
+.card-carousel-facilities{
+  display: flex;
+  justify-content: center;
+
+}
+/* CSS */
+.carousel-wrapper {
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 3/4;
   overflow: hidden;
+  margin: 0 2rem;
   position: relative;
+  
 }
 
 .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.image-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.overlay-facilities {
+  display: flex;
+  border-radius: 12px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
+  transition: transform 300ms ease-out;
+}
+
+.heading-slide{
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 1000;
   text-align: center;
 }
 
-.btn {
+.subheading-slide{
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
+  top: 4.5rem;
+  width: 100%;
+  color: #fff;
+  font-size: 1.5rem;
+  opacity: 90%;
+  text-align: center;
+}
+
+.facility{
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.carousel-wrapper .btn {
+  font-size: 2rem;
+  background: rgba(194, 192, 192, 0.8);
+  color: #00c2d8;
+  padding: 8px 10px;
+  border-radius: 50%;
   border: none;
+  margin: 10px;
+  position: absolute;
+  transform: translateY(-50%);
   cursor: pointer;
 }
-
-.btn-prev {
-  left: 10px;
-  color: white;
-  background-color: #007BFF;
+.carousel-wrapper .btn:hover {
+  background: rgb(255, 255, 255);
+  border: 5px;
 }
 
-.btn-next {
-  right: 10px;
-  color: white;
-  background-color: #007BFF;
+.btn.previous {
+  width: 40px;
+  top: 50%;
+  left: 0;
 }
 
-.slide:not(:first-child) {
-  transform: translateX(100%);
+.btn.previous img{
+  width: 20px;
+}
+.btn.next img{
+  width: 20px;
+}
+.btn.next {
+  top: 50%;
+  right: 0;
 }
 
 
@@ -554,94 +583,36 @@ body {
   }
   .card {
     padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: 10px;
   }
 
   .card-room1 {
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    box-shadow: 0.3s;
     width: 240px;
     height: 300px;
-    margin: 30px;
-    border: #ffffff;
-    position: relative;
-  }
-  
-  /* Styling for images within .card_room1 */
-  .card-room1 img{
-    width: 100%;
-    height: 60%;
-    position: absolute;
   }
   
   /* Hover effect for .card-room1 */
   .card-room1:hover {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    transform: scale(1.05);
-    cursor: pointer;
   }
-  .container {
-    position: relative;
-    width: 150px;
-    height: 150px;
-  }
-  
   .discount p{
-    position: absolute;
-    margin-top: 0px;
-    right: -20px;
-    background-color: rgba(220, 20, 20, 0.8);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 10px;
     font-size: 12px;
-    font-weight: bold;
   }
-  /* Styling for room details text (.text_room) */
-  .text-room {
-    position: absolute;
-    top: 57%;
-    left: 20px;
-  }
-  
   .text-room h2{
-    align-items: center;
-    text-align: center;
     font-size: 16px;
-    font-weight: bold;
   }
   /* Styling for room facilities information (.room_fasilities) */
   .available {
     position: absolute;
     top: 45%;
-    right: -10px;
+    right: 10px;
   }
   
   .available p{
-    text-align: center;
-    background-color: #009c95;
-    color: #ffffff;
     height: 15px;
     padding: 5px;
     border-radius: 5px;
     font-size: 12px;
     font-weight: bold;
-  }
-  .room-facilities {
-    position: absolute;
-    display: flex;
-    top: 65%;
-    left: 20px;
-  }
-  .item{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
   .item p{
     margin-left: 12px;
@@ -650,7 +621,6 @@ body {
   }
   
   .item img{
-    justify-content: center;
     width: 10px;
     height: 10px;
   }
@@ -659,30 +629,13 @@ body {
     bottom: 10px;
     left: 0;
     font-size: 12px;
-    color: #009c95;
-    font-weight: bold;
   }
   /* Styling for "View Room" button (.view-room) */
   .view-room {
-    position: absolute;
     bottom: 25px;
     right: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #ffca0e;
-    color: #ffffff;
-    font-family: inter;
     font-size: 10px;
-    font-weight: bold;
     padding: 6px 15px;
     height: 25px;
-    cursor: pointer;
-    text-align: center;
-    justify-content: center;
-    transition: background 0.3s, color 0.3s;
-  }
-  .view-room:hover {
-    background: #ffd524;
-    color: #ffffff;
   }
 }

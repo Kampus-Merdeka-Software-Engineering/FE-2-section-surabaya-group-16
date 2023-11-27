@@ -326,6 +326,7 @@ ul li button:hover {
 
   .social-container {
     width: 100px;
+    align-items: flex-start;
   }
 }
 

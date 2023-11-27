@@ -1,7 +1,20 @@
 .main-container {
   width: 100%;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 
+.content-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-welcome img {
+  width: 50%;
+}
 /* Styling for about section (.about-content) */
 .about-content {
   display: flex;
@@ -37,108 +50,168 @@
 
 /* Styling for images in .about-content */
 .about-content img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 40%;
-  margin-top: 72px;
+  margin: 30px;
 }
 
 /* Styling for heading and paragraphs in .about-content (visi, misi, and arround) */
-.about-content h2, p {
+.about-content h2,
+p {
   margin: 20px;
   text-align: center;
 }
 .text-about {
-  text-align: center;
+  margin: 20px;
 }
-
-/* Styling for heading color in .about-content */
-.about-content h2 {
+.text-about h2 {
+  text-align: center;
   color: #009c95;
 }
 
+.vision-missions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px;
+}
+
+.vision,
+.missions {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 10px #d1b829;
+  margin: 30px;
+  padding: 10px;
+}
+
+.vision h1,
+.missions h1 {
+  text-align: center;
+  border-bottom: 2px solid #ffd700;
+}
+
+.vision p,
+.missions p {
+  text-align: justify;
+}
+.headings-group h2 {
+  color: #009c95;
+  text-align: center;
+}
 .cards-member {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-right: 10px;
-  margin-top: 20px;
+  margin: 20px 20px 10px 0px;
 }
 
 .card-member {
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: 0.3s;
   width: 280px;
   height: 410px;
-  margin: 30px;
   border: #ffffff;
   position: relative;
 }
 
+.card-member {
+  margin: 14px;
+}
 .card-member img {
-  width: 250px;
-  height: 250px;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 60%;
   position: absolute;
-  margin-left: 15px;
-  margin-top: 15px;
-  border-radius: 5px;
+}
+.position-member {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  font-size: 20px;
+  font-weight: bolder;
 }
 
+.name-member {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  font-size: 16px;
+  color: #009c95;
+  font-weight: bold;
+}
+
+.follow-me {
+  justify-content: space-between;
+}
+.follow-in img {
+  width: 25px;
+  height: 23px;
+  top: 85%;
+  margin-left: 10px;
+  padding: 3px;
+}
+.follow-ig img {
+  width: 25px;
+  height: 25px;
+  top: 85%;
+  margin-left: 50px;
+  border-color: #009c95;
+  padding: 3px;
+}
+.follow-in img:hover {
+  box-shadow: 0px 0px 2px 2px #0e76a8;
+  cursor: pointer;
+  border-radius: 5px;
+  transform: scale3d(2);
+}
+
+.follow-ig img:hover{
+  box-shadow: 0px 0px 2px 2px #c32aa3;
+  cursor: pointer;
+  border-radius: 5px;
+  transform: scale3d(2);
+}
 .card-member:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   transform: scale(1.05);
   cursor: pointer;
 }
-
-.card-member h3 {
-  position: absolute;
-  top: 260px;
-  transform: translateY(-50%); 
-  color: #000000;
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 15px;
-
-}
-
-.card-member p {
-  position: absolute;
-  top: 290px;
-  transform: translateY(-50%); 
-  color: #009C95;
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 15px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-h2 {
-  margin-top: 110px;
-  text-align: center;
-}
-
-.card-member h3,
-.card-member p {
-  position: absolute;
-  text-align: center; 
-}
-
-.social-media-member a {
-  scale: 13%;
-  margin-top: 340px;
-  margin-left: 15px;
-  filter: sepia();
-  
-}
-.social-media-member b {
-  scale: 13%;
-  margin-left: 30px;
-  margin-top: 340px;
-  filter: sepia();
-}
-
 /* Extra styling for heading text in .about-content */
-.text-about h2 {
-  text-align: center;
-  margin-top: 100px;
-  color: #000000;
+
+@media screen and (max-width: 770px) {
+  .content-welcome {
+    display: block;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-welcome img {
+    width: 100%;
+  }
+
+  .vision-missions {
+    display: block;
+    margin: 20px;
+  }
+
+  .vision,
+  .missions {
+    margin: 50px;
+  }
+
+  .about-content {
+    display: block;
+  }
+
+  .about-content img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
 }
