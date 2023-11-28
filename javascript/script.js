@@ -8,8 +8,19 @@ function toggleMenu() {
   overlay.classList.toggle("overlay");
 }
 
+
 // Add a click event listener to the burger menu
 burgerMenu.addEventListener("click", toggleMenu);
+
+window.addEventListener('scroll', function() {
+  var navbar = document.querySelector('.topnav');
+  if (window.scrollY > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
 
 let navItems = document.querySelectorAll("li");
 navItems.forEach((item) => {
@@ -34,30 +45,3 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const slides = document.querySelectorAll("[data-slide]");
-const buttons = document.querySelectorAll("[data-button]");
-
-let currSlide = 0;
-let maxSlide = slides.length - 1;
-
-const updateCarousel = (number = 0) => {
-  slides.forEach((slide, index) => {
-    slide.style.transform = `translateX(${(index - number) * 100}%)`;
-  });
-};
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    button.dataset.button == "next" ? ++currSlide : --currSlide;
-
-    if (currSlide > maxSlide) {
-      currSlide = 0;
-    } else if (currSlide < 0) {
-      currSlide = maxSlide;
-    }
-
-    updateCarousel(currSlide);
-  });
-});
-
-updateCarousel();

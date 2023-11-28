@@ -21,7 +21,7 @@ body {
 }
 
 #home1{
-  margin-top: 30px;
+
   margin-bottom: 60px;
   width: 100%;
   position: relative;
@@ -37,12 +37,7 @@ body {
   z-index: 1;
   color: #f1ebeb; /* Text color */
   overflow: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
-
 /* Styling for main-pic container */
 .main-pic {
   position: relative;
@@ -69,46 +64,28 @@ body {
   font-size: 30px;
   text-align: center;
 }
-
-/* Styling for the book now button (#booknow1) */
-#booknow1 {
-  border: none;
-  border-radius: 5px;
-  background: #ffca0e;
-  color: #ffffff;
-  font-family: inter;
-  font-size: 14px;
-  font-weight: bold;
+.main-rooms{
   display: flex;
-  padding: 10px 20px;
-  height: 40px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
-#booknow1:hover {
-  background: #ffd524;
-  color: #ffffff;
+.more-rooms a{
+  height: 40px;
+  font-weight: bold;
 }
 
-/* Styling for popular rooms section (#popular_rooms) */
-
-
+.more-rooms a:hover {
+  color: #213e9e;
+  cursor: pointer;
+}
 /* Styling for headings within .headings */
 .headings h1 {
-  display: flex;
   text-align: center;
-  justify-content: center;
   color: #555555;
-  font-size: 30px;
+  font-size: 32px;
 }
 
-/* Styling for the last word in h1 within .headings */
-.headings h1::last-word {
-  color: #009c95;
-}
 
 /* Styling for grid layout in about section (.grid2) */
 .grid2 {
@@ -126,7 +103,7 @@ body {
   text-align: center;
   justify-content: center;
   color: #555555;
-  font-size: 30px;
+  font-size: 32px;
 }
 /* Styling for about section (.about-content) */
 .about-content {
@@ -138,6 +115,10 @@ body {
 .text-about{
   width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 .about-content .box {
   text-align: center;
@@ -147,7 +128,7 @@ body {
 
 /* Styling for heading and subheading in .box */
 .about-content .box h3 {
-  color: #009c95;
+  color: #213e9e;
   font-size: 20px;
 }
 
@@ -159,37 +140,35 @@ body {
 
 /* Styling for images in .about-content */
 .about-content img {
-  width: 80%;
+  width: 40%;
   justify-content: center;
-  margin-inline: 20px;
 }
-
 
 
 /* Styling for heading color in .about-content */
-.about-content h2 {
-  color: #009c95;
+.text-about h2 {
+  padding: 10px;
+  color: #213e9e;
 }
-.view-about{
-  margin-right: 50px;
-  float: right;
-  justify-content: center;
+
+.text-about p{
+  padding: 10px;
 }
 .view-about:hover{
-  background: #00c2d8;
+  background: #2347bc;
   color: #ffffff;
 }
 .view-about{
-  border: none;
+  border-color: #2347bc;
   border-radius: 5px;
-  background: #07aec1;
-  color: #ffffff;
+  color: #000;
   font-family: inter;
   font-size: 14px;
   font-weight: bold;
   display: flex;
   padding: 10px 20px;
   height: 40px;
+  margin-top: 10px;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
   align-items: center;
@@ -218,7 +197,9 @@ body {
   border: #ffffff;
   position: relative;
 }
-
+.headings-popular{
+  color: #555555;
+}
 /* Styling for images within .card_room1 */
 .card-room1 img{
   width: 100%;
@@ -261,6 +242,7 @@ body {
   height: 30px;
   font-size: 20px;
   font-weight: bold;
+  color: #2347bc;
 }
 /* Styling for room facilities information (.room_fasilities) */
 .available {
@@ -271,7 +253,8 @@ body {
 
 .available p{
   text-align: center;
-  background-color: #009c95;
+  box-shadow: 0px 0px 20px rgb(180, 175, 175);
+  background-color: rgba(26, 24, 24, 0.8);
   color: #ffffff;
   height: 20px;
   padding: 10px;
@@ -294,6 +277,7 @@ body {
 .item p{
   margin-left: 20px;
   text-align: center;
+
 }
 
 .item img{
@@ -301,18 +285,23 @@ body {
   width: 15px;
   height: 15px;
 }
+.view-price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
 .price{
   position: absolute;
-  bottom: 10px;
   left: 10px;
   font-size: 16px;
-  color: #009c95;
-  font-weight: bold;
+  color: #000;
+  font-weight: 500;
+  bottom: 10px;
 }
 /* Styling for "View Room" button (.view-room) */
 .view-room {
   position: absolute;
-  bottom: 20px;
   right: 10px;
   border: none;
   border-radius: 5px;
@@ -327,11 +316,13 @@ body {
   align-items: center;
   justify-content: center;
   transition: background 0.3s, color 0.3s;
+  bottom: 10px;
 }
 .view-room:hover {
   background: #ffd524;
   color: #ffffff;
 }
+
 /* Styling for client testimonials section (#customers_say) */
 #customers-say {
   margin-top: 40px;
@@ -371,9 +362,9 @@ body {
 }
 
 /* Styling for headings in customer testimonials (#customers_say .headings p) */
-#customers-say .headings p {
+#customers-say .subheadings p {
   text-align: center;
-  color: #009c95;
+  color: #213e9e;
 }
 
 /* Styling for card facilities section (.card-facilities) */
@@ -382,113 +373,67 @@ body {
   
 }
 
-.card-carousel-facilities{
+.headings p{
+  text-align: center
+}
+.service-facilities{
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  align-items: center;
+  padding: 20px;
 }
-/* CSS */
-.carousel-wrapper {
-  justify-content: center;
-  width: 100%;
-  max-width: 300px;
-  aspect-ratio: 3/4;
-  overflow: hidden;
-  margin: 0 2rem;
+.headings h3{
+  color: #555555;
+  text-align: center;
+}
+.service{
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  box-shadow: 0.3s;
+  width: 250px;
+  height: 250px;
+  padding: 20px;
+  margin: 30px;
+  border: #ffffff;
   position: relative;
-  
 }
 
-.slide {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  border-radius: 12px;
-  position: absolute;
-  transition: transform 300ms ease-out;
-}
-
-.heading-slide{
-  position: absolute;
-  top: 2rem;
-  width: 100%;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 1000;
-  text-align: center;
-}
-
-.subheading-slide{
-  position: absolute;
-  top: 4.5rem;
-  width: 100%;
-  color: #fff;
-  font-size: 1.5rem;
-  opacity: 90%;
-  text-align: center;
-}
-
-.facility{
-  position: absolute;
-  bottom: 1rem;
-  width: 80%;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  opacity: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
+.service img{
+  background-color: #213e9e;
   padding: 5px;
+  width: 30px;
   border-radius: 5px;
 }
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: inherit;
+
+.other-facilities-home{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-.carousel-wrapper .btn {
-  font-size: 2rem;
-  background: rgba(194, 192, 192, 0.8);
-  color: #00c2d8;
-  padding: 8px 10px;
-  border-radius: 50%;
-  border: none;
+.other-facility img{
   margin: 10px;
+  width: 280px;
+  height: 360px;
+  border-radius: 5px;
+}
+
+.heading-facility{
   position: absolute;
-  transform: translateY(-50%);
-  cursor: pointer;
+  color: #fff;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
 }
-.carousel-wrapper .btn:hover {
-  background: rgb(255, 255, 255);
-  border: 5px;
-}
-
-.btn.previous {
-  width: 40px;
-  top: 50%;
-  left: 0;
-}
-
-.btn.previous img{
-  width: 20px;
-}
-.btn.next img{
-  width: 20px;
-}
-.btn.next {
-  top: 50%;
-  right: 0;
-}
-
-
 /* Media query for mobile view (maximum width 770px) */
 @media screen and (max-width: 770px) {
-  #home1{
-    margin-top: 0px;
-  }
 
   /* Styling for images in main-pic for mobile view (.main-pic img) */
   .mainpic-home img {
@@ -505,12 +450,9 @@ body {
   #subheading {
     font-size: 20px;
   }
-
-  /* Styling for book now button in mobile view (#booknow1) */
-  #booknow1 {
-    font-size: 12px;
-    padding: 10px 20px;
-    height: 30px;
+  .main-rooms{
+    display: block;
+    margin: 30px;
   }
 
   /* Styling for card facilities section (.card-facilities) */
@@ -525,29 +467,21 @@ body {
     margin: 20px;
     flex: 1 0 auto;
   }
-  .about-container h1{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    color: #555555;
-    font-size: 30px;
-  }
   /* Adjust about content styles for mobile view (.about-content) */
   .about-content {
     display: block;
-    justify-content: center;
-    align-items: center;
   }
-
-  /* Adjust image size within about content for mobile view (.about-content img) */
-  .mainpic-about {
-    width: 0%;
-    margin-inline: 20px;
-  }
-
    .view-about{
     float: right;
     margin: 20px;
+  }
+
+  .service-facilities{
+    flex-direction: column;
+  }
+
+  .other-facilities-home{
+    flex-direction: column;
   }
 }
 
