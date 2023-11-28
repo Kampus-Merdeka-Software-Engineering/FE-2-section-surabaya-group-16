@@ -180,7 +180,7 @@ body {
 }
 /* Styling for cards container (.card) */
 .card {
-  padding: 40px;
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -392,18 +392,24 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   box-shadow: 0.3s;
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 410px;
   padding: 20px;
   margin: 30px;
   border: #ffffff;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .service img{
   background-color: #213e9e;
-  padding: 5px;
-  width: 30px;
+  padding: 10px;
+  width: 90%;
+  height: 50%;
   border-radius: 5px;
 }
 
@@ -417,7 +423,7 @@ body {
 .other-facility img{
   margin: 10px;
   width: 280px;
-  height: 360px;
+  height: 410px;
   border-radius: 5px;
 }
 
