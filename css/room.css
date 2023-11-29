@@ -1,0 +1,410 @@
+/* External font import for Inter */
+@font-face {
+   font-family: "Inter", sans-serif;
+   src: url("font/Inter-Regular.ttf");
+ }
+ 
+ /* External font import for Kaushan Script */
+ @font-face {
+   font-family: "KaushanScript-Regular", cursive;
+   src: url("font/KaushanScript-Regular.ttf") format("truetype");
+ }
+ 
+ /* Set the default font family for the body */
+ body {
+   font-family: "Inter", sans-serif;
+   margin: 0;
+   padding: 0;
+ }
+ .main-container{
+   position: relative;
+ }
+ 
+ #home1{
+ 
+   margin-bottom: 60px;
+   width: 100%;
+   position: relative;
+ }
+ /* Styling for the text container */
+ .text-container {
+   width: 100%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   z-index: 1;
+   color: #f1ebeb; /* Text color */
+   overflow: auto;
+ }
+ /* Styling for main-pic container */
+ .main-pic {
+   position: relative;
+ }
+ 
+ /* Styling for images within the main-pic */
+ .mainpic-home {
+   margin-top: 0;
+ }
+ 
+ .mainpic-home img{
+   width: 100%;
+ }
+.card {
+   display: flex;
+}
+
+/* Styling for headings within .headings */
+.headings h1 {
+  text-align: center;
+  color: #555555;
+  font-size: 32px;
+  padding: 30px;
+}
+
+
+/* CSS mengatur ukuran dari bagian main */
+#room1-fac {
+   width: 100%;
+   display: flex;
+   padding: 10px;
+   flex-wrap: nowrap;
+   justify-content: center;
+   
+   
+}
+
+#room1-fac img {
+   width: 30%;
+   margin-right: 30px;
+   margin-top: 30px;
+   
+}
+#room1-fac {
+  display: flex;
+  justify-content: space-between;
+}
+
+#room1-fac img {
+  width: 30%;
+  transition: transform .5s ease;
+}
+
+#room1-fac img:hover {
+  transform: scale(1.1);
+}
+
+
+/* CSS bagian 2 container beseblahan */
+.container-infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.roominfo,
+.booknow-info {
+  width: 50%; 
+}
+
+.roominfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 200px;
+  padding: 30px;
+  margin-top: 10px;
+}
+
+.roominfo div {
+  display: flex;
+  align-items: center;
+  width: 30%; 
+  height: 5px;
+}
+
+.roominfo div img {
+  width: 41px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.roominfo div p {
+  margin: 0;
+  font-size: 23px;
+}
+
+.booknow-info {
+  margin-top: 10px;
+  width: 623px;
+  height: 798px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+  box-sizing: border-box;
+  border: 1px solid #4a4a4a;
+  border-radius: 40px;
+}
+
+.booknow-info .top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.booknow-info .top p {
+  display: flex;
+}
+
+.booknow-info .price p,
+.booknow-info .total-ratings p {
+  margin: 0;
+}
+
+.booknow-info .total-ratings {
+  display: flex;
+  align-items: center;
+}
+
+.booknow-info .total-ratings img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.price {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: flex-start;
+}
+
+.price .real, .price .disc {
+  width: 35%;
+  color: #555555;
+}
+
+.price .aft-disc {
+  width: 100%;
+  font-size: 36px;
+  color: black;
+}
+.booknow-info h2, p {
+  font-size: 18px;
+  color: #555555;
+  display: flex;
+}
+
+.total-ratings{
+  align-self: flex-end;
+}
+
+.reservation-info {
+    display: grid;
+    width: 503px;
+    height: 235px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    border: 1px black;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    border: 1px solid black; 
+    border-radius: 40px;
+    padding: 15px;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bottom {
+    grid-column: span 2;
+}
+
+.room-type {
+  margin-top: 10px;
+  width:503px ;
+  height: 121px;
+  border: 1px solid black; 
+  border-radius: 40px;
+  padding: 15px;
+}
+
+.total-price {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin: 0%;
+}
+
+.total-price h2 {
+  text-align: left;
+}
+
+.total-price p {
+  text-align: right;
+}
+
+
+/* CSS untuk Top properties */
+.card_topproperty {
+   display: flex;
+   width: 100%; 
+   margin: 5px; 
+   padding: 5px; 
+   box-sizing: border-box;
+}
+
+.pic img {
+   width: 40%; 
+   height: auto;
+   padding: 20px;
+}
+
+.desc {
+   width: 20%; 
+   padding-left: 5px; 
+   color: black;
+   font-size: 14px; 
+}
+
+.desc h2, .desc p {
+   margin: 0;
+   padding: 0;
+}
+
+
+
+/* CSS mengatur bagian destination */
+.card_destinations {
+   position: relative;
+   width: 100%; 
+   padding: 10px;
+   overflow: hidden;
+   margin-bottom: 50px;
+}
+
+.card_destinations img {
+   width: 100%;
+   height: auto;
+   width: 100%;
+   transition: transform .5s ease;
+}
+
+.card_destinations:hover img {
+  transform: scale(1.1);
+}
+
+.card_destinations p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  background: rgba(255, 244, 206, 0.5);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all .5s ease;
+}
+
+.card_destinations:hover p {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+
+/* CSS bagian top property */
+.card_topproperty{
+   flex-direction: column;
+}
+.card_topproperty .row {
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
+}
+
+.card_topproperty .pic {
+   flex: 1;
+   text-align: left;
+   width: 100%;
+}
+
+.card_topproperty .pic img{
+   width: 30px;
+   height: auto;
+   object-fit: cover;
+}
+
+.card_topproperty .desc {
+   flex: 4.5;
+   text-align: left;
+   margin-left: 20px;
+   width: 100%;
+   font-size: 9px;
+}
+
+
+/* CSS untuk button */
+.reservation {
+  background-color: #FFD700; 
+  color: white; 
+  border: none; 
+  padding: 15px 30px; 
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block;
+  font-size: 35px;
+  margin: 4px 2px;
+  cursor: pointer; 
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+  width: 516px;
+  height: 79px;
+  border-radius: 10px;
+}
+
+button:hover {
+  background: #ffe16b;
+  color: #ffffff;
+}
+
+
+
+/* Gaya CSS untuk layar yang lebar kurang dari 1000px */
+@media (max-width: 1000px) {
+  .container-infos {
+    flex-direction: column;
+  }
+
+  .roominfo, .booknow-info {
+    width: 100%;
+  }
+}
+
+
+/* import eksternal font Inter */
+@font-face {
+   font-family:'Inter', sans-serif;
+   src: url('font/Inter-Regular.ttf');
+  }
+ 
+  @font-face {
+   font-family: 'KaushanScript-Regular', cursive;
+   src: url('font/KaushanScript-Regular.ttf') format('truetype');
+  }
+ 
+ 
+   body {
+     font-family:'Inter', sans-serif;
+     color: #009c95;
+   }
+ 
+   .card_fasilities p {
+     font-family: 'Kaushan Script', cursive;
+   }
