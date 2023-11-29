@@ -66,7 +66,7 @@ li .navbar-item {
 .navbar-item:hover {
   color: #ffca0e;
 }
-.navbar-item.active {
+#home, #about_us, #facilities, #rooms {
   color: #ffca0e;
   border-bottom: 2px solid #ffca0e;
 }

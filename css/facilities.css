@@ -21,7 +21,6 @@ body {
   transform: translate(-50%, -50%);
   z-index: 1;
   color: #ffffff; /* Warna teks */
-  background: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
   padding: 20px;
   border-radius: 20px;
   margin: 10px;
@@ -41,14 +40,14 @@ body {
 
 /* Heading - Font size 30px, Bold */
 #heading {
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
   text-align: center;
 }
 
 /* Subheading - Font size 20px */
 #subheading {
-  font-size: 20px;
+  font-size: 30px;
   text-align: justify;
   text-align: center;
 }
