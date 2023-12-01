@@ -1,0 +1,12 @@
+/* External font import for Inter */
+@font-face {
+    font-family: "Inter", sans-serif;
+    src: url("font/Inter-Regular.ttf");
+  }
+  
+  /* Set the default font family for the body */
+  body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+  }

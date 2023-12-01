@@ -1,15 +1,3 @@
-/* External font import for Inter */
-@font-face {
-   font-family: "Inter", sans-serif;
-   src: url("font/Inter-Regular.ttf");
- }
- 
- /* External font import for Kaushan Script */
- @font-face {
-   font-family: "KaushanScript-Regular", cursive;
-   src: url("font/KaushanScript-Regular.ttf") format("truetype");
- }
- 
  /* Set the default font family for the body */
  body {
    font-family: "Inter", sans-serif;

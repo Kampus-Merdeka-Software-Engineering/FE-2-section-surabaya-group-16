@@ -2,11 +2,7 @@
 .main-facilities {
   width: 100%;
 }
-body {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 0;
-}
+
 #facilities1,
 #facilities2,
 #facilities3 {
