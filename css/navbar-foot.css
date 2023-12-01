@@ -1,5 +1,3 @@
-/* Top Navigation Styles */
-
 .topnav {
   z-index: 2;
   top: 0;
@@ -11,7 +9,6 @@
   align-items: center;
   position: fixed;
   transition: background-color 0.3s;
-  font-family:'Inter', sans-serif;
 }
 
 .topnav.scrolled {
@@ -52,8 +49,7 @@ ul li {
 
 /* Anchor Styles */
 li .navbar-item {
-  font-family: Inter;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
@@ -67,7 +63,7 @@ li .navbar-item {
   color: #ffca0e;
 }
 .navbar-item.active {
-  color: #ffca0e;
+  color: #d1b829;
   border-bottom: 2px solid #ffca0e;
 }
 
@@ -77,8 +73,7 @@ li button {
   border-radius: 5px;
   background: #ffca0e;
   color: #ffffff;
-  font-family: Inter;
-  font-size: 14px;
+  font-size: 15px;
   height: 40px;
   padding: 10px 20px;
   font-weight: bold;
@@ -116,11 +111,13 @@ ul li button:hover {
   padding: 20px;
 }
 .logo-container p {
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   margin: 20px;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
+  font-family: 'great-vibes', cursive;
+  font-style: italic;
 }
 
 .social-container {
@@ -144,6 +141,7 @@ ul li button:hover {
   text-align: center;
   margin: 0;
   color: #fff;
+  font-size: 15px;
 }
 
 .contact-footer img,
@@ -269,7 +267,7 @@ ul li button:hover {
     visibility: visible;
     opacity: 3;
     top: 10%;
-    background: rgba(0, 0, 0, 0.87);
+    background: rgba(22, 22, 22, 0.87);
   }
 
   /* List Styles for Small Screens */
