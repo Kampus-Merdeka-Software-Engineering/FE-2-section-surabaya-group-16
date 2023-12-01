@@ -32,7 +32,10 @@ body {
   position: relative;
   z-index: -1;
 }
-
+.container{
+  padding: 0px 20px;
+  margin: 0px 50px;
+}
 /* Image in Slide - 100% width, 20% height, and 5% top margin */
 .slide1-facilities img {
   width: 100%;
@@ -78,7 +81,7 @@ body {
 
 /* Image in Our Facilities - 100% width, border-radius 10px */
 .fac-img {
-  width: 100%;
+  width: 40%;
   border-radius: 10px;
 }
 

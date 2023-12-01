@@ -13,7 +13,12 @@ body {
 }
 
 .content-welcome img {
-  width: 50%;
+  width: 100%;
+}
+
+.container{
+  padding: 0px 20px;
+  margin: 0px 50px;
 }
 /* Styling for about section (.about-content) */
 .about-content {
@@ -66,9 +71,10 @@ p {
 .text-about {
   margin: 20px;
 }
-.text-about h2 {
+.text-about h1 {
+  font-size: 30px;
   text-align: center;
-  color: #009c95;
+  color: #555555;
 }
 
 .vision-missions {
@@ -97,14 +103,19 @@ p {
 .missions p {
   text-align: justify;
 }
-.headings-group h2 {
-  color: #009c95;
+.headings-group h1 {
+  font-size: 30px;
+  color: #555555;
   text-align: center;
 }
 .cards-member {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 40px 10px 10px 0px;
 }
 
@@ -117,6 +128,7 @@ p {
   height: 410px;
   border: #ffffff;
   position: relative;
+  
 }
 
 .card-member {
@@ -130,6 +142,7 @@ p {
   position: absolute;
 }
 .position-member {
+  text-align: center;
   position: absolute;
   top: 60%;
   left: 10%;
@@ -186,6 +199,10 @@ p {
 /* Extra styling for heading text in .about-content */
 
 @media screen and (max-width: 770px) {
+  .container{
+    margin: 0px;
+    padding: 0px;
+  }
   .content-welcome {
     display: block;
     justify-content: center;
@@ -196,13 +213,18 @@ p {
   }
 
   .vision-missions {
-    display: block;
-    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    margin: 10px;
   }
 
   .vision,
   .missions {
-    margin: 50px;
+    margin: 20px;
   }
 
   .about-content {

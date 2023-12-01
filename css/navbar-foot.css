@@ -4,7 +4,7 @@
   z-index: 2;
   top: 0;
   left: 0;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -29,24 +29,19 @@
   margin-left: auto;
   text-align: center;
   margin-top: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* List Styles */
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 ul li {
   float: left;
+  margin-right:10px;
   
 }
 
@@ -69,28 +64,6 @@ li .navbar-item {
 #home, #about_us, #facilities, #rooms {
   color: #ffca0e;
   border-bottom: 2px solid #ffca0e;
-}
-
-/* Button Styles */
-li button {
-  border: none;
-  border-radius: 5px;
-  background: #ffca0e;
-  color: #ffffff;
-  font-family: Inter;
-  font-size: 14px;
-  height: 40px;
-  padding: 10px 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-  margin: 10px;
-  text-align: center;
-}
-
-ul li button:hover {
-  background: #ffd524;
-  color: #ffffff;
 }
 
 /* Bottom Footer Styles */
@@ -192,7 +165,7 @@ ul li button:hover {
     cursor: pointer;
     height: 20px;
     width: 20px;
-    margin: 10px 30px 10px auto;
+    margin: 5px 20px 10px auto;
     overflow: visible;
     position: relative;
     z-index: 3;
@@ -203,7 +176,7 @@ ul li button:hover {
   #burger-menu span:after {
     background: #fff;
     display: block;
-    height: 4px;
+    height: 3px;
     opacity: 1;
     position: absolute;
     transition: 0.3s ease-in-out;
@@ -216,32 +189,32 @@ ul li button:hover {
 
   #burger-menu span {
     left: 0px;
-    top: 13px;
-    width: 27px;
+    top: 10px;
+    width: 20px;
   }
 
   #burger-menu span:before {
     right: 0px;
     top: -10px;
-    width: 16px;
+    width: 12px;
   }
 
   #burger-menu span:after {
     right: 0px;
     top: 10px;
-    width: 20px;
+    width: 12px;
   }
 
   #burger-menu.close span {
     transform: rotate(-45deg);
     top: 5px;
-    width: 27px;
+    width: 20px;
   }
 
   #burger-menu.close span:before {
     top: 0px;
     transform: rotate(90deg);
-    width: 27px;
+    width: 20px;
   }
 
   #burger-menu.close span:after {
@@ -254,7 +227,7 @@ ul li button:hover {
 
   /* Menu Styles for Small Screens */
   #menu {
-    min-width: 100%;
+    min-width: 50%;
     min-height: 100%;
     right: 0;
     position: fixed;
@@ -268,13 +241,13 @@ ul li button:hover {
   #menu.overlay {
     visibility: visible;
     opacity: 3;
-    top: 10%;
+    top: 0px;
     background: rgba(0, 0, 0, 0.87);
   }
 
   /* List Styles for Small Screens */
   ul {
-    margin-top: 10px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -288,10 +261,6 @@ ul li button:hover {
     text-decoration: none;
     text-align: center;
     padding: 20px;
-  }
-
-  li button {
-    margin-top: 30px;
   }
 
   li .navbar-item:hover {
@@ -337,7 +306,7 @@ ul li button:hover {
 
 @media screen and (max-width: 330px){
   .logo-nav img{
-    height: 20px;
+    height: 30px;
   }
   #menu.overlay {
     visibility: visible;
