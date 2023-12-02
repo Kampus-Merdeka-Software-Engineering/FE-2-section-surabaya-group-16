@@ -118,24 +118,26 @@ body {
   font-size: 15px;
 }
 
-.box{
+.box {
   padding: 5px;
   border-radius: 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
 }
 
-#rooms-img, #restaurant-about,#gym, #meeting{
+#rooms-img,
+#restaurant-about,
+#gym,
+#meeting {
   height: 50px;
   width: 50px;
   padding: 5px;
 }
 /* Styling for images in .about-content */
 .about-content img {
-  width: 50%;
-  justify-content: center;
+  padding: 10px;
+  width: 45%;
 }
 
 /* Styling for heading color in .about-content */
@@ -275,18 +277,14 @@ body {
 }
 .room-facilities {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: row;
-  
 }
-.item{
+.item {
   position: absolute;
   top: 65%;
   left: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 #bed{
@@ -296,7 +294,14 @@ body {
   width: 24px;
 }
 
-#total-bed{
+#toilet {
+  margin: 15px;
+  left: 10px;
+  height: 30px;
+  width: 24px;
+}
+
+#total-bed, .total-toilet {
   text-align: center;
   justify-content: center;
   font-size: 20px;
@@ -426,19 +431,19 @@ body {
   align-items: center;
 }
 
-.service-img img{
+.service-img img {
   width: 50%;
   height: 50%;
 }
 
-.other-facilities-home {
+.other-facilities {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-right: 10px;
 }
-.other-facility {
+.facility {
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   background-color: #fff;
@@ -447,37 +452,41 @@ body {
   height: 410px;
   margin: 30px;
   border: #ffffff;
+  position: relative;
 }
-.other-facility img {
-  margin: 10px;
-  width: 260px;
-  height: 390px;
-  border-radius: 5px;
-}
-
-.heading-facility {
+.head-facility {
+  width: 100%;
   position: absolute;
-  color: #fff;
-  margin-left: 20px;
-  font-size: 20px;
-  font-weight: bold;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  padding: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 5px;
+  z-index: 1;
+  color: #f1ebeb; /* Text color */
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.img-facility img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
-.card-des{
+.card-des {
+  padding: 10px;
+  margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  flex-direction: row;
 }
-
 
 /* CSS mengatur bagian destination */
 .card_destinations {
   position: relative;
-  width: 100%; 
+  width: 100%;
   padding: 10px;
   overflow: hidden;
   margin-bottom: 50px;
@@ -487,31 +496,31 @@ body {
   width: 100%;
   height: auto;
   width: 100%;
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .card_destinations:hover img {
- transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .card_destinations p {
- position: absolute;
- bottom: 0;
- left: 0;
- width: 100%;
- opacity: 0;
- transform: translateY(100%);
- background: rgba(255, 244, 206, 0.5);
- color: white;
- text-align: center;
- padding: 20px;
- box-sizing: border-box;
- transition: all .5s ease;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(100%);
+  background: rgba(34, 34, 33, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
 }
 
 .card_destinations:hover p {
- opacity: 1;
- transform: translateY(0%);
+  opacity: 1;
+  transform: translateY(0%);
 }
 
 /* Media query for mobile view (maximum width 770px) */
@@ -520,7 +529,7 @@ body {
   .mainpic-home img {
     width: 100%;
   }
-  .about-content img{
+  .about-content img {
     width: 80%;
   }
   .container {
@@ -539,7 +548,7 @@ body {
   }
   .main-rooms {
     display: block;
-    margin: 30px;
+    padding: 10px;
   }
 
   /* Styling for card facilities section (.card-facilities) */
@@ -562,19 +571,14 @@ body {
     float: right;
     margin: 20px;
   }
+  .card-des {
+    margin: 0;
+    flex-direction: column;
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 395px) {
-  .text-container {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-    color: #f1ebeb; /* Text color */
-  }
   #heading {
     font-size: 20px;
     font-weight: bold;
@@ -586,7 +590,7 @@ body {
     font-size: 12px;
     text-align: center;
   }
-  .box{
+  .box {
     flex-direction: column;
   }
   .about-content {
@@ -600,7 +604,7 @@ body {
     padding: 6px 15px;
     height: 25px;
   }
-  
+
   .service-facilities {
     padding: 10px;
   }
@@ -608,20 +612,15 @@ body {
   .service {
     width: 240px;
     height: 300px;
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  .service-img img{
+  .service-img img {
     width: 50%;
     height: 50%;
   }
 
-  .service h3{
+  .service h3 {
     font-size: 14;
   }
-  .other-facilities-home{
-    width: 240px;
-    height: 300px;
-  }
-
 }
