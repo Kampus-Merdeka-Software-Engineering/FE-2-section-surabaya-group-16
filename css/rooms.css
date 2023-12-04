@@ -8,39 +8,40 @@ body {
 .main-container{
   position: relative;
 }
-
-#booking-form {
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.room-main{
+  position: relative;
+  z-index: -1;
 }
-
-label {
-    flex: 0 0 48%; /* Adjust the width as needed */
-    margin-bottom: 8px;
-}
-
-input,
-select{
-    flex: 0 0 48%; /* Adjust the width as needed */
-    box-sizing: border-box;
-    margin-bottom: 15px;
-}
-
-#filter-section img{
+.room-main img{
   width: 100%;
 }
-
-
-#room-status {
-    text-align: center;
+.text-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff; /* Warna teks */
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px;
+  overflow: auto;
+  justify-content: center;
+}
+/* Styling for heading (#heading) */
+#heading {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
-#status-message {
-    font-weight: bold;
-    color: #333;
+/* Styling for subheading (#subheading) */
+#subheading {
+  font-size: 30px;
+  text-align: center;
 }
+
 .headings{
   text-align: center;
 }
@@ -92,16 +93,14 @@ select{
 }
 /* Styling for room details text (.text_room) */
 .text-room {
-  position: absolute;
-  top: 57%;
-  left: 20px;
+  position: relative;
+  top: 60%;
+  text-align: center;
 }
 .text-room h2{
-  align-items: center;
-  text-align: center;
-  height: 30px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
+  color: #555555;
 }
 /* Styling for room facilities information (.room_fasilities) */
 .available {
@@ -110,9 +109,11 @@ select{
   right: 10px;
 }
 
-.available p{
+
+.text-available {
   text-align: center;
-  background-color: #009c95;
+  box-shadow: 0px 0px 20px rgb(180, 175, 175);
+  background-color: rgba(26, 24, 24, 0.8);
   color: #ffffff;
   height: 20px;
   padding: 10px;
@@ -126,28 +127,13 @@ select{
   top: 65%;
   left: 20px;
 }
-.item{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 4px;
-}
-.item p{
-  margin-left: 20px;
-  text-align: center;
-}
 
-.item img{
-  justify-content: center;
-  width: 15px;
-  height: 15px;
-}
 .price {
   position: absolute;
   bottom: 15px;
   left: 10px;
   font-size: 16px;
-  color: #009c95;
+  color: #000;
   font-weight: bold;
 }
 /* Styling for "View Room" button (.view-room) */
@@ -173,7 +159,18 @@ select{
   background: #ffd524;
   color: #ffffff;
 }
+@media screen and (max-width: 500px) {
+  #heading {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: inter;
+  }
 
+  #subheading {
+    font-size: 14px;
+    font-family: inter;
+  }
+}
 @media screen and (max-width: 395px) {
   .card {
     padding: 10px;
@@ -231,5 +228,26 @@ select{
     font-size: 10px;
     padding: 6px 15px;
     height: 25px;
+  }
+  
+}
+@media screen and (max-width:300px){
+  .text-container {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+  }
+  #heading {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: inter;
+  }
+
+  #subheading {
+    font-size: 8px;
+    font-family: inter;
   }
 }

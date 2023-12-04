@@ -44,7 +44,7 @@ ul li {
 
 /* Anchor Styles */
 li .navbar-item {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
@@ -114,7 +114,7 @@ ul li button:hover {
   color: #ffffff;
   font-weight: bold;
   margin: 20px;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
   font-family: 'great-vibes', cursive;
   font-style: italic;
@@ -252,7 +252,7 @@ ul li button:hover {
 
   /* Menu Styles for Small Screens */
   #menu {
-    min-width: 50%;
+    min-width: 100%;
     min-height: 100%;
     right: 0;
     position: fixed;
@@ -332,11 +332,5 @@ ul li button:hover {
 @media screen and (max-width: 330px){
   .logo-nav img{
     height: 30px;
-  }
-  #menu.overlay {
-    visibility: visible;
-    opacity: 3;
-    top: 8%;
-    background: rgba(0, 0, 0, 0.87);
   }
 }

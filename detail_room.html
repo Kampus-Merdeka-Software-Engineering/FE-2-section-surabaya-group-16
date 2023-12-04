@@ -18,7 +18,7 @@
         <div class="topnav">
           <!-- Top navigation bar starts here -->
           <div class="logo-nav">
-            <img src="images\sunshine_white.png" alt="" />
+            <img src="assets/sunshine_white.png" alt="" />
           </div>
           <div id="burger-menu">
             <span></span>
@@ -43,164 +43,116 @@
         </div>
       </section>
       <!-- Home section -->
-      <section id="home1">
-        <div class="text-container">
-          <p id="heading">Deluxe Room</p>
-        </div>
-        <div class="mainpic-home">
-          <img src="images\mainpic_home.jpg" />
+      <section id="home-room">
+        <div class="mainpic-room">
+          <img src="assets/images/Gymnasium square.jpg" />
         </div>
       </section>
-
       <section id="room-page">
-        <div class="image-room">
-          <div id="room1-fac">
-            <img src="images\room_page\other1.png" alt="" />
-            <img src="images\room_page\other2.png" alt="" />
-            <img src="images\room_page\other3.png" alt="" />
+        <div class="container">
+          <div class="image-room">
+            <div id="room1-fac">
+              <img src="assets/images/other1.png" alt="" />
+              <img src="assets/images/other2.png" alt="" />
+              <img src="assets/images/other3.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="heading-room">
+        <div class="container">
+          <div class="headings">
+            <h1 id="heading">Deluxe Room Suite</h1>
           </div>
         </div>
       </section>
 
       <!-- Top Property section -->
       <section id="top-property">
-        <div class="top_property">
-          <div class="headings">
-            <h1>Top Property</h1>
-          </div>
-          <div class="card">
-            <div class="card_topproperty">
-              <div class="row">
-                <div class="pic">
-                  <img src="images/room_page/Stars.png" alt="" />
-                </div>
-                <div class="desc">
-                  <h2>Paling Populer</h2>
-                  <p>
-                    5000+ tamu telah menginap disini dalam 12 bulan terakhir
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="pic">
-                  <img src="images/room_page/Love.png" alt="" />
-                </div>
-                <div class="desc">
-                  <h2>Paling Disukai</h2>
-                  <p>
-                    Lebih dari 90% tamutelah menilai properti ini dengan bintang
-                    5. tamu mennyukai harga & lokasinya.
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="pic">
-                  <img src="images/room_page/User.png" alt="" />
-                </div>
-                <div class="desc">
-                  <h2>Dikenal dengan pelayanan yang baik</h2>
-                  <p>
-                    Properti ini dikelola dengan staff yang terlatih, dan telah
-                    berkomitmen untuk membuat penglaman menginap anda menjadi
-                    lebih nyaman.
-                  </p>
-                </div>
-              </div>
+        <div class="container">
+          <div class="top_property">
+            <div class="headings">
+              <h2>Description</h2>
+            </div>
+            <div class="content-room">
+              <p>
+                The Deluxe Room Suite reflects luxury with meticulous design and
+                a seamless blend of comfort and sophistication. The suite is
+                adorned with classy furnishings, luxurious beds, and stylish
+                decor, creating a subtle atmosphere. You can enjoy moments of
+                relaxation with a spacious layout, including an inviting seating
+                area, a well-equipped workspace, and a luxurious king-size bed,
+                complemented by a luxurious bathroom with premium amenities and
+                stunning views through large windows.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Infos reservation and book room -->
-      <div class="headings">
-        <h1>Facilities</h1>
-      </div>
-      <div class="container-infos">
-        <div class="roominfo">
-          <div class="desc1">
-            <img src="images/bed.png" alt="" />
-            <p>bed</p>
-          </div>
+      <section id="facilities-room">
+        <div class="container">
+          <div class="facilities-info-price">
+            <div class="fasilities-info">
+              <div class="headings">
+                <h2>Facilities</h2>
+              </div>
+              <div class="container-info">
+                <div class="roominfo">
+                  <ul>
+                    <li>Bed</li>
+                    <li>Wifi</li>
+                    <li>Ac</li>
+                    <li>Bathroom</li>
+                    <li>MiniBar</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="booking-box" id="bookingBox">
+              <div class="info">
+                <div class="price">
+                  <p>
+                    <span>Price : </span><span>$</span
+                    ><span id="hargaPerKamar">180</span>
+                  </p>
+                  <p><span>Discount : </span><span id="diskon">10</span>%</p>
+                </div>
+                <label for="tipeKamar">Name Room:</label>
+                <input
+                  type="text"
+                  id="tipeKamar"
+                  name="tipeKamar"
+                  value="Standard"
+                  disabled
+                />
+                <label for="checkinDate">Check-in:</label>
+                <input type="date" id="checkinDate" />
 
-          <div class="desc2">
-            <img src="images/minibar.png" alt="" />
-            <p>mini bar</p>
-          </div>
+                <label for="checkoutDate">Check-out:</label>
+                <input type="date" id="checkoutDate" />
 
-          <div class="desc3">
-            <img src="images/wifi.png" alt="" />
-            <p>Free wifi</p>
-          </div>
+                <label for="jumlahKamar">Quantity of Rooms:</label>
+                <input type="number" id="jumlahKamar" min="1" />
 
-          <div class="desc4">
-            <img src="images/room_page/Toilet.png" alt="" />
-            <p>Toilet</p>
-          </div>
+                <button id="checkPriceBtn">Check Price</button>
 
-          <div class="desc5">
-            <img src="images/room_page/Television.png" alt="" />
-            <p>Television</p>
-          </div>
-
-          <div class="desc6">
-            <img src="images/room_page/Sunbed.png" alt="" />
-            <p>Sunbed</p>
+                <div id="resultPopup" class="popup">
+                  <span class="close" onclick="closePopup()">&times;</span>
+                  <p id="popupContent"></p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="booknow-info">
-          <div class="top">
-            <div class="price">
-              <p class="real" style="text-decoration: line-through">
-                Rp.300.000
-              </p>
-              <p class="disc">Rp. 56.968 OFF</p>
-              <p class="aft-disc">Rp. 201.979</p>
-            </div>
-
-            <div class="total-ratings">
-              <img src="images/star.png" alt="" />
-              <p>1541</p>
-            </div>
-          </div>
-          <div class="reservation-info">
-            <div class="top">
-              <h2>Check in</h2>
-              <p>Sun, 3 nov 2023</p>
-            </div>
-            <div class="top">
-              <h2>Check out</h2>
-              <p>Mon, 4 nov 2023</p>
-            </div>
-            <div class="bottom">
-              <h2>Jumlah kamar</h2>
-              <p>1</p>
-            </div>
-          </div>
-
-          <div class="room-type">
-            <h2>Tipe Kamar</h2>
-            <p>DELUXE ROOM</p>
-          </div>
-
-          <div class="total-price">
-            <h2>Menghemat Sebesar</h2>
-            <p>Rp. 56.968</p>
-          </div>
-
-          <div class="total-price">
-            <h2>Total Harga</h2>
-            <p>Rp.201.979</p>
-          </div>
-          <button class="reservation">Book now</button>
-        </div>
-      </div>
+      </section>
       <!-- Footer -->
       <section id="footer">
         <div class="bottom-footer">
           <div class="logo-social">
             <div class="logo-container">
-              <img src="images/sunshine_white.png" alt="sunshine i-land logo" />
+              <img src="assets/sunshine_white.png" alt="sunshine i-land logo" />
               <p>Enjoy holiday with us</p>
             </div>
             <div class="social-container">
@@ -210,17 +162,20 @@
                   <a class="contact" href="#"
                     ><img
                       class="contact-loc"
-                      src="images\map-pin.svg"
+                      src="assets/icons/map-pin.svg"
                       alt="Location"
                   /></a>
                   <a class="contact" href="#"
                     ><img
                       class="contact-phon"
-                      src="images\phone.svg"
+                      src="assets/icons/phone.svg"
                       alt="Phone"
                   /></a>
                   <a class="contact" href="mailto:sunshineilandresort@gmail.com"
-                    ><img class="contact-mail" src="images\mail.svg" alt="Mail"
+                    ><img
+                      class="contact-mail"
+                      src="assets/icons/mail.svg"
+                      alt="Mail"
                   /></a>
                 </div>
               </div>
@@ -230,12 +185,12 @@
                   <a
                     class="follow"
                     href="https://www.facebook.com/profile.php?id=61554082070886&mibextid=ZbWKwL"
-                    ><img src="images\facebook.svg" alt="Facebook"
+                    ><img src="assets/icons/facebook.svg" alt="Facebook"
                   /></a>
                   <a
                     class="follow"
                     href="https://instagram.com/sunshine_iland_resort?igshid=OGQ5ZDc2ODk2ZA=="
-                    ><img src="images\instagram.svg" alt="Instagram"
+                    ><img src="assets/icons/instagram.svg" alt="Instagram"
                   /></a>
                 </div>
               </div>
@@ -246,5 +201,6 @@
       </section>
     </div>
     <script src="javascript/navbar.js"></script>
+    <script src="javascript/detail_room.js"></script>
   </body>
 </html>

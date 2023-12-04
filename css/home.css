@@ -24,26 +24,30 @@ body {
   padding: 0px 20px;
   margin: 0px 50px;
 }
-#home1 {
+#home-main {
   margin-bottom: 60px;
   width: 100%;
   position: relative;
 }
+
 /* Styling for the text container */
 .text-container {
-  width: 100%;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  width: 80%;
+  transform: translate(-50%, -150%);
   z-index: 1;
-  color: #f1ebeb; /* Text color */
+  color: #ffffff; /* Warna teks */
+  padding: 20px;
+  border-radius: 20px;
+  margin: 10px;
   overflow: auto;
+  justify-content: center;
 }
 /* Styling for main-pic container */
 .main-pic {
   position: relative;
+  z-index: -1;
 }
 
 /* Styling for images within the main-pic */
@@ -66,12 +70,6 @@ body {
 #subheading {
   font-size: 30px;
   text-align: center;
-}
-/* Styling for grid layout in about section (.grid2) */
-.grid2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
 }
 
 /* Styling for individual boxes within .about-content (.box) */
@@ -98,6 +96,11 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
 }
 .about-content .box {
   text-align: center;
@@ -489,8 +492,11 @@ body {
 /* CSS mengatur bagian destination */
 .card_destinations {
   position: relative;
-  width: 60%;
-  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding: 15px;
   overflow: hidden;
   margin-bottom: 30px;
 }
@@ -517,6 +523,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   transition: all 0.5s ease;
+  border-radius: 10px;
 }
 
 .card_destinations:hover p {
@@ -579,7 +586,7 @@ body {
   }
   .card_destinations {
     position: relative;
-    width: 50%;
+    width: 60%;
     padding: 0px;
   }
 }
