@@ -25,7 +25,7 @@ body {
   margin: 0px 50px;
 }
 #home-main {
-  margin-bottom: 60px;
+  bottom: 0;
   width: 100%;
   position: relative;
 }
@@ -33,9 +33,10 @@ body {
 /* Styling for the text container */
 .text-container {
   position: absolute;
+  top: 40%;
   left: 50%;
   width: 80%;
-  transform: translate(-50%, -150%);
+  transform: translate(-50%, -50%);
   z-index: 1;
   color: #ffffff; /* Warna teks */
   padding: 20px;
@@ -430,7 +431,7 @@ body {
   align-items: center;
   align-content: center;
   flex-wrap: wrap;
-  text-align: center;
+  text-align: justify;
   flex-direction: column;
 }
 
@@ -569,9 +570,10 @@ body {
   #subheading {
     font-size: 20px;
   }
+  
   .main-rooms {
     display: block;
-    padding: 10px;
+    padding: 20px;
   }
 
   /* Display customer testimonials in a block in mobile view (.card_grid) */
@@ -606,7 +608,6 @@ body {
     font-weight: bold;
     text-align: center;
   }
-
   /* Styling for subheading (#subheading) */
   #subheading {
     font-size: 12px;
@@ -655,5 +656,24 @@ body {
   }
   .facility{
     height: 300px;
+  }
+}
+@media screen and (max-width:300px){
+  .text-container {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    padding: 10px;
+    margin: 10px;
+  }
+  #heading {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: inter;
+  }
+
+  #subheading {
+    font-size: 8px;
+    font-family: inter;
   }
 }

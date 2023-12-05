@@ -252,7 +252,7 @@ ul li button:hover {
 
   /* Menu Styles for Small Screens */
   #menu {
-    min-width: 100%;
+    min-width: 60%;
     min-height: 100%;
     right: 0;
     position: fixed;
