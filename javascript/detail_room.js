@@ -1,10 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
+import { getRoomDetail } from "./api/rooms.js";
+
+async function setInners(){
+  const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+  });
+  
+  const roomDetail = await getRoomDetail(params.room_id)
+  
+  console.log(roomDetail)
+
+  document.getElementById("heading").innerHTML = roomDetail.room_name
+}
+
+document.addEventListener("DOMContentLoaded", async function () {
   const hargaPerKamarElement = document.getElementById("hargaPerKamar");
   const diskonElement = document.getElementById("diskon");
 
   const checkinDateElement = document.getElementById("checkinDate");
   const checkoutDateElement = document.getElementById("checkoutDate");
   const jumlahKamarElement = document.getElementById("jumlahKamar");
+
+  await setInners()
 
   const checkPriceBtn = document.getElementById("checkPriceBtn");
   checkPriceBtn.addEventListener("click", function () {

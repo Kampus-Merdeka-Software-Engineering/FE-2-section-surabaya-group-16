@@ -62,7 +62,7 @@ body {
 
 #room1-fac img {
   width: 30%;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
 }
 
@@ -83,28 +83,37 @@ body {
 /* CSS bagian 2 container beseblahan */
 .container-info {
   display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+  flex-direction: row;
+  
+  margin: 0px;
+ 
 }
 
+.main-facilities, .support-facilities {
+  padding: 10px;
+  margin: 10px;
 
-
-.roominfo ul{
+ }
+ 
+ .main-facilities ul, .support-facilities ul {
   list-style-type: revert;
   display: flex;
   flex-direction: column;
-  padding-left: 5px;
-  margin-left: 10px;
-  color: #323131;
-}
-.roominfo li{
-  padding: 5px;
-}
+  padding: 10px;
+  margin: 10px;
 
-.booking-box {
+ }
+
+ li{
+  margin: 10px;
+  font-size: 16px;
+ }
+
+.price-box {
   border: 1px solid #ccc;
   height: auto;
   width: 400px;
+  margin: 20px;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

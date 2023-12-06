@@ -75,12 +75,6 @@
   text-align: center;
 }
 
-.our-facilities h2 ,
-.other-facilities h2{
-  color: #2474BD;
-  margin-bottom: 40px;
-}
-
 .our-facilities .container {
   display: flex;
   justify-content: space-between;
@@ -183,14 +177,20 @@
 /* Other Facilities Section Title - Center-aligned with underline */
 .our-facilities h2,
 .other-facilities h2 {
+  color: #2474BD;
   text-align: center;
   border-bottom: 1px solid #e3800a;
+  bottom: 10px;
+  width: 100%;
 }
 
 /* Media query for small screens (max-width: 770px) */
 @media screen and (max-width: 800px) {
   /* Text Container Style for Small Screens */
-
+  .container{
+    padding: 0;
+    margin: 0;
+  }
   /* Heading and Subheading Style for Small Screens */
   #heading {
     font-size: 20px;
@@ -231,6 +231,7 @@
     display: block;
     justify-content: center;
     align-items: center;
+    
   }
 
   /* Facilities Card and Image Style for Small Screens */
@@ -243,7 +244,7 @@
     border: #ffffff;
     position: relative;
     z-index: -1;
-    margin: auto;
+    margin: 20px;
   }
 
   .card-facility img,
