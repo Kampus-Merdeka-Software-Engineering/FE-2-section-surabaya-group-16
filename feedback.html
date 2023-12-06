@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sunshine i-land Resort</title>
+    <link rel="stylesheet" href="css/navbar-foot.css" />
+    <link rel="stylesheet" href="css/feedback.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <section id="nav">
+        <div class="topnav">
+          <!-- Top navigation bar starts here -->
+          <div class="logo-nav">
+            <img src="assets/sunshine_white.png" alt="" />
+          </div>
+          <div id="burger-menu">
+            <span></span>
+          </div>
+          <div id="menu">
+            <ul>
+              <!-- Navigation menu items -->
+              <li>
+                <a href="index.html" class="navbar-item">Home</a>
+              </li>
+              <li>
+                <a href="about_us.html" class="navbar-item">About Us</a>
+              </li>
+              <li>
+                <a href="rooms.html" class="navbar-item">Rooms</a>
+              </li>
+              <li>
+                <a href="facilities.html" class="navbar-item" id="facilities"
+                  >Facilities</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <form id="feedbackForm">
+          <label for="email">Email <span class="required">*</span>:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="name">Nama <span class="required">*</span>:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="comment">Komentar <span class="required">*</span>:</label>
+          <textarea id="comment" name="comment" rows="4" required></textarea>
+
+          <label for="photo">Upload Foto (opsional):</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+          <img
+            id="imagePreview"
+            alt="Preview"
+            style="max-width: 100%; margin-top: 10px; display: none"
+          />
+
+          <button type="button" onclick="submitFeedback()">
+            Send Feedback
+          </button>
+        </form>
+      </section>
+      <section id="footer">
+        <div class="bottom-footer">
+          <div class="logo-social">
+            <div class="logo-container">
+              <img src="assets/sunshine_white.png" alt="sunshine i-land logo" />
+              <p>Enjoy holiday with us</p>
+            </div>
+            <div class="social-container">
+              <div class="contact-footer">
+                <h4>Contact Us</h4>
+                <div class="contact-img">
+                  <a class="contact" href="#"
+                    ><img
+                      class="contact-loc"
+                      src="assets/icons/map-pin.svg"
+                      alt="Location"
+                  /></a>
+                  <a class="contact" href="#"
+                    ><img
+                      class="contact-phon"
+                      src="assets/icons/phone.svg"
+                      alt="Phone"
+                  /></a>
+                  <a class="contact" href="mailto:sunshineilandresort@gmail.com"
+                    ><img
+                      class="contact-mail"
+                      src="assets/icons/mail.svg"
+                      alt="Mail"
+                  /></a>
+                </div>
+              </div>
+              <div class="follow-footer">
+                <h4>Follow Us</h4>
+                <div class="follow-img">
+                  <a
+                    class="follow"
+                    href="https://www.facebook.com/profile.php?id=61554082070886&mibextid=ZbWKwL"
+                    ><img src="assets/icons/facebook.svg" alt="Facebook"
+                  /></a>
+                  <a
+                    class="follow"
+                    href="https://instagram.com/sunshine_iland_resort?igshid=OGQ5ZDc2ODk2ZA=="
+                    ><img src="assets/icons/instagram.svg" alt="Instagram"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h5>Copyright @2023 SESurabayaGrup16</h5>
+        </div>
+      </section>
+    </div>
+    <script>
+      function previewImage() {
+        var preview = document.getElementById("imagePreview");
+        var fileInput = document.getElementById("photo");
+        var file = fileInput.files[0];
+
+        if (file) {
+          var reader = new FileReader();
+          reader.onloadend = function () {
+            preview.src = reader.result;
+            preview.style.display = "block";
+          };
+          reader.readAsDataURL(file);
+        } else {
+          preview.src = "";
+          preview.style.display = "none";
+        }
+      }
+
+      // Function to display a notification
+      function showNotification(message, type) {
+        var notification = document.createElement("div");
+        notification.className = "notification " + type;
+        notification.innerHTML = message;
+        document.body.appendChild(notification);
+
+        setTimeout(function () {
+          document.body.removeChild(notification);
+        }, 3000);
+      }
+
+      // Function to submit feedback
+      function submitFeedback() {
+        var email = document.getElementById("email").value;
+        var name = document.getElementById("name").value;
+        var comment = document.getElementById("comment").value;
+
+        // Example: Validation
+        if (!email || !name || !comment) {
+          showNotification("Mohon isi semua kolom yang diperlukan.", "error");
+          return;
+        }
+
+        var photo = document.getElementById("photo").files[0];
+        var formData = new FormData();
+        formData.append("photo", photo);
+
+        fetch("submit_feedback", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            showNotification(data, "success");
+            // You can perform additional actions after successful submission
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            showNotification(
+              "Terjadi kesalahan saat mengirim feedback.",
+              "error"
+            );
+          });
+      }
+    </script>
+  </body>
+</html>
