@@ -54,23 +54,20 @@ body {
 }
 
 /* CSS mengatur ukuran dari bagian main */
-#room1-fac {
+.detail-room {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-#room1-fac img {
-  width: 30%;
+.detail-room img {
+  width: 15rem;
+  height: 15rem;
   padding: 20px;
-  border-radius: 10px;
-}
-
-#room1-fac img {
   transition: transform 0.5s ease;
 }
 
-#room1-fac img:hover {
+.detail-room img:hover {
   transform: scale(1.1);
 }
 
@@ -151,7 +148,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
-#tipeKamar, #checkinDate, #checkoutDate, #jumlahKamar{
+#roomName, #checkinDate, #checkoutDate, #totalRoom{
   margin-top: 10px;
   cursor: pointer;
   padding: 10px 20px;

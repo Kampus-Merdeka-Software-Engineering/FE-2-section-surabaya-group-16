@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/navbar-foot.css" />
     <link rel="stylesheet" href="css/detail_room.css" />
     <!-- Page title -->
-    <title>Sunshine i-land Resort | Room Detail </title>
+    <title>Sunshine i-land Resort | Room Detail</title>
     <link rel="icon" href="assets/sunshine_blue_icon.png " />
   </head>
   <body>
@@ -45,16 +45,16 @@
       <!-- Home section -->
       <section id="home-room">
         <div class="mainpic-room">
-          <img src="assets/images/Gymnasium square.jpg" />
+          <img id="img-main" />
         </div>
       </section>
       <section id="room-page">
         <div class="container">
           <div class="image-room">
-            <div id="room1-fac">
-              <img src="assets/images/other1.png" alt="" />
-              <img src="assets/images/other2.png" alt="" />
-              <img src="assets/images/other3.png" alt="" />
+            <div class="detail-room">
+              <img id="image1" />
+              <img id="image2" />
+              <img id="image3" />
             </div>
           </div>
         </div>
@@ -75,16 +75,7 @@
               <h2>Description</h2>
             </div>
             <div class="content-room">
-              <p>
-                The Deluxe Room Suite reflects luxury with meticulous design and
-                a seamless blend of comfort and sophistication. The suite is
-                adorned with classy furnishings, luxurious beds, and stylish
-                decor, creating a subtle atmosphere. You can enjoy moments of
-                relaxation with a spacious layout, including an inviting seating
-                area, a well-equipped workspace, and a luxurious king-size bed,
-                complemented by a luxurious bathroom with premium amenities and
-                stunning views through large windows.
-              </p>
+              <p id="desc"></p>
             </div>
           </div>
         </div>
@@ -107,8 +98,8 @@
                     <li id="facility4">Child-Friendly Room Service</li>
                     <li id="facility5">24/7 Kids Tv Channel</li>
                   </ul>
-               </div>
-               <div class="support-facilities">
+                </div>
+                <div class="support-facilities">
                   <h4>Support Facilities</h4>
                   <ul>
                     <li>Exclusive relaxation space</li>
@@ -117,7 +108,7 @@
                     <li>Fast Wi-Fi Throughout</li>
                     <li>Secure Parking Area</li>
                   </ul>
-               </div>
+                </div>
               </div>
             </div>
             <div class="price-box" id="priceBox">
@@ -125,26 +116,21 @@
                 <div class="price">
                   <p>
                     <span>Price : </span><span>$</span
-                    ><span id="hargaPerKamar">180</span>
+                    ><span id="priceRoom">180</span>
                   </p>
-                  <p><span>Discount : </span><span id="diskon">10</span>%</p>
+                  <p><span>Discount : </span><span id="discount">10</span>%</p>
                 </div>
-                <label for="tipeKamar">Name Room:</label>
-                <input
-                  type="text"
-                  id="tipeKamar"
-                  name="tipeKamar"
-                  value="Standard"
-                  disabled
-                />
+                <label for="roomName">Name Room:</label>
+                <input type="text" id="roomName" disabled />
+
                 <label for="checkinDate">Check-in:</label>
                 <input type="date" id="checkinDate" />
 
                 <label for="checkoutDate">Check-out:</label>
                 <input type="date" id="checkoutDate" />
 
-                <label for="jumlahKamar">Quantity of Rooms:</label>
-                <input type="number" id="jumlahKamar" min="1" />
+                <label for="totalRoom">Total of Rooms:</label>
+                <input type="number" id="totalRoom" min="1" max="5" />
 
                 <button id="checkPriceBtn">Check Price</button>
 
