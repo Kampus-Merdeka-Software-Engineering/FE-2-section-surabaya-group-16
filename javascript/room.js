@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const roomsData = await getRoom();
 
         // Menangani elemen HTML setelah data diterima
-        const cardContainer = document.getElementById("card-container");
+        const cardContainer = document.getElementById("room-container");
         
         // Pastikan data ada sebelum mencoba mengakses propertinya
         if (roomsData.length > 0) {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             //     cards += createCard(room)
             // });
 
-            for(let i = 0; i<3; i++) {
+            for(let i = 0; i < 3; i++) {
                 cards += createCard(roomsData[i])
             }
 
@@ -31,4 +31,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     } catch (error) {
         console.error('Error:', error);
     }
-});
+}); 
