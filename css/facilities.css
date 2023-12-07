@@ -249,7 +249,7 @@
 
   .card-facility img,
   .other-facility img {
-    width: 100%;
+    width: 190%;
     height: 60%;
     position: absolute;
     border-radius: 10px;
@@ -292,7 +292,7 @@
   }
 }
 
-@media screen and (max-width:300px){
+@media screen and (max-width:700px){
   .text-container {
     position: absolute;
     top: 40%;
