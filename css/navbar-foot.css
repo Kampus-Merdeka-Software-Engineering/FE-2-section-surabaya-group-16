@@ -12,7 +12,7 @@
 }
 
 .topnav.scrolled {
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgb(69, 69, 69);
 }
 /* Logo Navigation Styles */
 .logo-nav img {
@@ -90,7 +90,7 @@ ul li button:hover {
 
 /* Bottom Footer Styles */
 .bottom-footer {
-  background-color: #2d2d2d;
+  background-color: rgb(69, 69, 69);;
   width: 100%;
   position: absolute;
   right: 0;

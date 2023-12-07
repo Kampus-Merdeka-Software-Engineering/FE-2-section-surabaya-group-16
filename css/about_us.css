@@ -221,6 +221,20 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
+
+/* Style for page */
+section:not(#nav, #footer) {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-in-out;
+  will-change: transform, opacity;
+}
+
+section:not(#nav, #footer).show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Extra styling for heading text in .about-content */
 
 @media screen and (max-width: 880px) {

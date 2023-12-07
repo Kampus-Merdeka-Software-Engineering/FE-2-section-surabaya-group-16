@@ -21,3 +21,19 @@ window.addEventListener('scroll', function() {
   }
 });
 
+//Page style
+window.addEventListener('DOMContentLoaded', (event) => {
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+          }
+      });
+  });
+
+  const elements = document.querySelectorAll('section:not(#nav, #footer) ');
+  elements.forEach(element => {
+      observer.observe(element);
+  });
+});
+
