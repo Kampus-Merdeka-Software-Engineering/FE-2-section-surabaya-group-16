@@ -1,15 +1,3 @@
-/* External font import for Inter */
-@font-face {
-  font-family: "Inter", sans-serif;
-  src: url("font/Inter-Regular.ttf");
-}
-
-/* External font import for Kaushan Script */
-@font-face {
-  font-family: "KaushanScript-Regular", cursive;
-  src: url("font/KaushanScript-Regular.ttf") format("truetype");
-}
-
 /* Set the default font family for the body */
 body {
   font-family: "Inter", sans-serif;
@@ -62,15 +50,18 @@ body {
 
 /* Styling for heading (#heading) */
 #heading {
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 55px;
+  font-weight: 500;
   text-align: center;
+  margin-top: 50px;
 }
 
 /* Styling for subheading (#subheading) */
 #subheading {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
+  font-style: italic;
+  margin-top: -10px;
 }
 
 /* Styling for individual boxes within .about-content (.box) */
@@ -90,6 +81,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 50px;
 }
 .text-about {
   text-align: center;
@@ -153,7 +145,7 @@ body {
   padding: 10px;
 }
 .view-about:hover {
-  background: #113fd5;
+  background: #FFCA0E;
   color: #ffffff;
 }
 .view-about {
@@ -182,17 +174,18 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 20px;
   margin-right: 10px;
 }
 
 .more-rooms a {
   height: 40px;
-  font-weight: bold;
+  font-weight: 500;
+  text-decoration: none;
+  color: #213e9e;
 }
 
 .more-rooms a:hover {
-  color: #213e9e;
+  color: #FFCA0E;
   cursor: pointer;
 }
 /* Styling for headings within .headings */
@@ -200,12 +193,10 @@ body {
   text-align: center;
   color: #213e9e;
   font-size: 32px;
-  padding: 20px;
 }
 
 .subheadings p {
   color: #555555;
-  padding: 20px;
 }
 /* Styling for cards container (.card) */
 .card {
@@ -320,7 +311,7 @@ body {
   right: 10px;
   border: none;
   border-radius: 5px;
-  background: #ffca0e;
+  background: #213e9e;
   color: #ffffff;
   font-size: 14px;
   font-weight: bold;
@@ -388,6 +379,7 @@ body {
 
 .headings p {
   text-align: center;
+  color: #555555;
 }
 .service-facilities {
   padding: 20px;
@@ -404,7 +396,7 @@ body {
   border-radius: 8px;
   width: 280px;
   height: 300px;
-  margin: 30px;
+  margin: 20px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -413,6 +405,12 @@ body {
   flex-wrap: wrap;
   text-align: justify;
   flex-direction: column;
+}
+.service h3 {
+  color: #555555;
+}
+.service p {
+  margin-top: -5px;
 }
 
 .service-img {
@@ -458,7 +456,7 @@ body {
   z-index: 1;
   color: #f1ebeb; /* Text color */
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #213e9e;
   border-radius: 10px;
 }
 .img-facility img {
@@ -664,11 +662,9 @@ section:not(#nav, #footer).show {
   #heading {
     font-size: 12px;
     font-weight: bold;
-    font-family: inter;
   }
 
   #subheading {
     font-size: 8px;
-    font-family: inter;
   }
 }
