@@ -1,15 +1,17 @@
 export function createCard(room) {
-    let discountView = ""
-    if(room.discount != null) {
-        discountView = `<p><span>Discount </span>${room.discount}<span> %</span></p>`
-    }
+  let discountView = "";
+  if (room.discount != null) {
+    discountView = `<p><span>Discount </span>${room.discount}<span> %</span></p>`;
+  }
 
-    const card = `
+  const card =
+    `
             <div class="card-room1" id=${room.room_id}>
               <img src="${room.main_image}" alt="" />
               <div class="room-container">
-                <div class="discount">`
-                + discountView +`
+                <div class="discount">` +
+    discountView +
+    `
                 </div>
               </div>
               <div class="text-room">
@@ -25,5 +27,5 @@ export function createCard(room) {
             </div>
     `;
 
-    return card
+  return card;
 }

@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Document type declaration and language declaration -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Connect external stylesheet files for the main page -->
     <link rel="stylesheet" href="css/navbar-foot.css" />
     <link rel="stylesheet" href="css/detail_room.css" />
-    <!-- Page title -->
     <title>Sunshine i-land Resort | Room Detail</title>
     <link rel="icon" href="assets/sunshine_blue_icon.png " />
   </head>
   <body>
     <div class="main-container">
-      <!-- Header -->
       <section id="nav">
         <div class="topnav">
-          <!-- Top navigation bar starts here -->
           <div class="logo-nav">
             <img src="assets/sunshine_white.png" alt="" />
           </div>
@@ -25,7 +20,6 @@
           </div>
           <div id="menu">
             <ul>
-              <!-- Navigation menu items -->
               <li>
                 <a href="index.html" class="navbar-item">Home</a>
               </li>
@@ -42,7 +36,6 @@
           </div>
         </div>
       </section>
-      <!-- Home section -->
       <section id="home-room">
         <div class="mainpic-room">
           <img id="img-main" />
@@ -66,8 +59,6 @@
           </div>
         </div>
       </section>
-
-      <!-- Top Property section -->
       <section id="top-property">
         <div class="container">
           <div class="top_property">
@@ -80,7 +71,6 @@
           </div>
         </div>
       </section>
-      <!-- Info price room -->
       <section id="facilities-room">
         <div class="container">
           <div class="facilities-info-price">
@@ -91,12 +81,8 @@
               <div class="container-info">
                 <div class="main-facilities">
                   <h4>Main Facilities</h4>
-                  <ul>
-                    <li id="facility1">King-Friendly Views</li>
-                    <li id="facility2">Family Concierge Assitance</li>
-                    <li id="facility3">Stroller Rental Services</li>
-                    <li id="facility4">Child-Friendly Room Service</li>
-                    <li id="facility5">24/7 Kids Tv Channel</li>
+                  <ul id="facilities-detail-room">
+                    <li></li>
                   </ul>
                 </div>
                 <div class="support-facilities">
@@ -116,9 +102,9 @@
                 <div class="price">
                   <p>
                     <span>Price : </span><span>$</span
-                    ><span id="priceRoom">180</span>
+                    ><span id="priceRoom"> </span>
                   </p>
-                  <p><span>Discount : </span><span id="discount">10</span>%</p>
+                  <p><span>Discount : </span><span id="discount"> </span>%</p>
                 </div>
                 <label for="roomName">Name Room:</label>
                 <input type="text" id="roomName" disabled />
@@ -129,21 +115,31 @@
                 <label for="checkoutDate">Check-out:</label>
                 <input type="date" id="checkoutDate" />
 
+                <label for="emailGuest">Email:</label>
+                <input type="text" id="emailGuest" />
+
+                <label for="nameGuest">Name:</label>
+                <input type="text" id="nameGuest" />
+
+                <label for="noHpGuest">No HP:</label>
+                <input type="number" id="noHpGuest" />
+
                 <label for="totalRoom">Total of Rooms:</label>
                 <input type="number" id="totalRoom" min="1" max="5" />
-
-                <button id="checkPriceBtn">Check Price</button>
-
-                <div id="resultPopup" class="popup">
-                  <span class="close" onclick="closePopup()">&times;</span>
-                  <p id="popupContent"></p>
-                </div>
+                <p>
+                  <span>Total Price : </span><span>$</span
+                  ><span id="totalPrice"> </span>
+                </p>
+                <input type="checkbox" id="confirmationCheckbox" />
+                <label for="confirmationCheckbox"
+                  >I confirm that the information provided is correct</label
+                >
+                <button id="bookNow">Book Now</button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Footer -->
       <section id="footer">
         <div class="bottom-footer">
           <div class="logo-social">
