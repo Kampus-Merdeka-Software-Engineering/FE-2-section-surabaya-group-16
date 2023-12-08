@@ -41,8 +41,8 @@ body {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 0px 0px 10px #d1b829;
-  margin: 40px;
-  padding: 10px;
+  margin: 30px;
+  padding: 5px;
 }
 
 .vision h1,
@@ -171,16 +171,16 @@ body {
   position: absolute;
   top: 73%;
   left: 5%;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #000;
 }
 
 .name-member {
   position: absolute;
-  top: 65%;
+  top: 66%;
   left: 5%;
-  font-size: 20px;
+  font-size: 17px;
   color: #213e9e;
 }
 
@@ -188,14 +188,14 @@ body {
   justify-content: space-between;
 }
 .follow-in img {
-  width: 20px;
+  width: 15px;
   height: auto;
   top: 85%;
   margin-left: 10px;
   margin: 0%;
 }
 .follow-ig img {
-  width: 20px;
+  width: 15px;
   height: auto;
   top: 85%;
   margin-left: 30px;

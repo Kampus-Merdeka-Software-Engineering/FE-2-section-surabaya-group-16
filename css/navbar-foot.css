@@ -12,7 +12,7 @@
 }
 
 .topnav.scrolled {
-  background-color: rgb(69, 69, 69);
+  background-color: #213e9e;
 }
 /* Logo Navigation Styles */
 .logo-nav img {
@@ -44,8 +44,8 @@ ul li {
 
 /* Anchor Styles */
 li .navbar-item {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
   color: #ffffff;
   text-decoration: none;
   padding: 8px 10px;
@@ -84,13 +84,13 @@ li button {
 }
 
 ul li button:hover {
-  background: #ffd524;
+  background: #FFCA0E;
   color: #ffffff;
 }
 
 /* Bottom Footer Styles */
 .bottom-footer {
-  background-color: rgb(69, 69, 69);;
+  background-color: #213e9e;
   width: 100%;
   position: absolute;
   right: 0;
