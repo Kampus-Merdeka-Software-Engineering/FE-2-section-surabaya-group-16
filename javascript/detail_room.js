@@ -1,99 +1,191 @@
-import { getRoomDetail } from "./api/rooms.js";
+import { getDetailFacilities, createBook } from "./api/rooms.js";
 
 async function setInners() {
-  const params = new Proxy(new URLSearchParams(window.location.search), {
-    get: (searchParams, prop) => searchParams.get(prop),
+  try {
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+      get: (searchParams, prop) => searchParams.get(prop),
+    });
+
+    let roomDetail = await getDetailFacilities(params.room_id);
+
+    console.log(roomDetail);
+
+    document.getElementById("heading").innerHTML = roomDetail.room_name;
+    document.getElementById("desc").innerHTML = roomDetail.room_description;
+    document.getElementById("priceRoom").innerHTML = roomDetail.price;
+    document.getElementById("roomName").value = roomDetail.room_name;
+    document.getElementById("discount").innerHTML = roomDetail.discount;
+
+    const imgMainElement = document.getElementById("img-main");
+    imgMainElement.setAttribute("src", roomDetail.main_image);
+    imgMainElement.setAttribute("alt", roomDetail.room_name);
+
+    const imgDetailElement1 = document.getElementById("image1");
+    imgDetailElement1.setAttribute("src", roomDetail.detail_image1);
+    imgDetailElement1.setAttribute("alt", roomDetail.room_name);
+
+    const imgDetailElement2 = document.getElementById("image2");
+    imgDetailElement2.setAttribute("src", roomDetail.detail_image2);
+    imgDetailElement2.setAttribute("alt", roomDetail.room_name);
+
+    const imgDetailElement3 = document.getElementById("image3");
+    imgDetailElement3.setAttribute("src", roomDetail.detail_image3);
+    imgDetailElement3.setAttribute("alt", roomDetail.room_name);
+
+    // Ambil elemen ul dengan ID "facilities-detail-room"
+    const facilitiesUl = document.getElementById("facilities-detail-room");
+
+    // Bersihkan kontennya sebelum menambahkan fasilitas baru
+    facilitiesUl.innerHTML = "";
+
+    // Check if roomDetail.Facilities is defined before using forEach
+    if (roomDetail.Facilities && roomDetail.Facilities.length > 0) {
+      // Loop through the facilities data and create li elements
+      roomDetail.Facilities.forEach((facility) => {
+        // Create a new li element
+        var li = document.createElement("li");
+
+        // Set the text content of the li element to the current facility_name
+        li.textContent = facility.facility_name;
+
+        // Append the li element to the ul element
+        facilitiesUl.appendChild(li);
+      });
+    } else {
+      console.error("No facilities data available");
+    }
+  } catch (error) {
+    console.error("Error fetching room details:", error);
+  }
+
+  const bookNowButton = document.getElementById("bookNow");
+
+  bookNowButton.addEventListener("click", async () => {
+    const checkinDate = document.getElementById("checkinDate").value;
+    const checkoutDate = document.getElementById("checkoutDate").value;
+    const emailGuest = document.getElementById("emailGuest").value;
+    const nameGuest = document.getElementById("nameGuest").value;
+    const noHpGuest = document.getElementById("noHpGuest").value;
+    const totalRoom = document.getElementById("totalRoom").value;
+
+    // Calculate total price based on room price and discount
+    const totalPrice = calculateTotalPrice(
+      roomDetail.price,
+      roomDetail.discount,
+      totalRoom
+    );
+
+    const bookingData = {
+      room_id: params.room_id,
+      checkin_date: checkinDate,
+      checkout_date: checkoutDate,
+      email: emailGuest,
+      name: nameGuest,
+      no_hp: noHpGuest,
+      total_rooms: totalRoom,
+      total_price: totalPrice,
+    };
+
+    const createdBooking = await createBook(bookingData);
+
+    if (createdBooking) {
+      console.log("Booking created:", createdBooking);
+      document.getElementById(
+        "bookingId"
+      ).innerHTML = `Booking ID: ${createdBooking.booking_id}`;
+    } else {
+      console.error("Failed to create booking");
+    }
   });
-
-  const roomDetail = await getRoomDetail(params.room_id);
-
-  console.log(roomDetail);
-
-  document.getElementById("heading").innerHTML = roomDetail.room_name;
-
-  document.getElementById("desc").innerHTML = roomDetail.room_description;
-
-  document.getElementById("priceRoom").innerHTML = roomDetail.price;
-
-  document.getElementById("roomName").value = roomDetail.room_name;
-
-  document.getElementById("discount").innerHTML = roomDetail.discount;
-
-  const imgMainElement = document.getElementById("img-main");
-  imgMainElement.setAttribute("src", roomDetail.main_image);
-  imgMainElement.setAttribute("alt", roomDetail.room_name);
-
-  const imgDetailElement1 = document.getElementById("image1");
-  imgDetailElement1.setAttribute("src", roomDetail.detail_image1);
-  imgDetailElement1.setAttribute("alt", roomDetail.room_name);
-
-  const imgDetailElement2 = document.getElementById("image2");
-  imgDetailElement2.setAttribute("src", roomDetail.detail_image2);
-  imgDetailElement2.setAttribute("alt", roomDetail.room_name);
-
-  const imgDetailElement3 = document.getElementById("image3");
-  imgDetailElement3.setAttribute("src", roomDetail.detail_image3);
-  imgDetailElement3.setAttribute("alt", roomDetail.room_name);
-
-
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-
-  const checkinDateElement = document.getElementById("checkinDate");
-  const checkoutDateElement = document.getElementById("checkoutDate");
-  const totalKamarElemenet = document.getElementById("totalRoom");
-
   await setInners();
 
-  const checkPriceBtn = document.getElementById("checkPriceBtn");
-  checkPriceBtn.addEventListener("click", function () {
-    const priceRoom = parseInt(document.getElementById("priceRoom").innerText);
-const discount = parseInt(document.getElementById("discount").innerText);
 
+  const bookNowButton = document.getElementById("bookNow");
+  const confirmationCheckbox = document.getElementById("confirmationCheckbox");
 
-    const checkinDate = checkinDateElement.value;
-    const checkoutDate = checkoutDateElement.value;
-    const totalRoom = parseInt(totalKamarElemenet.value);
+  bookNowButton.addEventListener("click", async () => {
+    if (confirmationCheckbox.checked) {
+      const checkinDate = document.getElementById("checkinDate").value;
+      const checkoutDate = document.getElementById("checkoutDate").value;
+      const emailGuest = document.getElementById("emailGuest").value;
+      const nameGuest = document.getElementById("nameGuest").value;
+      const noHpGuest = document.getElementById("noHpGuest").value;
+      const totalRoom = document.getElementById("totalRoom").value;
 
-    // Cek apakah form telah diisi dengan benar
-    if (checkinDate && checkoutDate && totalRoom > 0) {
-      // Konversi discount menjadi persen jika ada
-      const discountPercent = discount ? discount / 100 : 0;
+      // Calculate total price based on room price and discount
+      const totalPrice = calculateTotalPrice(
+        roomDetail.price,
+        roomDetail.discount,
+        totalRoom
+      );
 
-      // Hitung total harga sebelum discount
-      const totalSebelumDiskon = priceRoom * totalRoom;
+      // Prepare data for the popup
+      const popupData = {
+        roomName: roomDetail.room_name,
+        checkinDate,
+        checkoutDate,
+        emailGuest,
+        nameGuest,
+        noHpGuest,
+        totalRoom,
+        totalPrice,
+      };
 
-      // Hitung total hari
-      const checkin = new Date(checkinDate);
-      const checkout = new Date(checkoutDate);
-      const totalHari = Math.ceil((checkout - checkin) / (1000 * 60 * 60 * 24));
+      // Fetch booking details based on room ID
+      const bookingDetails = await getRoomBook(params.room_id);
 
-      // Hitung discount
-      const totalDiskon = totalSebelumDiskon * discountPercent;
+      if (bookingDetails) {
+        // Update popup data with booking details
+        popupData.bookingDetails = bookingDetails;
 
-      // Hitung total harga setelah discount
-      const totalSetelahDiskon = totalSebelumDiskon - totalDiskon;
-
-      // Tampilkan hasil dalam popup
-      const popupContent = `
-        Total Kamar: ${totalRoom} kamar<br>
-        Total Hari: ${totalHari} hari<br>
-        Diskon: ${discount ? discount + "%" : "Tidak ada discount"}<br>
-        Total Sebelum Diskon: $${totalSebelumDiskon}<br>
-        Total Diskon: $${totalDiskon}<br>
-        Total Harga: $${totalSetelahDiskon}
-      `;
-
-      document.getElementById("popupContent").innerHTML = popupContent;
-      document.getElementById("resultPopup").style.display = "block";
+        // Display the popup
+        displayPopup(popupData);
+      } else {
+        alert("Failed to fetch booking details");
+      }
     } else {
-      alert("Silakan isi form dengan benar.");
+      alert("Please confirm that the information provided is correct.");
     }
   });
 });
 
-function closePopup() {
-  document.getElementById("resultPopup").style.display = "none";
+
+function calculateTotalPrice(price, discount, totalRoom) {
+  const discountedPrice = price - (price * discount) / 100;
+  return discountedPrice * totalRoom;
 }
 
+// Function to display the popup with entered information
+function displayPopup(data) {
+  const popupContent = `
+      <p><strong>Room Name:</strong> ${data.roomName}</p>
+      <p><strong>Check-in:</strong> ${data.checkinDate}</p>
+      <p><strong>Check-out:</strong> ${data.checkoutDate}</p>
+      <p><strong>Email:</strong> ${data.emailGuest}</p>
+      <p><strong>Name:</strong> ${data.nameGuest}</p>
+      <p><strong>No HP:</strong> ${data.noHpGuest}</p>
+      <p><strong>Total Rooms:</strong> ${data.totalRoom}</p>
+      <p><strong>Total Price:</strong> $${data.totalPrice}</p>
+  `;
+
+  // Create a div element for the popup
+  const popupDiv = document.createElement("div");
+  popupDiv.innerHTML = popupContent;
+
+  // Add styles to the popup div (you may want to customize this based on your design)
+  popupDiv.style.position = "fixed";
+  popupDiv.style.top = "50%";
+  popupDiv.style.left = "50%";
+  popupDiv.style.transform = "translate(-50%, -50%)";
+  popupDiv.style.background = "#fff";
+  popupDiv.style.padding = "20px";
+  popupDiv.style.border = "1px solid #ccc";
+  popupDiv.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+  popupDiv.style.zIndex = "1000";
+
+  // Append the popup div to the body
+  document.body.appendChild(popupDiv);
+}
