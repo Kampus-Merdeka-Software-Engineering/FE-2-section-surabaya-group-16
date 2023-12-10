@@ -85,6 +85,7 @@
 
 .our-facilities .facility {
   width: 100%;
+  margin-top: 20px;
 }
 .our-facilities h3 {
   color: #3b3b3b;
@@ -281,6 +282,9 @@ section:not(#nav, #footer).show {
     border-radius: 10px;
   }
 
+  .fac-img {
+    width: 65%;
+  }
   .our-facilities .container {
     flex-direction: column;
   }
