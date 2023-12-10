@@ -1,9 +1,37 @@
-/* Set the default font family for the body */
-body {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  padding: 0;
+#home-main {
+  position: relative;
+  height: 850px; 
 }
+
+.mainpic-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.mainpic-home img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.mainpic-home:first-child {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+}
+
 .main-container {
   position: relative;
 }
@@ -72,8 +100,12 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-  color: #555555;
+  color: #3B3B3B;
   font-size: 32px;
+}
+
+.offer {
+  color: #3B3B3B;
 }
 /* Styling for about section (.about-content) */
 .about-content {
@@ -98,15 +130,11 @@ body {
 .about-content .box {
   text-align: center;
   position: relative;
-  margin: 10px;
+  margin-top: 10px;
+
 }
 
 /* Styling for heading and subheading in .box */
-.about-content .box h3 {
-  color: #213e9e;
-  font-size: 20px;
-}
-
 .about-content .box h4 {
   position: relative;
   margin-top: -10px;
@@ -137,25 +165,18 @@ body {
 
 /* Styling for heading color in .about-content */
 .text-about h2 {
-  padding: 10px;
-  color: #213e9e;
+  color: #3B3B3B;
 }
 
 .text-about p {
-  padding: 10px;
-}
-.view-about:hover {
-  background: #FFCA0E;
-  color: #ffffff;
+  margin: 0;
 }
 .view-about {
   border: none;
-  background: #2347bc;
+  background: #213E9E;
   border-radius: 5px;
   color: #ffffff;
-  font-family: inter;
   font-size: 14px;
-  font-weight: bold;
   display: flex;
   padding: 10px 20px;
   height: 40px;
@@ -164,6 +185,10 @@ body {
   transition: background 0.3s, color 0.3s;
   align-items: center;
   justify-content: center;
+}
+.view-about:hover {
+  background: #18307e;
+  color: #ffffff;
 }
 /* Styling for individual room cards (.card_room1) */
 #popular-rooms {
@@ -181,22 +206,23 @@ body {
   height: 40px;
   font-weight: 500;
   text-decoration: none;
-  color: #213e9e;
+  color: #3B3B3B;
 }
 
 .more-rooms a:hover {
-  color: #FFCA0E;
+  color: #18307e;
   cursor: pointer;
 }
 /* Styling for headings within .headings */
 .headings h1 {
   text-align: center;
-  color: #213e9e;
+  color: #3B3B3B;
   font-size: 32px;
 }
 
 .subheadings p {
-  color: #555555;
+  color: #555555
+;
 }
 /* Styling for cards container (.card) */
 .card {
@@ -205,6 +231,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-right: 10px;
+  margin-bottom: 50px;
 }
 .card-room1 {
   border-radius: 8px;
@@ -218,7 +245,7 @@ body {
   position: relative;
 }
 .headings-popular {
-  color: #555555;
+  color: #3B3B3B;
 }
 /* Styling for images within .card_room1 */
 .card-room1 img {
@@ -256,7 +283,7 @@ body {
 .text-room h2 {
   font-size: 24px;
   font-weight: bold;
-  color: #555555;
+  color: #3B3B3B;
 }
 /* Styling for room facilities information (.room_fasilities) */
 .available {
@@ -311,7 +338,7 @@ body {
   right: 10px;
   border: none;
   border-radius: 5px;
-  background: #213e9e;
+  background: #213E9E;
   color: #ffffff;
   font-size: 14px;
   font-weight: bold;
@@ -363,13 +390,34 @@ body {
 .client-card h2,
 .client-card p {
   text-align: center;
-  color: #5b5b5b;
+  color: #3B3B3B;
 }
 
 /* Styling for headings in customer testimonials (#customers_say .headings p) */
 #customers-say .subheadings p {
   text-align: center;
-  color: #5b5b5b;
+  color: #555555;
+}
+.letus-know {
+  position: absolute;
+  border: none;
+  border-radius: 5px;
+  margin-left: 25px;
+  background: #213E9E;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, color 0.3s;
+  bottom: 10px;
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+.letus-know:hover {
+  background: #18307e;
+  color: #ffffff;
 }
 
 /* Styling for card facilities section (.card-facilities) */
@@ -379,7 +427,7 @@ body {
 
 .headings p {
   text-align: center;
-  color: #555555;
+  color: #3B3B3B;
 }
 .service-facilities {
   padding: 20px;
@@ -389,7 +437,7 @@ body {
   margin-right: 10px;
 }
 .headings h3 {
-  color: #555555;
+  color: #3B3B3B;
   text-align: center;
 }
 .service {
@@ -407,14 +455,14 @@ body {
   flex-direction: column;
 }
 .service h3 {
-  color: #555555;
+  color: #3B3B3B;
 }
 .service p {
   margin-top: -5px;
 }
 
 .service-img {
-  background-color: #213e9e;
+  background-color: #213E9E;
   width: 45%;
   height: 40%;
   border-radius: 50%;
@@ -456,7 +504,7 @@ body {
   z-index: 1;
   color: #f1ebeb; /* Text color */
   overflow: auto;
-  background-color: #213e9e;
+  background-color: rgba(32, 18, 89, 0.8);
   border-radius: 10px;
 }
 .img-facility img {
@@ -510,7 +558,7 @@ body {
   width: 100%;
   opacity: 0;
   transform: translateY(100%);
-  background: rgba(76, 50, 184, 0.8);
+  background: rgba(32, 18, 89, 0.8);
   color: white;
   text-align: center;
   padding: 20px;
