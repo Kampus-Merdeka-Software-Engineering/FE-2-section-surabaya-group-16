@@ -249,12 +249,12 @@ body {
 /* Styling for room details text (.text_room) */
 .text-room {
   position: relative;
-  top: 60%;
+  top: 65%;
   text-align: center;
 }
 
 .text-room h2 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   color: #555555;
 }
@@ -291,7 +291,7 @@ body {
 }
 .price {
   position: absolute;
-  left: 10px;
+  left: 15px;
   font-size: 16px;
   color: #000;
   font-weight: 500;
@@ -308,7 +308,7 @@ body {
 /* Styling for "View Room" button (.view-room) */
 .view-room {
   position: absolute;
-  right: 10px;
+  right: 15px;
   border: none;
   border-radius: 5px;
   background: #213e9e;
@@ -321,7 +321,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: background 0.3s, color 0.3s;
-  bottom: 10px;
+  bottom: 15px;
   text-decoration: none;
 }
 .view-room:hover {

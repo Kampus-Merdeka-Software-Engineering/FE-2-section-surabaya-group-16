@@ -97,6 +97,7 @@
                 </div>
               </div>
             </div>
+            <form id="booking-form">
             <div class="price-box" id="priceBox">
               <div class="info">
                 <div class="price">
@@ -106,6 +107,7 @@
                   </p>
                   <p><span>Discount : </span><span id="discount"> </span>%</p>
                 </div>
+                <p id="bookingId"></p>
                 <label for="roomName">Name Room:</label>
                 <input type="text" id="roomName" disabled />
 
@@ -134,9 +136,10 @@
                 <label for="confirmationCheckbox"
                   >I confirm that the information provided is correct</label
                 >
-                <button id="bookNow">Book Now</button>
+                <button type="submit" id="bookNow">Book Now</button>
               </div>
             </div>
+            </form>
           </div>
         </div>
       </section>
@@ -151,7 +154,9 @@
               <div class="contact-footer">
                 <h4>Contact Us</h4>
                 <div class="contact-img">
-                  <a class="contact" href="https://maps.app.goo.gl/Ro9od683DTYt97N17"
+                  <a
+                    class="contact"
+                    href="https://maps.app.goo.gl/Ro9od683DTYt97N17"
                     ><img
                       class="contact-loc"
                       src="assets/icons/map-pin.svg"

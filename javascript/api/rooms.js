@@ -32,24 +32,28 @@ export async function getDetailFacilities(room_id) {
     return null;
   }
 }
-export async function createBook(bookingData) {
+export async function createBooking(booking) {
   try {
     const response = await fetch("http://localhost:3000/book", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(bookingData),
+      body: JSON.stringify(booking),
+      credentials: "include",
     });
 
-    const { data } = await response.json();
-    console.log(data);
-    return data;
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    return await response.json();
   } catch (error) {
-    console.error(error);
-    return null;
+    console.error("Error creating booking:", error);
+    throw error;
   }
 }
+
 
 export async function getRoomBook(room_id) {
   try {
@@ -58,6 +62,7 @@ export async function getRoomBook(room_id) {
       headers: {
         "Content-Type": "application/json",
       },
+      credentials: "include"
     });
 
     const { data } = await response.json();

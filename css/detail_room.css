@@ -57,12 +57,12 @@ body {
 .detail-room {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .detail-room img {
-  width: 250px;
-  height: 150px;
+  width: 330px;
+  height: 200px;
   padding: 20px;
   border-radius: 25px;
   transition: transform 0.5s ease;
