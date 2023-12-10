@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sunshine i-land Resort</title>
     <link rel="stylesheet" href="css/navbar-foot.css" />
+    <link rel="stylesheet" href="css/font_style.css" />
     <link rel="stylesheet" href="css/feedback.css" />
   </head>
   <body>
     <div class="main-container">
       <section id="nav">
-        <div class="topnav">
+        <div class="topnav-feedback">
           <div class="logo-nav">
             <img src="assets/sunshine_white.png" alt="" />
           </div>
@@ -38,35 +39,41 @@
             </ul>
           </div>
       </section>
-      <section id="feedback">
-        <div class="container">
-        <img src="" alt="">
-        <div class="container-feedback">
-        <h1>Create Feedback</h1>
-        <form id="feedbackForm" autocomplete="on"/> 
-          <div>
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email" required/>
+      <div id="content-wrapper">
+        <section id="home-main">
+          <div class="mainpic-home">
+            <img src="assets/images/feedback.png" />
           </div>
-          <div>
-            <label for="name_user">Name: </label>
-            <input type="text" name="name_user" id="name_user" required />
+          <div class="feedback-section">
+            <form id="feedbackForm">
+              <label for="email">Email <span class="required">*</span>:</label>
+              <input type="email" id="email" name="email" required />
+      
+              <label for="name">Name <span class="required">*</span>:</label>
+              <input type="text" id="name" name="name" required />
+      
+              <label for="comment">Your Feedback <span class="required">*</span>:</label>
+              <textarea id="comment" name="comment" rows="4" required></textarea>
+      
+              <label for="photo">Upload Your Photo (optional):</label>
+              <input type="file" id="photo" name="photo" accept="image/*" />
+              <img id="imagePreview" alt="Preview" style="max-width: 100%; margin-top: 10px; display: none" />
+      
+              <button type="button" onclick="submitFeedback()">
+                Send 
+              </button>
+            </form>
+	          <div id="successPopup" class="popup">
+              <div class="popup-content">
+              <img src="assets/icons/check-mark.png" alt="Checkmark" />
+              <p>Feedback submitted successfully!</p>
+            </div>
+           </div>
           </div>
-          <div>
-            <label for="comments">Feedback: </label>
-            <textarea name="comments" id="comments" required></textarea>
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-        <div id="successPopup" class="popup">
-          <div class="popup-content">
-            <img src="assets/icons/check-mark.png" alt="Checkmark" />
-            <p>Feedback submitted successfully!</p>
-          </div>
-        </div>
+        </section>
+        
       </div>
-    </div>
-      </section>
+      
       <section id="footer">
         <div class="bottom-footer">
           <div class="logo-social">
@@ -113,6 +120,7 @@
         </div>
       </section>
     </div>
+    <script src="javascript/page_style.js"></script>
     <script src="javascript/navbar.js"></script>
     <script type="module" src="javascript/feedback.js"></script>
   </body>

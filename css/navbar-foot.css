@@ -10,6 +10,20 @@
   transition: background-color 0.3s;
 }
 
+.topnav-feedback {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  transition: background-color 0.3s;
+  background-color: #050F30;
+}
+
+
 .topnav.scrolled {
   background-color: #050F30;
   opacity: 90%;
@@ -255,7 +269,7 @@ body {
 
   
   #menu {
-    min-width: 60%;
+    min-width: 100%;
     min-height: 100%;
     right: 0;
     position: fixed;
