@@ -1,7 +1,7 @@
 import { getRoom } from "./api/rooms.js";
 import { createCard } from "../components/room_popular.js";
 import { getFeedback } from "./api/feedback.js";
-import { FeedbackCard } from "../components/feedback.js";
+import { feedbackCard } from "../components/feedback.js";
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const roomsData = await getRoom();
@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.error("Data kamar tidak ditemukan.");
     }
 
-    if (feedbackData && feedbackData.length > 0) {
+    if (feedbackData.length > 0) {
       let feedbackCards = "";
 
       for (let i = 0; i < feedbackData.length; i++) {
-        feedbackCards += FeedbackCard(feedbackData[i]);
+        feedbackCards += feedbackCard(feedbackData[i]);
       }
 
       feedbackContainer.innerHTML = feedbackCards;
