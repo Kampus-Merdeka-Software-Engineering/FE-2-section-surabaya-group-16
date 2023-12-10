@@ -6,7 +6,6 @@ export async function getFeedback(feedback_id) {
         "Content-Type": "application/json",
       },
     });
-
     const { data } = await response.json();
     console.log(data);
     return data;

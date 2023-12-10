@@ -3,15 +3,9 @@ import { RoomCard } from "../components/room_card.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    // Mengambil data kamar dari server
     const roomsData = await getRoom();
-
-    // Menangani elemen HTML setelah data diterima
-    const cardContainer = document.getElementById("room-container");
-
-    // Pastikan data ada sebelum mencoba mengakses propertinya
+    roomsData.sort((a, b) => b.price - a.price);
     if (roomsData.length > 0) {
-      // Menggunakan data pertama dari array sebagai contoh
       let cards = "";
 
       for (let i = 0; i < 12; i++) {
@@ -37,8 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
           cards += RoomCard(roomsData[i]);
       }
       document.getElementById("room-standard").innerHTML = cards;
-
-      // Cetak data ke konsol
       console.log("rooms", roomsData[0].room_name);
     } else {
       console.error("Data kamar tidak ditemukan.");

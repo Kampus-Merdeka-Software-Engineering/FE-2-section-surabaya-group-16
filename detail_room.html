@@ -111,36 +111,37 @@
                   <p id="bookingId"></p>
                   <label for="roomName">Name Room:</label>
                   <input type="text" id="roomName" disabled />
-
                   <label for="checkinDate">Check-in:</label>
                   <input type="date" id="checkinDate" />
-
                   <label for="checkoutDate">Check-out:</label>
                   <input type="date" id="checkoutDate" />
-
                   <label for="emailGuest">Email:</label>
                   <input type="text" id="emailGuest" />
-
                   <label for="nameGuest">Name:</label>
                   <input type="text" id="nameGuest" />
-
-                  <label for="noHpGuest">No HP:</label>
-                  <input type="number" id="noHpGuest" />
-
+                  <label for="noHpGuest">Phone Number:</label>
+                  <input type="text" id="noHpGuest" />
                   <label for="totalRoom">Total of Rooms:</label>
                   <input type="number" id="totalRoom" min="1" max="5" />
                   <p>
                     <span>Total Price : </span><span>$</span
                     ><span id="totalPrice"> </span>
                   </p>
+                  <div class="checkBox">
                   <input type="checkbox" id="confirmationCheckbox" />
-                  <label for="confirmationCheckbox"
-                    >I confirm that the information provided is correct</label
-                  >
+                  <label for="confirmationCheckbox">I confirm that the information provided is correct</label>
+                  </div>
                   <button type="submit" id="bookNow">Book Now</button>
                 </div>
               </div>
             </form>
+            <div class="popup" id="successPopup">
+              <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h2>Booking Successful!</h2>
+                <p id="popupInfo"></p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -198,6 +199,12 @@
         </div>
       </section>
     </div>
+    <script>
+      function closePopup() {
+        const popup = document.getElementById("successPopup");
+        popup.style.display = "none";
+      }
+    </script>
     <script src="javascript/navbar.js"></script>
     <script type="module" src="javascript/detail_room.js"></script>
   </body>

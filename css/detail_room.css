@@ -7,19 +7,20 @@
   width: 100%;
   position: relative;
 }
-/* Styling for the text container */
-/* Styling for main-pic container */
 .main-pic {
   position: relative;
 }
 
-/* Styling for images within the main-pic */
 .mainpic-room {
   margin-top: 0;
 }
 
 .mainpic-room img {
   width: 100%;
+}
+
+#image1, #image2, #image3{
+  width: 250px;
 }
 .container {
   padding: 0px 20px;
@@ -28,42 +29,40 @@
 .card {
   display: flex;
 }
-.headings, .content-room {
+.headings,
+.content-room {
   text-align: left;
   padding-left: 10px;
   margin-left: 10px;
 }
-/* Styling for headings within .headings */
 .headings h1 {
   text-align: left;
   color: #3b3b3b;
   font-size: 30px;
 }
-.top_property .headings h2{
+.top_property .headings h2 {
   text-align: left;
   color: #3b3b3b;
 }
 
-.fasilities-info .headings h2{
+.fasilities-info .headings h2 {
   text-align: left;
   color: #3b3b3b;
   font-size: 20px;
 }
-.content-room p{
+.content-room p {
   text-align: justify;
 }
 
-/* CSS mengatur ukuran dari bagian main */
 .detail-room {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .detail-room img {
-  width: 330px;
-  height: 200px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 25px;
   transition: transform 0.5s ease;
 }
@@ -72,46 +71,47 @@
   transform: scale(1.1);
 }
 
-.facilities-info-price{
+.facilities-info-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-/* CSS bagian 2 container beseblahan */
 .container-info {
   display: flex;
   flex-direction: row;
   margin: 0px;
   color: #555555;
   font-size: 16px;
- 
 }
-
-.main-facilities, .support-facilities {
+.main-facilities,
+.support-facilities {
   padding: 10px;
   margin: 10px;
   color: #555555;
- }
- 
- .main-facilities ul, .support-facilities ul {
+}
+#desc{
+  padding-right: 20px;
+}
+.main-facilities ul,
+.support-facilities ul {
   list-style-type: revert;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 10px;
   margin: 10px;
+}
 
- }
-
- li{
+li {
   margin: 10px;
   font-size: 16px;
- }
+}
 
 .price-box {
   border: 1px solid #ccc;
   height: auto;
-  width: 400px;
+  width: 600px;
   margin: 20px;
   padding: 30px;
   border-radius: 10px;
@@ -136,21 +136,27 @@
 .info button {
   margin-top: 10px;
   cursor: pointer;
-  background-color: #213E9E;
+  background-color: #213e9e;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
 }
-.info button:hover{
+.info button:hover {
   background-color: #18307e;
 }
-.price{
+.price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-#roomName, #checkinDate, #checkoutDate, #totalRoom{
+#roomName,
+#checkinDate,
+#checkoutDate,
+#totalRoom,
+#emailGuest,
+#nameGuest,
+#noHpGuest {
   margin-top: 10px;
   cursor: pointer;
   padding: 10px 20px;
@@ -162,24 +168,59 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
-.popup span.close {
-  position: absolute;
+.popup-content {
+  position: relative;
+}
+
+.close-btn {
+  position: fixed;
   top: 5px;
   right: 10px;
-  font-size: 20px;
   cursor: pointer;
+  font-size: 30px;
+  color: #333;
 }
-/* Gaya CSS untuk layar yang lebar kurang dari 1000px */
-@media (max-width: 700px) {
-  .facilities-info-price{
+
+.close-btn:hover {
+  color: #ff0000;
+}
+.checkBox{
+  display: flex;
+  align-items: flex-start;
+
+}
+
+@media screen and (max-width: 1000px) {
+  .facilities-info-price {
     flex-direction: column;
     margin-bottom: 30px;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .price-box {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .detail-room {
+    justify-content: center;
+  }
+  .container-info {
+    flex-direction: column;
+  }
+  .price-box {
+    width: 180px;
   }
 }

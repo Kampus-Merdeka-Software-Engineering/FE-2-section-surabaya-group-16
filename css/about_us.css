@@ -21,7 +21,7 @@ body {
   margin: 0px 50px;
 }
 .text-about {
-  margin: 50px;
+  margin: 20px;
 }
 .text-about h1 {
   font-size: 30px;
@@ -39,7 +39,7 @@ body {
   border: 4px solid #213E9E;
   padding: 10px;
   border-radius: 15px;
-  width: 50%;
+  width: 100%;
 }
 
 .vision h1,
@@ -96,7 +96,6 @@ body {
 
 }
 
-/* Styling for heading and subheading in .box */
 .about-content .box h4 {
   position: relative;
   margin-top: -10px;

@@ -36,36 +36,40 @@
                 >
               </li>
             </ul>
-          </div
-        </div>
+          </div>
       </section>
-      <section>
+      <section id="feedback">
+        <div class="container">
         <img src="" alt="">
+        <div class="container-feedback">
         <h1>Create Feedback</h1>
         <form id="feedbackForm" autocomplete="on"/> 
-        <div>
-              <label for="email">Email: </label>
-              <input type="email" name="email" id="email" required />
-            </div>
-            <div>
-              <label for="name_user">Name: </label>
-              <input type="text" name="name_user" id="name_user" required />
-            </div>
-            <div>
-              <label for="comments">Comments: </label>
-              <textarea name="comments" id="comments" required></textarea>
-            </div>
-            <div>
+          <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" required/>
+          </div>
+          <div>
+            <label for="name_user">Name: </label>
+            <input type="text" name="name_user" id="name_user" required />
+          </div>
+          <div>
+            <label for="comments">Feedback: </label>
+            <textarea name="comments" id="comments" required></textarea>
+          </div>
+            <!-- <div>
               <label for="img_user">Image: </label>
               <input type="file" name="img_user" id="img_user" accept="image/*" required />
-            </div>
-            <button type="submit">Submit</button>
+            </div> -->
+          <button type="submit">Submit</button>
         </form>
         <div id="successPopup" class="popup">
           <div class="popup-content">
             <img src="assets/icons/check-mark.png" alt="Checkmark" />
             <p>Feedback submitted successfully!</p>
           </div>
+        </div>
+      </div>
+    </div>
       </section>
       <section id="footer">
         <div class="bottom-footer">

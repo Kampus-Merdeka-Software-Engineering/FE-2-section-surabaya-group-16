@@ -1,6 +1,6 @@
 // Get references to the burger menu and overlay elements
-var burgerMenu = document.getElementById("burger-menu");
-var overlay = document.getElementById("menu");
+let burgerMenu = document.getElementById("burger-menu");
+let overlay = document.getElementById("menu");
 
 // Function to toggle the burger menu and overlay classes
 function toggleMenu() {
@@ -8,11 +8,10 @@ function toggleMenu() {
   overlay.classList.toggle("overlay");
 }
 
-// Add a click event listener to the burger menu
 burgerMenu.addEventListener("click", toggleMenu);
 
 window.addEventListener("scroll", function () {
-  var navbar = document.querySelector(".topnav");
+  let navbar = document.querySelector(".topnav");
   if (window.scrollY > 0) {
     navbar.classList.add("scrolled");
   } else {
@@ -37,8 +36,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 
-var slideIndex = 0;
-var slides = document.getElementsByClassName("mainpic-home");
+let slideIndex = 0;
+let slides = document.getElementsByClassName("mainpic-home");
 if (slides.length > 0) {
   slides[slideIndex].style.opacity = "1";
 }
@@ -56,3 +55,4 @@ function showSlides() {
 }
 
 showSlides();
+

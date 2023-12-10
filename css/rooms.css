@@ -164,7 +164,7 @@
   background: #18307e;
   color: #ffffff;
 }
-/* Style for page */
+
 section:not(#nav, #footer) {
   opacity: 0;
   transform: translateY(50px);
@@ -224,16 +224,16 @@ section:not(#nav, #footer).show {
   .price{
     position: absolute;
     bottom: 10px;
-    left: 0;
+    left: 10px;
     font-size: 12px;
   }
-  /* Styling for "View Room" button (.view-room) */
+
   .view-room {
-    bottom: 25px;
+    bottom: 15px;
     right: 10px;
     font-size: 10px;
-    padding: 6px 15px;
-    height: 25px;
+    padding: 10px 15px;
+    height: 15px;
   }
   
 }

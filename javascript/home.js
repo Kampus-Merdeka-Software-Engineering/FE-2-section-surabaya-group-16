@@ -1,5 +1,5 @@
 import { getRoom } from "./api/rooms.js";
-import { createCard } from "../components/room_popular.js";
+import { RoomCard } from "../components/room_card.js";
 import { getFeedback } from "./api/feedback.js";
 import { feedbackCard } from "../components/feedback.js";
 document.addEventListener("DOMContentLoaded", async () => {
@@ -7,13 +7,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const roomsData = await getRoom();
     const cardContainer = document.getElementById("card-container");
     const feedbackData = await getFeedback();
-    const feedbackContainer = document.getElementById("customers")
+    const feedbackContainer = document.getElementById("customers");
     if (roomsData.length > 0) {
       let cards = "";
-
       for (let i = 0; i < roomsData.length; i++) {
         if (roomsData[i].discount) {
-          cards += createCard(roomsData[i]);
+          cards += RoomCard(roomsData[i]);
         }
       }
       cardContainer.innerHTML = cards;
@@ -22,17 +21,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.error("Data kamar tidak ditemukan.");
     }
 
-    if (feedbackData.length > 0) {
-      let feedbackCards = "";
+    feedbackData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
-      for (let i = 0; i < feedbackData.length; i++) {
-        feedbackCards += feedbackCard(feedbackData[i]);
-      }
+    const latestFeedback = feedbackData.slice(0, 3);
 
-      feedbackContainer.innerHTML = feedbackCards;
-    } else {
-      console.error("Data feedback tidak ditemukan atau kosong.");
+    let feedbackCards = "";
+    for (let i = 0; i < latestFeedback.length; i++) {
+      feedbackCards += feedbackCard(latestFeedback[i]);
     }
+
+    feedbackContainer.innerHTML = feedbackCards;
   } catch (error) {
     console.error("Error:", error);
   }
