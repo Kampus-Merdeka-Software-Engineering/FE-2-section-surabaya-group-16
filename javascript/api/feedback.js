@@ -7,10 +7,8 @@ export async function getFeedback(feedback_id) {
       },
     });
     const { data } = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
-    console.log(error);
     return null;
   }
 }
@@ -24,4 +22,3 @@ export async function createFeedback(feedbackData) {
   });
   return await response.json();
 }
-

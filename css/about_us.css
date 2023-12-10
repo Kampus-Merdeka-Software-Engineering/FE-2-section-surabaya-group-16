@@ -58,7 +58,7 @@ body {
   color: #3B3B3B;
   text-align: center;
 }
-/* Styling for individual boxes within .about-content (.box) */
+
 #about-us {
   margin-bottom: 100px;
 }
@@ -69,7 +69,7 @@ body {
   color: #3B3B3B;
   font-size: 32px;
 }
-/* Styling for about section (.about-content) */
+
 .about-content {
   display: flex;
   justify-content: center;
@@ -118,13 +118,12 @@ body {
   width: 50px;
   padding: 5px;
 }
-/* Styling for images in .about-content */
+
 .about-content img {
   padding: 10px;
   width: 30rem;
 }
 
-/* Styling for heading color in .about-content */
 .text-about h2 {
   color: #3B3B3B;
 }
@@ -220,7 +219,6 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Style for page */
 section:not(#nav, #footer) {
   opacity: 0;
   transform: translateY(50px);
@@ -233,7 +231,7 @@ section:not(#nav, #footer).show {
   transform: translateY(0);
 }
 
-/* Extra styling for heading text in .about-content */
+
 
 @media screen and (max-width: 880px) {
   .about-content {

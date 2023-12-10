@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     roomsData.sort((a, b) => b.price - a.price);
     if (roomsData.length > 0) {
       let cards = "";
-
       for (let i = 0; i < 12; i++) {
         if (roomsData[i].category_name == "Deluxe")
           cards += RoomCard(roomsData[i]);
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", async () => {
           cards += RoomCard(roomsData[i]);
       }
       document.getElementById("room-standard").innerHTML = cards;
-      console.log("rooms", roomsData[0].room_name);
     } else {
       console.error("Data kamar tidak ditemukan.");
     }

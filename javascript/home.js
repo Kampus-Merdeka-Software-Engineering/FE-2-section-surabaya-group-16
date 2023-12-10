@@ -2,6 +2,7 @@ import { getRoom } from "./api/rooms.js";
 import { RoomCard } from "../components/room_card.js";
 import { getFeedback } from "./api/feedback.js";
 import { feedbackCard } from "../components/feedback.js";
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const roomsData = await getRoom();
@@ -16,20 +17,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
       }
       cardContainer.innerHTML = cards;
-      console.log("rooms", roomsData[0].room_name);
     } else {
       console.error("Data kamar tidak ditemukan.");
     }
-
     feedbackData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-    
     const latestFeedback = feedbackData.slice(0, 3);
-
     let feedbackCards = "";
     for (let i = 0; i < latestFeedback.length; i++) {
       feedbackCards += feedbackCard(latestFeedback[i]);
     }
-
     feedbackContainer.innerHTML = feedbackCards;
   } catch (error) {
     console.error("Error:", error);

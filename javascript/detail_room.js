@@ -43,10 +43,8 @@ function calculateTotalPrice(checkinDate, checkoutDate, price, discount, totalRo
   const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
   const discountedPricePerDay = price - (price * discount) / 100;
   const totalPrice = discountedPricePerDay * totalRoom * daysDifference;
-
   return totalPrice;
 }
-
 async function setInners() {
   try {
     const params = new URLSearchParams(window.location.search);
@@ -68,7 +66,6 @@ async function setInners() {
     document.getElementById("image3").setAttribute("src", roomDetail.detail_image3);
     const facilitiesUl = document.getElementById("facilities-detail-room");
     facilitiesUl.innerHTML = "";
-
     if (roomDetail.Facilities.length > 0) {
       roomDetail.Facilities.forEach((facility) => {
         const li = document.createElement("li");
@@ -85,7 +82,6 @@ async function setInners() {
       const checkinDate = document.getElementById("checkinDate").value;
       const checkoutDate = document.getElementById("checkoutDate").value;
       const totalRoom = totalRoomInput.value;
-
       try {
         const totalPrice = calculateTotalPrice(
           checkinDate,

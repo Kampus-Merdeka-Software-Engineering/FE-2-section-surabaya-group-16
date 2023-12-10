@@ -46,7 +46,7 @@
   position: relative;
 }
 
-/* Styling for the text container */
+
 .text-container {
   position: absolute;
   top: 40%;
@@ -80,7 +80,7 @@
   margin-top: 50px;
 }
 
-/* Styling for subheading (#subheading) */
+
 #subheading {
   font-size: 25px;
   text-align: center;
@@ -599,13 +599,13 @@ section:not(#nav, #footer).show {
     padding: 0px;
     margin: 0px;
   }
-  /* Styling for heading in mobile view (#heading) */
+  
   #heading {
     font-size: 30px;
     text-align: center;
   }
 
-  /* Styling for subheading in mobile view (#subheading) */
+  
   #subheading {
     font-size: 20px;
   }
@@ -615,7 +615,7 @@ section:not(#nav, #footer).show {
     padding: 20px;
   }
 
-  /* Display customer testimonials in a block in mobile view (.card_grid) */
+  
   .card-grid {
     display: block;
   }
@@ -643,7 +643,7 @@ section:not(#nav, #footer).show {
     font-weight: bold;
     text-align: center;
   }
-  /* Styling for subheading (#subheading) */
+  
   #subheading {
     font-size: 12px;
     text-align: center;
@@ -654,7 +654,7 @@ section:not(#nav, #footer).show {
   .about-content {
     font-size: 14px;
   }
-  /* Styling for "View Room" button (.view-room) */
+  
   .view-room {
     bottom: 15px;
     right: 10px;

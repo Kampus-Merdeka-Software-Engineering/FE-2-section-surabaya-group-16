@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sunshine i-land Resort</title>
     <link rel="stylesheet" href="css/navbar-foot.css" />
+    <link rel="stylesheet" href="css/font_style.css" />
     <link rel="stylesheet" href="css/feedback.css" />
   </head>
   <body>
@@ -12,7 +13,7 @@
       <section id="nav">
         <div class="topnav">
           <div class="logo-nav">
-            <img src="assets/sunshine_white.png" alt="" />
+            <img src="assets/sunshine_white.png" alt="logo" />
           </div>
           <div id="burger-menu">
             <span></span>
@@ -20,33 +21,33 @@
           <div id="menu">
             <ul>
               <li>
-                <a href="index.html" class="navbar-item">Home</a>
+                <a href="index.html" class="navbar-item" id="home">Home</a>
               </li>
               <li>
-                <a href="about_us.html" class="navbar-item"
-                  >About Us</a
-                >
+                <a href="about_us.html" class="navbar-item">About Us</a>
               </li>
               <li>
                 <a href="rooms.html" class="navbar-item">Rooms</a>
               </li>
               <li>
-                <a href="facilities.html" class="navbar-item"
-                  >Facilities</a
-                >
+                <a href="facilities.html" class="navbar-item">Facilities</a>
               </li>
             </ul>
           </div>
+        </div>
       </section>
       <section id="feedback">
+        <div class="mainpic-feedback">
+          <img src="assets/images/feedback.png" alt="feedback" />
+          <div class="overlay"></div>
+        </div>
         <div class="container">
-          <img src="" alt="">
           <div class="container-feedback">
-            <h1>Create Feedback</h1>
-            <form id="feedbackForm" autocomplete="on"/> 
+            <h1 class="headings">Create Feedback</h1>
+            <form id="feedbackForm" autocomplete="on">
               <div>
                 <label for="email">Email: </label>
-                <input type="email" name="email" id="email" required/>
+                <input type="email" name="email" id="email" required />
               </div>
               <div>
                 <label for="name_user">Name: </label>
@@ -57,7 +58,10 @@
                 <textarea name="comments" id="comments" required></textarea>
               </div>
               <div class="rating-submit">
-                <label>Kindly share your rating with us, your feedback is highly valued!</label>
+                <label
+                  >Kindly share your rating with us, your feedback is highly
+                  valued!</label
+                >
                 <div class="rating-star" id="star-container">
                   <div class="star" data-value="1">&#9733;</div>
                   <div class="star" data-value="2">&#9733;</div>
@@ -68,7 +72,7 @@
                 <button type="submit">Submit</button>
               </div>
             </form>
-          </div>        
+          </div>
           <div id="successPopup" class="popup">
             <div class="popup-content">
               <img src="assets/icons/check-mark.png" alt="Checkmark" />
@@ -89,9 +93,7 @@
             </p>
           </div>
           <div class="card">
-            <div class="card-grid" id="customers">
-              
-            </div>
+            <div class="card-grid" id="customers"></div>
           </div>
         </div>
       </section>
@@ -106,18 +108,33 @@
               <div class="contact-footer">
                 <h4>Contact Us</h4>
                 <div class="contact-img">
-                  <a class="contact" href="https://maps.app.goo.gl/Ro9od683DTYt97N17"
-                    ><img
+                  <a
+                    class="contact"
+                    href="https://maps.app.goo.gl/Ro9od683DTYt97N17"
+                  >
+                    <img
                       class="contact-loc"
                       src="assets/icons/map-pin.svg"
                       alt="Location"
-                  /></a>
-                  <a class="contact" href="https://wa.me/085156467819"
-                    ><img class="contact-phon" src="assets/icons/phone.svg" alt="Phone"
-                  /></a>
-                  <a class="contact" href="mailto:sunshineilandresort@gmail.com"
-                    ><img class="contact-mail" src="assets/icons/mail.svg" alt="Mail"
-                  /></a>
+                    />
+                  </a>
+                  <a class="contact" href="https://wa.me/085156467819">
+                    <img
+                      class="contact-phon"
+                      src="assets/icons/phone.svg"
+                      alt="Phone"
+                    />
+                  </a>
+                  <a
+                    class="contact"
+                    href="mailto:sunshineilandresort@gmail.com"
+                  >
+                    <img
+                      class="contact-mail"
+                      src="assets/icons/mail.svg"
+                      alt="Mail"
+                    />
+                  </a>
                 </div>
               </div>
               <div class="follow-footer">
@@ -126,21 +143,24 @@
                   <a
                     class="follow"
                     href="https://www.facebook.com/profile.php?id=61554082070886&mibextid=ZbWKwL"
-                    ><img src="assets/icons/facebook.svg" alt="Facebook"
-                  /></a>
+                  >
+                    <img src="assets/icons/facebook.svg" alt="Facebook" />
+                  </a>
                   <a
                     class="follow"
                     href="https://instagram.com/sunshine_iland_resort?igshid=OGQ5ZDc2ODk2ZA=="
-                    ><img src="assets/icons/instagram.svg" alt="Instagram"
-                  /></a>
+                  >
+                    <img src="assets/icons/instagram.svg" alt="Instagram" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        <h5>Copyright @2023 SESurabayaGrup16</h5>
+          <h5>Copyright @2023 SESurabayaGrup16</h5>
         </div>
       </section>
     </div>
+    <script src="javascript/page_style.js"></script>
     <script src="javascript/navbar.js"></script>
     <script type="module" src="javascript/feedback.js"></script>
   </body>
