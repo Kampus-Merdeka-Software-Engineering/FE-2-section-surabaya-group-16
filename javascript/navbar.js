@@ -39,14 +39,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 var slideIndex = 0;
 var slides = document.getElementsByClassName("mainpic-home");
-slides[slideIndex].style.opacity = "1";
-function showSlides() {
-  slides[slideIndex].style.opacity = "0";
-  slideIndex++;
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
-  }
+if (slides.length > 0) {
   slides[slideIndex].style.opacity = "1";
+}
+
+function showSlides() {
+  if (slides.length > 0) {
+    slides[slideIndex].style.opacity = "0";
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    slides[slideIndex].style.opacity = "1";
+  }
   setTimeout(showSlides, 4000);
 }
+
 showSlides();

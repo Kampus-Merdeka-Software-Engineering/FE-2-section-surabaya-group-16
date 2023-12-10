@@ -147,8 +147,7 @@ body {
 
 .card-member {
   border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0.3s;
   width: 280px;
   height: 410px;
@@ -188,17 +187,17 @@ body {
   justify-content: space-between;
 }
 .follow-in img {
-  width: 15px;
+  width: 17px;
   height: auto;
   top: 85%;
   margin-left: 10px;
   margin: 0%;
 }
 .follow-ig img {
-  width: 15px;
+  width: 17px;
   height: auto;
-  top: 85%;
-  margin-left: 30px;
+  top: 84.8%;
+  margin-left: 25px;
   border-color: #009c95;
   padding: 3px;
 }
@@ -294,6 +293,7 @@ section:not(#nav, #footer).show {
   .position-member{
     font-size: 14px;
   }
+  
 }
 
 @media screen and (max-width: 395px) {

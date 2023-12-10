@@ -237,7 +237,7 @@ section:not(#nav, #footer).show {
   }
   
 }
-@media screen and (max-width:395px){
+@media screen and (max-width:770px){
   .text-container {
     position: absolute;
     top: 40%;
@@ -247,7 +247,7 @@ section:not(#nav, #footer).show {
     overflow: auto;
   }
   #heading {
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
   }
   #subheading {
