@@ -14,13 +14,13 @@
   background-color: #050F30;
   opacity: 90%;
 }
-/* Logo Navigation Styles */
+
 .logo-nav img {
   height: 40px;
   margin: 20px;
 }
 
-/* Menu Styles */
+
 #menu {
   float: right;
   margin-left: auto;
@@ -28,7 +28,7 @@
   margin-top: 0px;
 }
 
-/* List Styles */
+
 ul {
   list-style-type: none;
   margin: 0px;
@@ -42,7 +42,7 @@ ul li {
   
 }
 
-/* Anchor Styles */
+
 li .navbar-item {
   font-size: 16px;
   font-weight: 500;
@@ -67,7 +67,7 @@ li .navbar-item {
   border-bottom: 2px solid #ffca0e;
 }
 
-/* Button Styles */
+
 li button {
   border: none;
   border-radius: 5px;
@@ -88,7 +88,7 @@ ul li button:hover {
   color: #ffffff;
 }
 
-/* Bottom Footer Styles */
+
 .bottom-footer {
   background-color: #050F30;
   width: 100%;
@@ -96,7 +96,7 @@ ul li button:hover {
   right: 0;
 }
 
-/* Logo and Social Styles */
+
 .logo-social {
   display: flex;
   flex-direction: row;
@@ -129,7 +129,7 @@ ul li button:hover {
   justify-content: center;
   margin: 0 auto;
 }
-/* Contact and Follow Footer Styles */
+
 .contact-footer,
 .follow-footer {
   margin-left: 50px;
@@ -163,7 +163,7 @@ ul li button:hover {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* Additional Footer Styles */
+
 .bottom-footer h5 {
   text-align: center;
   color: #ffffff;
@@ -182,13 +182,13 @@ ul li button:hover {
 body {
   background-color: #F0EFF5 ;
 }
-/* Media Query for Small Screens */
+
 @media screen and (max-width: 770px) {
   .navbar {
     flex-direction: column;
     align-items: center;
   }
-  /* Burger Menu Styles */
+  
   #burger-menu {
     cursor: pointer;
     height: 20px;
@@ -253,7 +253,7 @@ body {
     width: 0;
   }
 
-  /* Menu Styles for Small Screens */
+  
   #menu {
     min-width: 60%;
     min-height: 100%;
@@ -273,7 +273,7 @@ body {
     background: rgba(22, 22, 22, 0.87);
   }
 
-  /* List Styles for Small Screens */
+  
   ul {
     margin-top: 50px;
     display: flex;
@@ -308,7 +308,7 @@ body {
 
     display: block;
   }
-  /* Contact and Follow Footer Styles for Small Screens */
+  
   .contact img:hover,
   .follow img:hover {
     background-color: #ffca0e;

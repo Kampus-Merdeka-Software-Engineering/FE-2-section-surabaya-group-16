@@ -29,7 +29,7 @@ label {
   font-size: 14px;
 }
 
-/* Added styles for required indicator */
+
 span.required {
   color: red;
   font-weight: bold;

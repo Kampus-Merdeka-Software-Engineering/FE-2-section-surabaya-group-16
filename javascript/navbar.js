@@ -1,8 +1,8 @@
-// Get references to the burger menu and overlay elements
+
 let burgerMenu = document.getElementById("burger-menu");
 let overlay = document.getElementById("menu");
 
-// Function to toggle the burger menu and overlay classes
+
 function toggleMenu() {
   burgerMenu.classList.toggle("close");
   overlay.classList.toggle("overlay");
@@ -19,7 +19,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-//Page style
+
 window.addEventListener("DOMContentLoaded", (event) => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
