@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     feedbackData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-
+    
     const latestFeedback = feedbackData.slice(0, 3);
 
     let feedbackCards = "";

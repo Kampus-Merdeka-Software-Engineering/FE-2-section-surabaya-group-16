@@ -145,6 +145,7 @@ async function setInners() {
           <p>No HP: ${noHpGuest}</p>
           <p>Check-in: ${checkinDate}</p>
           <p>Check-out: ${checkoutDate}</p>
+          <p>Room Name: ${roomDetail.room_name}</p>
           <p>Total Rooms: ${totalRoomInput.value}</p>
           <p>Total Price: $${totalPrice}</p>
         `);
