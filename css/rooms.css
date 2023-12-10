@@ -41,7 +41,7 @@
 
 .headings{
   text-align: center;
-  color: #213e9e;
+  color: #3b3b3b;
 }
 
 .card {
@@ -49,6 +49,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin-right: 10px;
+  margin-bottom: 50px;
 }
 .card-room1 {
   border-radius: 8px;
@@ -60,7 +61,7 @@
   margin: 20px;
   border: #ffffff;
   position: relative;
-  transition: transform 0.5s ease
+  transition: transform 0.8s ease
 }
 /* Styling for images within .card_room1 */
 .card-room1 img{
@@ -89,7 +90,7 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 10px;
-  font-weight: bold;
+  font-weight: 500;
 }
 /* Styling for room details text (.text_room) */
 .text-room {
@@ -118,7 +119,7 @@
   padding: 10px;
   border-radius: 5px;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .room-facilities {
   position: absolute;
@@ -138,7 +139,7 @@
   bottom: 10px;
   left: 15px;
   font-size: 16px;
-  color: #000;
+  color: #3b3b3b;
   font-weight: bold;
 }
 /* Styling for "View Room" button (.view-room) */
@@ -160,19 +161,22 @@
   text-decoration: none;
 }
 .view-room:hover {
-  background: #ffd524;
+  background: #18307e;
   color: #ffffff;
 }
-@media screen and (max-width: 395px) {
-  #heading {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-  #subheading {
-    font-size: 14px;
-  }
+/* Style for page */
+section:not(#nav, #footer) {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-in-out;
+  will-change: transform, opacity;
 }
+
+section:not(#nav, #footer).show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media screen and (max-width: 395px) {
   .card {
     padding: 10px;

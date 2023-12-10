@@ -2,7 +2,6 @@
   z-index: 2;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -12,7 +11,8 @@
 }
 
 .topnav.scrolled {
-  background-color: #213e9e;
+  background-color: #050F30;
+  opacity: 90%;
 }
 /* Logo Navigation Styles */
 .logo-nav img {
@@ -58,7 +58,7 @@ li .navbar-item {
   color: #ffca0e;
 }
 .navbar-item.active {
-  color: #d1b829;
+  color: #302c19;
   border-bottom: 2px solid #ffca0e;
 }
 
@@ -90,7 +90,7 @@ ul li button:hover {
 
 /* Bottom Footer Styles */
 .bottom-footer {
-  background-color: #213e9e;
+  background-color: #050F30;
   width: 100%;
   position: absolute;
   right: 0;
@@ -179,6 +179,9 @@ ul li button:hover {
   margin: 0 auto 20px;
 }
 
+body {
+  background-color: #F0EFF5 ;
+}
 /* Media Query for Small Screens */
 @media screen and (max-width: 770px) {
   .navbar {

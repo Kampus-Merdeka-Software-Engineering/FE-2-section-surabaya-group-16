@@ -78,9 +78,6 @@
   text-align: center;
 }
 
-.our-facilities p{
-  padding: 5px;
-}
 .our-facilities .container {
   display: flex;
   justify-content: space-between;
@@ -88,8 +85,17 @@
 
 .our-facilities .facility {
   width: 100%;
+  margin-top: 20px;
 }
-
+.our-facilities h3 {
+  color: #3b3b3b;
+}
+.our-facilities p {
+  color: #555555;
+  font-size: 16px;
+  margin-top: -15px;
+  margin-bottom: 25px;
+}
 
 /* Image in Our Facilities - 100% width, border-radius 10px */
 .fac-img {
@@ -113,7 +119,7 @@
 
 /* Our Facilities Icons Container - Blue background */
 .our-facilities-icons {
-  background-color: #2474BD;
+  background-color: #050F30;
   width: 100%;
   position: relative;
   bottom: 0;
@@ -135,12 +141,13 @@
 /* Facilities Card - Shadow, fixed width and height */
 .card-facility {
   margin: 30px;
-  background-color: #fff;
+  background-color: #F0EFF5;
   width: 280px;
   height: 410px;
-  border: #ffffff;
+  border: #F0EFF5;
   position: relative;
   z-index: -1;
+  border-radius: 20px;
 }
 .icon {
   display: flex;
@@ -171,6 +178,7 @@
   top: 250px;
   font-size: 20px;
   font-weight: bold;
+  color: #3b3b3b;
 }
 
 /* Text in Card - Absolute position, left-aligned text */
@@ -178,14 +186,15 @@
   position: absolute;
   top: 290px;
   text-align: left;
+  color: #555555;
 }
 
 /* Other Facilities Section Title - Center-aligned with underline */
 .our-facilities h2,
 .other-facilities h2 {
-  color: #213e9e;
+  color: #3b3b3b;
   text-align: center;
-  border-bottom: 1px solid #e3800a;
+  border-bottom: 1px solid #555555;
   bottom: 10px;
   width: 100%;
 }
@@ -213,14 +222,12 @@ section:not(#nav, #footer).show {
   }
   /* Heading and Subheading Style for Small Screens */
   #heading {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
-    font-family: inter;
   }
 
   #subheading {
-    font-size: 14px;
-    font-family: inter;
+    font-size: 20px;
   }
 
   /* Text, Image, and Icon Style for Small Screens */
@@ -257,11 +264,11 @@ section:not(#nav, #footer).show {
   /* Facilities Card and Image Style for Small Screens */
   .card-facility,
   .other-facility {
-    background-color: #fff;
+    background-color: #F0EFF5;
     box-shadow: 0.3s;
     width: 280px;
     height: 410px;
-    border: #ffffff;
+    border: #F0EFF5;
     position: relative;
     z-index: -1;
     margin: 20px;
@@ -275,6 +282,9 @@ section:not(#nav, #footer).show {
     border-radius: 10px;
   }
 
+  .fac-img {
+    width: 65%;
+  }
   .our-facilities .container {
     flex-direction: column;
   }
@@ -290,6 +300,7 @@ section:not(#nav, #footer).show {
     top: 250px;
     font-size: 20px;
     font-weight: bold;
+    color: #3b3b3b;
   }
 
   .card-facility p,
@@ -299,7 +310,7 @@ section:not(#nav, #footer).show {
     text-align: left;
   }
   .our-facilities-icons {
-    background-color: #2474BD;
+    background-color: #050F30;
     width: 100%;
     position: relative;
     bottom: 0;
@@ -312,7 +323,7 @@ section:not(#nav, #footer).show {
   }
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:300px){
   .text-container {
     position: absolute;
     top: 40%;
@@ -323,11 +334,9 @@ section:not(#nav, #footer).show {
   #heading {
     font-size: 12px;
     font-weight: bold;
-    font-family: inter;
   }
 
   #subheading {
     font-size: 8px;
-    font-family: inter;
   }
 }
