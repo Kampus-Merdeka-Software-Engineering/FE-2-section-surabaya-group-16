@@ -135,6 +135,11 @@ li {
   flex-direction: row;
   justify-content: space-between;
 }
+.price p{
+  font-weight: bold;
+  font-size: 16px;
+  color: #18307e;
+}
 #roomName,
 #checkinDate,
 #checkoutDate,
