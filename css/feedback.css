@@ -34,7 +34,7 @@ body {
   padding: 0px 20px;
   margin: 0px 50px;
 }
-.headings h1 {
+h1 {
   text-align: center;
   color: #3B3B3B;
   font-size: 32px;
@@ -42,7 +42,7 @@ body {
 
 .subheadings p {
   color: #555555;
-  padding: 20px;
+  text-align: center;
 }
 .mainpic-feedback img {
   width: 100%;
@@ -145,7 +145,6 @@ button {
   margin-bottom: 10px;
 }
 #customers-say {
-  margin-top: 40px;
   padding: 20px;
   background-color: rgb(238, 238, 238);
 }

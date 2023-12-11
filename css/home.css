@@ -46,7 +46,7 @@
   width: 80%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  color: #ffffff; /* Warna teks */
+  color: #ffffff; 
   padding: 20px;
   border-radius: 20px;
   margin: 10px;
@@ -437,7 +437,7 @@
   transform: translate(-50%, -50%);
   text-align: center;
   z-index: 1;
-  color: #f1ebeb; /* Text color */
+  color: #f1ebeb; 
   overflow: auto;
   background-color: rgba(32, 18, 89, 0.8);
   border-radius: 10px;
