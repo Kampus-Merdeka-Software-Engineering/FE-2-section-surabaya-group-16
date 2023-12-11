@@ -18,7 +18,7 @@ export async function createFeedback(feedbackData) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(feedbackData),
+    body: JSON.stringify(feedbackData)
   });
   return await response.json();
 }

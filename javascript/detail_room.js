@@ -33,13 +33,15 @@ function calculateTotalPrice(checkinDate, checkoutDate, price, discount, totalRo
 
   const checkInDate = new Date(checkinDate);
   const checkOutDate = new Date(checkoutDate);
-  
+
   const timeDifference = checkOutDate - checkInDate;
   const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
   const discountedPricePerDay = discount > 0 ? price - (price * discount) / 100 : price;
   const totalPrice = discountedPricePerDay * totalRoom * daysDifference;
   return totalPrice;
 }
+
 
 async function setInners() {
   try {
