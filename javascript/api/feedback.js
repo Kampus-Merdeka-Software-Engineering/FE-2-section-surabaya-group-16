@@ -1,6 +1,6 @@
 export async function getFeedback() {
   try {
-    const response = await fetch(`http://localhost:3000/feedbacks`, {
+    const response = await fetch(`be-2-surabaya-16-production.up.railway.app/feedbacks`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -13,7 +13,7 @@ export async function getFeedback() {
   }
 }
 export async function createFeedback(feedbackData) {
-  const response = await fetch("http://localhost:3000/feedbacks", {
+  const response = await fetch("be-2-surabaya-16-production.up.railway.app/feedbacks", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -151,6 +151,7 @@ async function setInners() {
           <p>Room Name: ${roomDetail.room_name}</p>
           <p>Total Rooms: ${totalRoomInput.value}</p>
           <p>Total Price: $${totalPrice}</p>
+          <p>You can pay at Sunshine I-land Resort, when you check in</p>
         `);
       } catch (error) {
         console.error("Error creating booking:", error);
