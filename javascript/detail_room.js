@@ -28,25 +28,25 @@ function validateBookingData({ emailGuest, nameGuest, noHpGuest, totalRoom, conf
   return null;
 }
 function calculateTotalPrice(checkinDate, checkoutDate, price, discount, totalRoom) {
-  if (!checkinDate || !checkoutDate || !price || !discount || !totalRoom) {
-    throw new Error("Semua input harus diisi");
-  }
+
   const checkInDate = new Date(checkinDate);
   const checkOutDate = new Date(checkoutDate);
-  if (isNaN(checkInDate.getTime()) || isNaN(checkOutDate.getTime())) {
-    throw new Error("Input tanggal tidak valid");
-  }
-  if (checkOutDate <= checkInDate) {
-    throw new Error("Tanggal checkout harus setelah tanggal checkin");
-  }
+  
   const timeDifference = checkOutDate - checkInDate;
   const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
-  const discountedPricePerDay = price - (price * discount) / 100;
+  const discountedPricePerDay = discount > 0 ? price - (price * discount) / 100 : price;
   const totalPrice = discountedPricePerDay * totalRoom * daysDifference;
-
   return totalPrice;
 }
-
+function clearForm() {
+  document.getElementById("checkinDate").value = "";
+  document.getElementById("checkoutDate").value = "";
+  document.getElementById("emailGuest").value = "";
+  document.getElementById("nameGuest").value = "";
+  document.getElementById("noHpGuest").value = "";
+  document.getElementById("totalRoom").value = "";
+  document.getElementById("confirmationCheckbox").checked = false;
+}
 async function setInners() {
   try {
     const params = new URLSearchParams(window.location.search);
@@ -57,6 +57,13 @@ async function setInners() {
       return;
     }
     const roomDetail = await getDetailFacilities(room_id);
+    if (roomDetail.discount) {
+      document.getElementById("discount").innerHTML = roomDetail.discount;
+      document.querySelector(".discount-label").style.display = "inline";
+    } else {
+      document.getElementById("discount").innerHTML = "";
+      document.querySelector(".discount-label").style.display = "none";
+    }
     document.getElementById("heading").innerHTML = roomDetail.room_name;
     document.getElementById("desc").innerHTML = roomDetail.room_description;
     document.getElementById("priceRoom").innerHTML = roomDetail.price;
@@ -68,7 +75,6 @@ async function setInners() {
     document.getElementById("image3").setAttribute("src", roomDetail.detail_image3);
     const facilitiesUl = document.getElementById("facilities-detail-room");
     facilitiesUl.innerHTML = "";
-
     if (roomDetail.Facilities.length > 0) {
       roomDetail.Facilities.forEach((facility) => {
         const li = document.createElement("li");
@@ -85,7 +91,6 @@ async function setInners() {
       const checkinDate = document.getElementById("checkinDate").value;
       const checkoutDate = document.getElementById("checkoutDate").value;
       const totalRoom = totalRoomInput.value;
-
       try {
         const totalPrice = calculateTotalPrice(
           checkinDate,
@@ -145,6 +150,7 @@ async function setInners() {
           <p>No HP: ${noHpGuest}</p>
           <p>Check-in: ${checkinDate}</p>
           <p>Check-out: ${checkoutDate}</p>
+          <p>Room Name: ${roomDetail.room_name}</p>
           <p>Total Rooms: ${totalRoomInput.value}</p>
           <p>Total Price: $${totalPrice}</p>
         `);

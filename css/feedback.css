@@ -2,78 +2,101 @@ body {
   margin: 0;
   padding: 0;
 }
+.mainpic-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
 
+.mainpic-feedback img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.mainpic-feedback:first-child {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+}
 #content-wrapper {
   width: 80%;
   margin: 0 auto;
 }
-
-#home-main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+.container {
+  padding: 0px 20px;
+  margin: 0px 50px;
+}
+.headings h1 {
+  text-align: center;
+  color: #3B3B3B;
+  font-size: 32px;
 }
 
-#mainpic-home {
-  flex: 1;
-  position: relative;
-  height: 500px;
-  overflow: hidden;
+.subheadings p {
+  color: #555555;
+  padding: 20px;
 }
-
-.mainpic-home img {
+.mainpic-feedback img {
   width: 100%;
   height: auto;
 }
-
 .feedback-section {
   flex: 1;
   padding-left: 50px;
 }
-
 #feedbackForm {
   width: 100%;
   padding: 40px;
   border: 2px solid #ccc;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: white;
   box-sizing: border-box;
 }
 
 #feedbackForm label {
   display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #333;
+  margin-top: 10px;
+  font-size: 16px;
 }
 
-#feedbackForm input, 
-#feedbackForm textarea {
+/* Added styles for required indicator */
+span.required {
+  color: red;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 15px; 
+  border-radius: 5px; 
   font-size: 14px;
   box-sizing: border-box;
 }
 
-#feedbackForm button {
-  display: block;
-  width: 25%;
+button {
   padding: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: #213E9E;
   color: white;
   border: none;
   border-radius: 10px; 
   cursor: pointer;
-  box-sizing: border-box;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
+  width: 80px;
+  text-align: center;
 }
 
 #feedbackForm button:hover {
@@ -114,117 +137,86 @@ body {
   color: #4caf50;
   font-weight: bold;
 }
-
-@media screen and (max-width: 1200px) {
-  #home-main {
-      flex-direction: column;
-      padding: 5%; 
-  }
-
-  .mainpic-home img {
-      width: 100%; 
-      height: auto; 
-  }
-
-  #feedbackForm {
-      width: 100%; 
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      background-color: white;
-      box-sizing: border-box;
-  }
-
-  #feedbackForm label {
-      font-size: 12px; 
-  }
-
-  #feedbackForm input, 
-  #feedbackForm textarea {
-      font-size: 12px; 
-  }
-  #feedbackForm {
-    width: 100%; 
-    margin: auto; 
+.rating-submit{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.feedback-section {
-  padding: 0%;
+.rating-star {
+  font-size: 30px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
-#feedbackForm button {
-  display: block;
-  width: 25%;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #213E9E;
-  color: white;
-  border: none;
-  border-radius: 10px; 
+#customers-say {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: rgb(238, 238, 238);
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 10px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.client-card {
+  padding: 1rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+}
+
+.client-card h2,
+.client-card p {
+  text-align: center;
+  color: #3B3B3B;
+}
+.client-card h2{
+  font-size: 18px;
+}
+.client-card.rating-container {
+  color: #d3d3d3; 
+  position: fixed;
+  color: #333;
+}
+.rating-container{
+  color: #fdd835;
+  font-size: 30px;
+}
+.star {
+  display: inline-block;
   cursor: pointer;
-  box-sizing: border-box;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-#feedbackForm button:hover {
-  background-color: #0056b3;
+.star:hover,
+.star.active {
+  color: gold;
 }
-
-}
-
 @media screen and (max-width: 770px) {
-  #home-main {
-      flex-direction: column;
-      padding: 5%; 
+  .card-grid {
+    display: block;
   }
-
-  .mainpic-home img {
-      width: 100%; 
-      height: auto; 
-  }
-
-  #feedbackForm {
-      width: 100%; 
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      background-color: white;
-      box-sizing: border-box;
-  }
-
-  #feedbackForm label {
-      font-size: 12px; 
-  }
-
-  #feedbackForm input, 
-  #feedbackForm textarea {
-      font-size: 12px; 
-  }
-  #feedbackForm {
-    width: 100%; 
-    margin: auto; 
 }
-.feedback-section {
-  padding: 0%;
-}
-#feedbackForm button {
-  display: block;
-  width: 40%;
-  padding: 5px;
-  margin-top: 20px;
-  background-color: #213E9E;
-  color: white;
-  border: none;
-  border-radius: 10px; 
-  cursor: pointer;
-  box-sizing: border-box;
-  align-self: center;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 10px;
-}
-
-#feedbackForm button:hover {
-  background-color: #0056b3;
-}
+@media screen and (max-width: 395px) {
+  .card{
+    padding: 0px;
+    margin-right: 0px;
+  }
+  .container {
+    padding: 0px;
+    margin: 5px;
+  }
 }

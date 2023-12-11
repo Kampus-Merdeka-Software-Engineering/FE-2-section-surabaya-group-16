@@ -3,7 +3,6 @@ export function RoomCard(room) {
   if (room.discount != null) {
     discountView = `<p><span>Discount </span>${room.discount}<span> %</span></p>`;
   }
-
   const card =
     `
             <div class="card-room1" id=${room.room_id}>
@@ -26,6 +25,5 @@ export function RoomCard(room) {
               <a class="view-room" href="detail_room.html?room_id=${room.room_id}">View Room</a>
             </div>
     `;
-
   return card;
 }

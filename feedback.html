@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sunshine i-land Resort</title>
     <link rel="stylesheet" href="css/navbar-foot.css" />
     <link rel="stylesheet" href="css/font_style.css" />
     <link rel="stylesheet" href="css/feedback.css" />
+    <title>Sunshine i-land Resort | Feedback</title>
+    <link rel="icon" href="assets/sunshine_blue_icon.png" />
   </head>
   <body>
     <div class="main-container">
       <section id="nav">
-        <div class="topnav-feedback">
+        <div class="topnav">
           <div class="logo-nav">
-            <img src="assets/sunshine_white.png" alt="" />
+            <img src="assets/sunshine_white.png" alt="logo" />
           </div>
           <div id="burger-menu">
             <span></span>
@@ -21,59 +22,82 @@
           <div id="menu">
             <ul>
               <li>
-                <a href="index.html" class="navbar-item" id="home">Home</a>
+                <a href="index.html" class="navbar-item">Home</a>
               </li>
               <li>
-                <a href="about_us.html" class="navbar-item"
-                  >About Us</a
-                >
+                <a href="about_us.html" class="navbar-item">About Us</a>
               </li>
               <li>
                 <a href="rooms.html" class="navbar-item">Rooms</a>
               </li>
               <li>
-                <a href="facilities.html" class="navbar-item"
-                  >Facilities</a
-                >
+                <a href="facilities.html" class="navbar-item">Facilities</a>
               </li>
             </ul>
           </div>
+        </div>
       </section>
-      <div id="content-wrapper">
-        <section id="home-main">
-          <div class="mainpic-home">
-            <img src="assets/images/feedback.png" />
-          </div>
-          <div class="feedback-section">
-            <form id="feedbackForm">
-              <label for="email">Email <span class="required">*</span>:</label>
-              <input type="email" id="email" name="email" required />
-      
-              <label for="name">Name <span class="required">*</span>:</label>
-              <input type="text" id="name" name="name" required />
-      
-              <label for="comment">Your Feedback <span class="required">*</span>:</label>
-              <textarea id="comment" name="comment" rows="4" required></textarea>
-      
-              <label for="photo">Upload Your Photo (optional):</label>
-              <input type="file" id="photo" name="photo" accept="image/*" />
-              <img id="imagePreview" alt="Preview" style="max-width: 100%; margin-top: 10px; display: none" />
-      
-              <button type="button" onclick="submitFeedback()">
-                Send 
-              </button>
+      <section id="feedback">
+        <div class="mainpic-feedback">
+          <img src="assets/images/feedback.png" alt="feedback" />
+          <div class="overlay"></div>
+        </div>
+        <div class="container">
+          <div class="container-feedback">
+            <h1 class="headings">Create Feedback</h1>
+            <form id="feedbackForm" autocomplete="on">
+              <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div>
+                <label for="name_user">Name: </label>
+                <input type="text" name="name_user" id="name_user" required />
+              </div>
+              <div>
+                <label for="comments">Feedback: </label>
+                <textarea name="comments" id="comments" required></textarea>
+              </div>
+              <div class="rating-submit">
+                <label
+                  >Kindly share your rating with us, your feedback is highly
+                  valued!</label
+                >
+                <div class="rating-star" id="star-container">
+                  <div class="star" data-value="1">&#9733;</div>
+                  <div class="star" data-value="2">&#9733;</div>
+                  <div class="star" data-value="3">&#9733;</div>
+                  <div class="star" data-value="4">&#9733;</div>
+                  <div class="star" data-value="5">&#9733;</div>
+                </div>
+                <button type="submit">Submit</button>
+              </div>
             </form>
-	          <div id="successPopup" class="popup">
-              <div class="popup-content">
+          </div>
+          <div id="successPopup" class="popup">
+            <div class="popup-content">
               <img src="assets/icons/check-mark.png" alt="Checkmark" />
               <p>Feedback submitted successfully!</p>
             </div>
-           </div>
           </div>
-        </section>
-        
-      </div>
-      
+        </div>
+      </section>
+      <section id="customers-say">
+        <div class="container">
+          <div class="headings">
+            <h1>Our Customers Say</h1>
+          </div>
+          <div class="subheadings">
+            <p>
+              Here are some customers who are satisfied with the quality of our
+              service, maybe you will be one of them
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-grid" id="customers"></div>
+          </div>
+        </div>
+      </section>
       <section id="footer">
         <div class="bottom-footer">
           <div class="logo-social">
@@ -85,18 +109,33 @@
               <div class="contact-footer">
                 <h4>Contact Us</h4>
                 <div class="contact-img">
-                  <a class="contact" href="https://maps.app.goo.gl/Ro9od683DTYt97N17"
-                    ><img
+                  <a
+                    class="contact"
+                    href="https://maps.app.goo.gl/Ro9od683DTYt97N17"
+                  >
+                    <img
                       class="contact-loc"
                       src="assets/icons/map-pin.svg"
                       alt="Location"
-                  /></a>
-                  <a class="contact" href="https://wa.me/085156467819"
-                    ><img class="contact-phon" src="assets/icons/phone.svg" alt="Phone"
-                  /></a>
-                  <a class="contact" href="mailto:sunshineilandresort@gmail.com"
-                    ><img class="contact-mail" src="assets/icons/mail.svg" alt="Mail"
-                  /></a>
+                    />
+                  </a>
+                  <a class="contact" href="https://wa.me/085156467819">
+                    <img
+                      class="contact-phon"
+                      src="assets/icons/phone.svg"
+                      alt="Phone"
+                    />
+                  </a>
+                  <a
+                    class="contact"
+                    href="mailto:sunshineilandresort@gmail.com"
+                  >
+                    <img
+                      class="contact-mail"
+                      src="assets/icons/mail.svg"
+                      alt="Mail"
+                    />
+                  </a>
                 </div>
               </div>
               <div class="follow-footer">
@@ -105,18 +144,20 @@
                   <a
                     class="follow"
                     href="https://www.facebook.com/profile.php?id=61554082070886&mibextid=ZbWKwL"
-                    ><img src="assets/icons/facebook.svg" alt="Facebook"
-                  /></a>
+                  >
+                    <img src="assets/icons/facebook.svg" alt="Facebook" />
+                  </a>
                   <a
                     class="follow"
                     href="https://instagram.com/sunshine_iland_resort?igshid=OGQ5ZDc2ODk2ZA=="
-                    ><img src="assets/icons/instagram.svg" alt="Instagram"
-                  /></a>
+                  >
+                    <img src="assets/icons/instagram.svg" alt="Instagram" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        <h5>Copyright @2023 SESurabayaGrup16</h5>
+          <h5>Copyright @2023 SESurabayaGrup16</h5>
         </div>
       </section>
     </div>

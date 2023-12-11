@@ -217,7 +217,6 @@
 .subheadings p {
   color: #555555;
   padding: 20px;
-;
 }
 
 .card {
@@ -360,20 +359,16 @@
 }
 
 .client-card {
-  padding: 2rem;
+  padding: 1rem;
   background-color: var(--white);
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.client-card img {
-  display: block;
-  margin: auto;
-  padding: auto;
-  max-width: 80px;
-  margin: auto;
-  margin-bottom: 1rem;
-  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  width: auto;
 }
 
 .client-card h2,
@@ -381,7 +376,9 @@
   text-align: center;
   color: #3B3B3B;
 }
-
+.client-card h2{
+  font-size: 18px;
+}
 #customers-say .subheadings p {
   text-align: center;
   color: #555555;
@@ -435,11 +432,11 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex-wrap: wrap;
   text-align: justify;
   flex-direction: column;
 }
 .service h3 {
+  text-align: center;
   color: #3B3B3B;
 }
 .service p {
@@ -574,6 +571,18 @@ section:not(#nav, #footer).show {
   align-items: center;
   text-align: center;
 }
+
+.client-card.rating-container {
+  color: #d3d3d3; 
+  position: fixed;
+
+  color: #333;
+}
+.rating-container{
+  color: #fdd835;
+  font-size: 30px;
+}
+
 @media screen and (max-width: 880px) {
   .about-content {
     display: block;
@@ -610,12 +619,7 @@ section:not(#nav, #footer).show {
     display: block;
   }
 
-  
-  .client-card {
-    margin: 20px;
-    flex: 1 0 auto;
-  }
-  
+  /* Adjust about content styles for mobile view (.about-content) */
   .view-about {
     float: right;
     margin: 20px;
@@ -629,6 +633,7 @@ section:not(#nav, #footer).show {
     width: 60%;
     padding: 0px;
   }
+
 }
 
 @media screen and (max-width: 395px) {

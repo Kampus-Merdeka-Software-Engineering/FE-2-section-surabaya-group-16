@@ -19,9 +19,6 @@
   width: 100%;
 }
 
-#image1, #image2, #image3{
-  width: 250px;
-}
 .container {
   padding: 0px 20px;
   margin: 0px 50px;
@@ -59,9 +56,12 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
+  margin-left: 10px;
 }
 
 .detail-room img {
+  width: 250px;
+  height: 150px;
   padding: 10px;
   border-radius: 25px;
   transition: transform 0.5s ease;
@@ -216,6 +216,7 @@ li {
 @media screen and (max-width: 360px) {
   .detail-room {
     justify-content: center;
+    margin-left: 0px;
   }
   .container-info {
     flex-direction: column;
