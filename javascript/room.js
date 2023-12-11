@@ -30,9 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           cards += RoomCard(roomsData[i]);
       }
       document.getElementById("room-standard").innerHTML = cards;
-    } else {
-      console.error("Data kamar tidak ditemukan.");
-    }
+    } 
   } catch (error) {
     console.error("Error:", error);
   }

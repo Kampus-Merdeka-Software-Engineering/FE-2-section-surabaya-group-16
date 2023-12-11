@@ -1,6 +1,6 @@
-export async function getFeedback(feedback_id) {
+export async function getFeedback() {
   try {
-    const response = await fetch(`http://localhost:3000/feedbacks/${feedback_id}`, {
+    const response = await fetch(`http://localhost:3000/feedbacks`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

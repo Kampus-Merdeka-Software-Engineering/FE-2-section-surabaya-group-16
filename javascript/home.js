@@ -17,9 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
       }
       cardContainer.innerHTML = cards;
-    } else {
-      console.error("Data kamar tidak ditemukan.");
-    }
+    } 
     feedbackData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     const latestFeedback = feedbackData.slice(0, 3);
     let feedbackCards = "";

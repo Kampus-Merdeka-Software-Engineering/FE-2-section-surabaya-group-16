@@ -619,7 +619,6 @@ section:not(#nav, #footer).show {
     display: block;
   }
 
-  /* Adjust about content styles for mobile view (.about-content) */
   .view-about {
     float: right;
     margin: 20px;
@@ -632,6 +631,9 @@ section:not(#nav, #footer).show {
     position: relative;
     width: 60%;
     padding: 0px;
+  }
+  .client-card{
+    margin-bottom: 15px;
   }
 
 }
