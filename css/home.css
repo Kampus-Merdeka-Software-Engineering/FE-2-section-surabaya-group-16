@@ -140,7 +140,7 @@
   color: #3B3B3B;
 }
 .text-about p {
-  margin: 0;
+  margin: 16px;
 }
 .view-about {
   border: none;
@@ -304,11 +304,10 @@
   text-decoration: none;
 }
 .view-room:hover {
-  background: #ffd524;
+  background: #18307e;
   color: #ffffff;
 }
 #customers-say {
-  margin-top: 40px;
   padding: 20px;
   background-color: rgb(238, 238, 238);
 }
@@ -569,6 +568,9 @@ section:not(#nav, #footer).show {
   }
   .client-card{
     margin-bottom: 15px;
+  }
+  .text-about {
+    margin: 16px;
   }
 }
 
