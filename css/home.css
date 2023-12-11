@@ -217,7 +217,6 @@
 .subheadings p {
   color: #555555;
   padding: 20px;
-;
 }
 
 .card {
@@ -378,7 +377,7 @@
   color: #3B3B3B;
 }
 .client-card h2{
-  font-size: 16px;
+  font-size: 18px;
 }
 #customers-say .subheadings p {
   text-align: center;

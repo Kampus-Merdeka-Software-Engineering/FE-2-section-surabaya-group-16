@@ -37,10 +37,16 @@ body {
   padding: 0px 20px;
   margin: 0px 50px;
 }
-.headings{
+.headings h1 {
   text-align: center;
+  color: #3B3B3B;
+  font-size: 32px;
 }
 
+.subheadings p {
+  color: #555555;
+  padding: 20px;
+}
 .mainpic-feedback img {
   width: 100%;
   height: auto;
@@ -179,7 +185,7 @@ button {
   color: #3B3B3B;
 }
 .client-card h2{
-  font-size: 16px;
+  font-size: 18px;
 }
 .client-card.rating-container {
   color: #d3d3d3; 
@@ -204,9 +210,13 @@ button {
     display: block;
   }
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 395px) {
   .card{
     padding: 0px;
     margin-right: 0px;
+  }
+  .container {
+    padding: 0px;
+    margin: 5px;
   }
 }
