@@ -1,6 +1,6 @@
 export async function getRoom() {
   try {
-    const response = await fetch("be-2-surabaya-16-production.up.railway.app/room", {
+    const response = await fetch("https://successful-clothes-ox.cyclic.app/room", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -14,7 +14,7 @@ export async function getRoom() {
 }
 export async function getDetailFacilities(room_id) {
   try {
-    const response = await fetch(`be-2-surabaya-16-production.up.railway.app/${room_id}`, {
+    const response = await fetch(`https://successful-clothes-ox.cyclic.app/${room_id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export async function getDetailFacilities(room_id) {
 }
 export async function createBooking(booking) {
   try {
-    const response = await fetch("be-2-surabaya-16-production.up.railway.app/book", {
+    const response = await fetch("https://successful-clothes-ox.cyclic.app/book", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
