@@ -11,11 +11,9 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .content-welcome img {
   width: 100%;
 }
-
 .container {
   padding: 0px 20px;
   margin: 0px 50px;
@@ -28,27 +26,23 @@ body {
   text-align: center;
   color: #3B3B3B;
 }
-
 .vision-missions {
   display: flex;
   gap: 25px;
   margin-top: 50px;
 }
-
 .vision, .missions {
   border: 4px solid #213E9E;
   padding: 10px;
   border-radius: 15px;
   width: 100%;
 }
-
 .vision h1,
 .missions h1 {
   color: #3B3B3B;
   text-align: center;
   border-bottom: 2px solid #555555;
 }
-
 .vision p,
 .missions p {
   text-align: justify;
@@ -58,7 +52,6 @@ body {
   color: #3B3B3B;
   text-align: center;
 }
-
 #about-us {
   margin-bottom: 100px;
 }
@@ -69,7 +62,6 @@ body {
   color: #3B3B3B;
   font-size: 32px;
 }
-
 .about-content {
   display: flex;
   justify-content: center;
@@ -93,15 +85,12 @@ body {
   text-align: center;
   position: relative;
   margin-top: 10px;
-
 }
-
 .about-content .box h4 {
   position: relative;
   margin-top: -10px;
   font-size: 15px;
 }
-
 .box {
   padding: 5px;
   border-radius: 10px;
@@ -109,7 +98,6 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-
 #rooms-img,
 #restaurant-about,
 #gym,
@@ -118,16 +106,13 @@ body {
   width: 50px;
   padding: 5px;
 }
-
 .about-content img {
   padding: 10px;
   width: 30rem;
 }
-
 .text-about h2 {
   color: #3B3B3B;
 }
-
 .text-about p {
   margin: 0;
 }
@@ -140,9 +125,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 40px 10px 50px 0px;
-
 }
-
 .card-member {
   border-radius: 8px;
   background-color: #ffffff;
@@ -152,7 +135,6 @@ body {
   border: #ffffff;
   position: relative;
 }
-
 .card-member {
   margin: 14px;
 }
@@ -172,7 +154,6 @@ body {
   color: #555555;
   font-weight: 200;
 }
-
 .name-member {
   position: absolute;
   top: 66%;
@@ -180,7 +161,6 @@ body {
   font-size: 17px;
   color: #050F30;
 }
-
 .follow-me {
   justify-content: space-between;
 }
@@ -218,27 +198,24 @@ body {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
-
 section:not(#nav, #footer) {
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease-in-out;
   will-change: transform, opacity;
 }
-
 section:not(#nav, #footer).show {
   opacity: 1;
   transform: translateY(0);
 }
 
 
-
 @media screen and (max-width: 880px) {
   .about-content {
     display: block;
   }  
-
 }
+
 @media screen and (max-width: 770px) {
   .container {
     margin: 0px;
@@ -252,7 +229,6 @@ section:not(#nav, #footer).show {
   .content-welcome img {
     width: 100%;
   }
-
   .vision-missions {
     display: flex;
     flex-wrap: wrap;
@@ -262,7 +238,6 @@ section:not(#nav, #footer).show {
     flex-direction: row;
     margin: 10px;
   }
-
   .vision,
   .missions {
     margin: 20px;
@@ -278,7 +253,6 @@ section:not(#nav, #footer).show {
     padding: 0;
     width: 80%;
   }
-
   .card-member{
     width: 280px;
     height: 380px;
@@ -290,7 +264,6 @@ section:not(#nav, #footer).show {
   .position-member{
     font-size: 14px;
   }
-  
 }
 
 @media screen and (max-width: 395px) {

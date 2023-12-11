@@ -1,7 +1,6 @@
 .main-container {
   position: relative;
 }
-
 #home-room {
   margin-bottom: 30px;
   width: 100%;
@@ -10,15 +9,12 @@
 .main-pic {
   position: relative;
 }
-
 .mainpic-room {
   margin-top: 0;
 }
-
 .mainpic-room img {
   width: 100%;
 }
-
 .container {
   padding: 0px 20px;
   margin: 0px 50px;
@@ -41,7 +37,6 @@
   text-align: left;
   color: #3b3b3b;
 }
-
 .fasilities-info .headings h2 {
   text-align: left;
   color: #3b3b3b;
@@ -50,7 +45,6 @@
 .content-room p {
   text-align: justify;
 }
-
 .detail-room {
   display: flex;
   flex-wrap: wrap;
@@ -58,7 +52,6 @@
   align-items: center;
   margin-left: 10px;
 }
-
 .detail-room img {
   width: 250px;
   height: 150px;
@@ -66,11 +59,9 @@
   border-radius: 25px;
   transition: transform 0.5s ease;
 }
-
 .detail-room img:hover {
   transform: scale(1.1);
 }
-
 .facilities-info-price {
   display: flex;
   flex-direction: row;
@@ -102,12 +93,10 @@
   padding: 10px;
   margin: 10px;
 }
-
 li {
   margin: 10px;
   font-size: 16px;
 }
-
 .price-box {
   border: 1px solid #ccc;
   height: auto;
@@ -117,22 +106,18 @@ li {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .info {
   line-height: 1.6;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-
 .info label {
   margin-right: 10px;
 }
-
 .info input {
   margin-bottom: 10px;
 }
-
 .info button {
   margin-top: 10px;
   cursor: pointer;
@@ -173,11 +158,9 @@ li {
   padding: 20px;
   z-index: 1000;
 }
-
 .popup-content {
   position: relative;
 }
-
 .close-btn {
   position: fixed;
   top: 5px;
@@ -186,14 +169,12 @@ li {
   font-size: 30px;
   color: #333;
 }
-
 .close-btn:hover {
   color: #ff0000;
 }
 .checkBox{
   display: flex;
   align-items: flex-start;
-
 }
 
 @media screen and (max-width: 1000px) {

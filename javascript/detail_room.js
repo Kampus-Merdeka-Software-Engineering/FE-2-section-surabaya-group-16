@@ -6,6 +6,7 @@ function openSuccessPopup(bookingInfo) {
   popupInfo.innerHTML = bookingInfo;
   popup.style.display = "block";
 }
+
 function validateBookingData({ emailGuest, nameGuest, noHpGuest, totalRoom, confirmationCheckbox }) {
   if (
     typeof emailGuest !== "string" ||
@@ -27,6 +28,7 @@ function validateBookingData({ emailGuest, nameGuest, noHpGuest, totalRoom, conf
   }
   return null;
 }
+
 function calculateTotalPrice(checkinDate, checkoutDate, price, discount, totalRoom) {
 
   const checkInDate = new Date(checkinDate);
@@ -38,15 +40,7 @@ function calculateTotalPrice(checkinDate, checkoutDate, price, discount, totalRo
   const totalPrice = discountedPricePerDay * totalRoom * daysDifference;
   return totalPrice;
 }
-function clearForm() {
-  document.getElementById("checkinDate").value = "";
-  document.getElementById("checkoutDate").value = "";
-  document.getElementById("emailGuest").value = "";
-  document.getElementById("nameGuest").value = "";
-  document.getElementById("noHpGuest").value = "";
-  document.getElementById("totalRoom").value = "";
-  document.getElementById("confirmationCheckbox").checked = false;
-}
+
 async function setInners() {
   try {
     const params = new URLSearchParams(window.location.search);
@@ -64,6 +58,7 @@ async function setInners() {
       document.getElementById("discount").innerHTML = "";
       document.querySelector(".discount-label").style.display = "none";
     }
+
     document.getElementById("heading").innerHTML = roomDetail.room_name;
     document.getElementById("desc").innerHTML = roomDetail.room_description;
     document.getElementById("priceRoom").innerHTML = roomDetail.price;
@@ -73,6 +68,7 @@ async function setInners() {
     document.getElementById("image1").setAttribute("src", roomDetail.detail_image1);
     document.getElementById("image2").setAttribute("src", roomDetail.detail_image2);
     document.getElementById("image3").setAttribute("src", roomDetail.detail_image3);
+
     const facilitiesUl = document.getElementById("facilities-detail-room");
     facilitiesUl.innerHTML = "";
     if (roomDetail.Facilities.length > 0) {
@@ -84,6 +80,7 @@ async function setInners() {
     } else {
       console.error("No facilities data available");
     }
+
     const totalRoomInput = document.getElementById("totalRoom");
     const totalPriceElement = document.getElementById("totalPrice");
     const confirmationCheckbox = document.getElementById("confirmationCheckbox");
@@ -105,6 +102,7 @@ async function setInners() {
         totalPriceElement.innerHTML = "Invalid date or input";
       }
     });
+
     const bookNowButton = document.getElementById("bookNow");
     bookNowButton.addEventListener("click", async (event) => {
       event.preventDefault();
@@ -163,6 +161,7 @@ async function setInners() {
     console.error("Error fetching room details:", error);
   }
 }
+
 document.addEventListener("DOMContentLoaded", async function () {
   try {
     await setInners();

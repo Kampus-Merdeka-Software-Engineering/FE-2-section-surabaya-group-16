@@ -10,6 +10,7 @@ stars.forEach((star) => {
     updateStars(selectedRating);
   });
 });
+
 function validateData(email, name_user, comments, img_user) {
   if (
     typeof email !== "string" ||
@@ -25,9 +26,8 @@ function validateData(email, name_user, comments, img_user) {
   }
   return null;
 }
-document
-  .getElementById("feedbackForm")
-  .addEventListener("submit", async (e) => {
+
+document.getElementById("feedbackForm").addEventListener("submit", async (e) => {
     e.preventDefault();
     const email = document.getElementById("email").value;
     const name_user = document.getElementById("name_user").value;
@@ -51,18 +51,22 @@ document
     } catch (error) {
       console.error("Error submitting feedback:", error);
     }
-  });
+  }
+);
+
 function updateStars(value) {
   stars.forEach((star) => {
     const starValue = parseInt(star.getAttribute("data-value"), 10);
     star.classList.toggle("active", starValue <= value);
   });
 }
+
 function resetForm() {
   document.getElementById("feedbackForm").reset();
   selectedRating = 0;
   updateStars(selectedRating);
 }
+
 function showSuccessPopup() {
   const successPopup = document.getElementById("successPopup");
   successPopup.style.display = "block";
@@ -70,6 +74,7 @@ function showSuccessPopup() {
     successPopup.style.display = "none";
   }, 3000);
 }
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     const feedbackData = await getFeedback();
