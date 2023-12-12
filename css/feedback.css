@@ -166,13 +166,13 @@ button {
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
+  justify-content: center; 
   align-items: center;
   flex-direction: column;
   height: auto;
   width: auto;
+  overflow: auto;
 }
-
 .client-card h2,
 .client-card p {
   text-align: center;
@@ -180,6 +180,16 @@ button {
 }
 .client-card h2{
   font-size: 18px;
+  margin-bottom: 0; 
+  order: 1;
+}
+.client-card p {
+  flex-grow: 1;
+  order: 2;
+}
+#customers-say .subheadings p {
+  text-align: center;
+  color: #555555;
 }
 .client-card.rating-container {
   color: #d3d3d3; 
