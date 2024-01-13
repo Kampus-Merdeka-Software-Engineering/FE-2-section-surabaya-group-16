@@ -1,7 +1,7 @@
 export async function getRoom() {
   try {
     const response = await fetch(
-      "https://successful-clothes-ox.cyclic.app/room",
+      "https://sunshine-i-land-resort.netlify.app/room",
       {
         method: "GET",
         headers: {
@@ -18,7 +18,7 @@ export async function getRoom() {
 export async function getDetailFacilities(room_id) {
   try {
     const response = await fetch(
-      `https://successful-clothes-ox.cyclic.app/detail/${room_id}`,
+      `hhttps://sunshine-i-land-resort.netlify.app/detail/${room_id}`,
       {
         method: "GET",
         headers: {
@@ -33,7 +33,7 @@ export async function getDetailFacilities(room_id) {
   }
 }
 export async function createBooking(booking) {
-  const response = await fetch("https://successful-clothes-ox.cyclic.app/book",
+  const response = await fetch("https://sunshine-i-land-resort.netlify.app/book",
     {
       method: "POST",
       headers: {
