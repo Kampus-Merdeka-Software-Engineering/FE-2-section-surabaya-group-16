@@ -58,7 +58,7 @@ Welcome to the Section Surabaya Group 16 project! Our team is working collaborat
    ```
 
 4. **Visit the Website:**
-   Open your web browser and go to [https://elegant-macaron-a7311d.netlify.app/](https://elegant-macaron-a7311d.netlify.app/).
+   Open your web browser and go to [https://sunshine-i-land-resort.netlify.app/](https://sunshine-i-land-resort.netlify.app/).
    
 ## Contributing:
 We welcome contributions from the community. If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
