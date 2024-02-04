@@ -18,8 +18,7 @@ Welcome to the Section Surabaya Group 16 project! Our team is working collaborat
 ### Tools and Technologies:
 
 #### Design:
-- **Figma:** We are utilizing Figma for designing and prototyping. You can view our design [here](https://un gu.in/SE_Figma_Group16_23Surabaya) (remove the space in the link).
-
+- **Figma:** We are utilizing Figma for designing and prototyping. You can view our design [here](https://un gu.in/SE_Figma_Group16_23Surabaya)
 #### Version Control:
 - **GitHub:** Our source code is managed using GitHub, providing version control and collaboration capabilities.
 
